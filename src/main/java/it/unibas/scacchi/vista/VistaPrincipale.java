@@ -1,21 +1,20 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package it.unibas.scacchi.vista;
 
-/**
- *
- * @author santo
- */
 public class VistaPrincipale extends javax.swing.JPanel {
 
-    /**
-     * Creates new form VistaPrincipale
-     */
-    public VistaPrincipale() {
+    public void inizializza() {
         initComponents();
+        
+        inizializzaComponenti();
+        assegnaControllo();
+    }
+    
+    private void inizializzaComponenti(){
+        
+    }
+    
+    private void assegnaControllo(){
+        
     }
 
     /**

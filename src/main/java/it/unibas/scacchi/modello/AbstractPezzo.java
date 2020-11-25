@@ -16,7 +16,13 @@ public abstract class AbstractPezzo implements Pezzo{
         this.colore = colore;
     }
 
-    public abstract void  mangiare() ;
+    @Override
+    public abstract void mangiare();
     
+    public abstract void reNelleMieMosse();
+
+    public abstract void calcolaMosse();
+    
+    public abstract void eseguiAzione();
     
 }
