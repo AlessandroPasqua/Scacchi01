@@ -1,17 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package it.unibas.scacchi.vista;
 
 import it.unibas.scacchi.Applicazione;
 import javax.swing.JScrollPane;
 
-/**
- *
- * @author santo
- */
 public class Frame extends javax.swing.JFrame {
 
     public void inizializza() {
@@ -59,9 +50,6 @@ public class Frame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     */
   static  {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -90,6 +78,4 @@ public class Frame extends javax.swing.JFrame {
         
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
-    // End of variables declaration//GEN-END:variables
 }

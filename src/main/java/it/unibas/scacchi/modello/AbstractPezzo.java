@@ -15,14 +15,4 @@ public abstract class AbstractPezzo implements Pezzo{
     public void setColore(String colore) {
         this.colore = colore;
     }
-
-    @Override
-    public abstract void mangiare();
-    
-    public abstract void reNelleMieMosse();
-
-    public abstract void calcolaMosse();
-    
-    public abstract void eseguiAzione();
-    
 }

@@ -1,5 +1,9 @@
 package it.unibas.scacchi.modello;
 
-public class Cavallo {
+public class Cavallo extends AbstractPezzo{
+    
+    public Cavallo(String colore) {
+        super(colore);
+    }
     
 }

@@ -12,9 +12,4 @@ public class Pedone extends AbstractPezzo{
     public boolean isPrimaMossa() {
         return primaMossa;
     }
-
-    @Override
-    public void mangiare() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
