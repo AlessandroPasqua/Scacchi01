@@ -7,6 +7,8 @@ public class Mossa {
     private int succX;
     private int succY;
 
+    //Costruttori
+    
     public Mossa(int prevX, int prevY, int succX, int succY) {
         this.prevX = prevX;
         this.prevY = prevY;
@@ -14,6 +16,12 @@ public class Mossa {
         this.succY = succY;
     }
 
+    //Metodi Classe
+    
+    
+    
+    //Metodi Get e Set
+    
     public int getPrevX() {
         return prevX;
     }

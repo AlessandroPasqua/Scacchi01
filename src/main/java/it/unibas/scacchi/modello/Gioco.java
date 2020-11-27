@@ -34,9 +34,5 @@ public class Gioco {
     public void setScacchiera(Scacchiera scacchiera) {
         this.scacchiera = scacchiera;
     }
-    
-    
-    
-    
-    
+      
 }

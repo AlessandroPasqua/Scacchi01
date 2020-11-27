@@ -2,14 +2,13 @@ package it.unibas.scacchi.modello;
 
 public class Cavallo extends AbstractPezzo {
 
+    //Costruttori
+    
     public Cavallo(String colore) {
         super(colore);
     }
 
-    @Override
-    public void mangiare() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    //Metodi Classe
 
     @Override
     public void reNelleMieMosse() {
@@ -21,9 +20,6 @@ public class Cavallo extends AbstractPezzo {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    @Override
-    public void eseguiAzione() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    //Metodi Get e Set
     
 }

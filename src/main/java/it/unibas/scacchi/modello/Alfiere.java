@@ -1,15 +1,14 @@
 package it.unibas.scacchi.modello;
 
 public class Alfiere extends AbstractPezzo {
+    
+    //Costruttori
 
     public Alfiere(String colore) {
         super(colore);
     }
 
-    @Override
-    public void mangiare() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    //Metodi Classe
 
     @Override
     public void reNelleMieMosse() {
@@ -20,10 +19,7 @@ public class Alfiere extends AbstractPezzo {
     public void calcolaMosse() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    @Override
-    public void eseguiAzione() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
+    //Metodi Get e Set
+
 }
