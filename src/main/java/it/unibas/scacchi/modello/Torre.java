@@ -11,58 +11,15 @@ public class Torre extends AbstractPezzo {
     }
 
     //Metodi Classe
-
+    
+    //Movimento di una torre è possibile in un incremento/decremento della sola x o incremento/decremento della sola y
     @Override
     public void calcolaMosse() {
+        this.getMossePossibili().clear();
         Scacchiera scacchiera = (Scacchiera)Applicazione.getInstance().getModello().getBean(Costanti.SCACCHIERA);
-        int prevX = this.getPosX();
-        int prevY = this.getPosY();
-        Pezzo p ;
-        for ( int i = prevX+1 ; i < Costanti.N ; i++ ){
-            p = scacchiera.getPezzo(i, prevY );
-            if ( p == null ){
-                this.aggiungiMossa(new Mossa(prevX,prevY,i,prevY));
-            } else {
-                if ( !this.isStessoColore(p) ){
-                    this.aggiungiMossa(new Mossa(prevX,prevY,i,prevY));
-                }
-                return;
-            }
-        }
-        for ( int i = prevX-1 ; i >= 0 ; i-- ){
-            p = scacchiera.getPezzo(i, prevY );
-            if ( p == null ){
-                this.aggiungiMossa(new Mossa(prevX,prevY,i,prevY));
-            } else {
-                if ( !this.isStessoColore(p) ){
-                    this.aggiungiMossa(new Mossa(prevX,prevY,i,prevY));
-                }
-                return;
-            }
-        }
-        for ( int i = prevY+1 ; i < Costanti.N ; i++ ){
-            p = scacchiera.getPezzo(prevX, i );
-            if ( p == null ){
-                this.aggiungiMossa(new Mossa(prevX,prevY,prevX,i));
-            } else {
-                if ( !this.isStessoColore(p) ){
-                    this.aggiungiMossa(new Mossa(prevX,prevY,prevX,i));
-                }
-                return;
-            }
-        }
-        for ( int i = prevY-1 ; i >= 0 ; i-- ){
-            p = scacchiera.getPezzo(prevX, i );
-            if ( p == null ){
-                this.aggiungiMossa(new Mossa(prevX,prevY,prevX,i));
-            } else {
-                if ( !this.isStessoColore(p) ){
-                    this.aggiungiMossa(new Mossa(prevX,prevY,prevX,i));
-                }
-                return;
-            }
-        }
+        calcolaMosse(scacchiera);
     }
+    
     
     @Override
     public void calcolaMosse(Scacchiera scacchiera) {

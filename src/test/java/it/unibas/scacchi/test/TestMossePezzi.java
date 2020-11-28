@@ -1,5 +1,6 @@
 package it.unibas.scacchi.test;
 
+import it.unibas.scacchi.modello.Alfiere;
 import it.unibas.scacchi.modello.Cavallo;
 import it.unibas.scacchi.modello.Costanti;
 import it.unibas.scacchi.modello.Scacchiera;
@@ -114,7 +115,29 @@ public class TestMossePezzi extends TestCase{
         assertEquals(guevara.getMossePossibili().size(), 8);
     }
     
+    //////////////////////////
+    ////// Metodi Test Alfiere
+    //////////////////////////
     
+    public void testMosseAlfiereUno(){
+        Alfiere romeo = new Alfiere(Costanti.NERO);
+        scacchiera.posizionaPezzo(romeo, 0, 0);
+        romeo.calcolaMosse(scacchiera);
+        assertEquals(romeo.getMossePossibili().size(), 7);   
+    }
     
+    public void testMosseAlfiereDue(){
+        Alfiere romeo = new Alfiere(Costanti.NERO);
+        scacchiera.posizionaPezzo(romeo, 7, 7);
+        romeo.calcolaMosse(scacchiera);
+        assertEquals(romeo.getMossePossibili().size(), 7);   
+    }
+    
+    public void testMosseAlfiereTre(){
+        Alfiere romeo = new Alfiere(Costanti.NERO);
+        scacchiera.posizionaPezzo(romeo, 4, 4);
+        romeo.calcolaMosse(scacchiera);
+        assertEquals(romeo.getMossePossibili().size(), 13);   
+    }
     
 }
