@@ -24,14 +24,14 @@ public class Alfiere extends AbstractPezzo {
     //Stesso metodo di prima ma con scacchiera passata come argomento
     @Override
     public void calcolaMosse(Scacchiera scacchiera) {
-        int prevX = this.getPosX();
-        int prevY = this.getPosY();
+        int prevX = this.getPosX();//1
+        int prevY = this.getPosY();//1
         int tmpx;
         int tmpy;
         Pezzo p;
         for ( int i = 1 ; i < Costanti.N ; i++ ){ 
-            tmpx = prevX + i;
-            tmpy = prevY + i;
+            tmpx = prevX + i;//2
+            tmpy = prevY + i;//2
             if ( tmpx < Costanti.N && tmpy < Costanti.N ){
                 p = scacchiera.getPezzo(tmpx, tmpy );
                 if ( p == null ){

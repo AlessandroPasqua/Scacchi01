@@ -38,7 +38,8 @@ public abstract class AbstractPezzo implements Pezzo{
         this.posX = x;
         this.posY = y;
     }
-
+    
+    
     public abstract void calcolaMosse();
     
     public abstract void calcolaMosse( Scacchiera scacchiera );
@@ -103,6 +104,7 @@ public abstract class AbstractPezzo implements Pezzo{
     public void setPosY(int posY) {
         this.posY = posY;
     }
+    
     
     
     

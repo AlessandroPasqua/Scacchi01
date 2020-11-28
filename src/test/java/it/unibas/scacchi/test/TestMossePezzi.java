@@ -30,14 +30,14 @@ public class TestMossePezzi extends TestCase{
         Cavallo valerio = new Cavallo(Costanti.NERO);
         scacchiera.posizionaPezzo(valerio, 1, 1);
         valerio.calcolaMosse(scacchiera);
-        assertEquals(valerio.getMossePossibili().size() , 2);
+        assertEquals(valerio.getMossePossibili().size() , 4);
     }
     
     public void testMosseCavalloTre(){
         Cavallo valerio = new Cavallo(Costanti.NERO);
         scacchiera.posizionaPezzo(valerio, 4, 4);
         valerio.calcolaMosse(scacchiera);
-        assertEquals(valerio.getMossePossibili().size() ,4);
+        assertEquals(valerio.getMossePossibili().size() ,8);
     }
     
     public void testMosseCavalloQuattro(){
@@ -51,7 +51,7 @@ public class TestMossePezzi extends TestCase{
         Cavallo valerio = new Cavallo(Costanti.NERO);
         scacchiera.posizionaPezzo(valerio, 0, 6);
         valerio.calcolaMosse(scacchiera);
-        assertEquals(valerio.getMossePossibili().size() , 1);
+        assertEquals(valerio.getMossePossibili().size() , 3);
     }
     
     public void testMosseCavalloConNemico(){
@@ -60,16 +60,39 @@ public class TestMossePezzi extends TestCase{
         scacchiera.posizionaPezzo(valerio, 4, 4);
         scacchiera.posizionaPezzo(cortix, 6, 5);
         valerio.calcolaMosse(scacchiera);
-        assertEquals(valerio.getMossePossibili().size() , 4);
+        assertEquals(valerio.getMossePossibili().size() , 8);
     }
     
     public void testMosseCavalloConAmico(){
         Cavallo valerio = new Cavallo(Costanti.NERO);
         Cavallo cortix = new Cavallo(Costanti.NERO);
+        scacchiera.posizionaPezzo(valerio, 0, 7);
+        scacchiera.posizionaPezzo(cortix, 2, 6);
+        valerio.calcolaMosse(scacchiera);
+        assertEquals(valerio.getMossePossibili().size() , 1);
+    }
+    
+    public void testMosseCavalloConAmico2(){
+        Cavallo valerio = new Cavallo(Costanti.NERO);
+        Cavallo cortix = new Cavallo(Costanti.NERO);
         scacchiera.posizionaPezzo(valerio, 4, 4);
         scacchiera.posizionaPezzo(cortix, 6, 5);
         valerio.calcolaMosse(scacchiera);
-        assertEquals(valerio.getMossePossibili().size() , 3);
+        assertEquals(valerio.getMossePossibili().size() , 7);
+    }
+    
+    public void testMosseCavalloPosizione21(){
+        Cavallo valerio = new Cavallo(Costanti.NERO);
+        scacchiera.posizionaPezzo(valerio, 2, 1);
+        valerio.calcolaMosse(scacchiera);
+        assertEquals(valerio.getMossePossibili().size() , 6);
+    }
+    
+    public void testMosseCavalloPosizione54(){
+        Cavallo valerio = new Cavallo(Costanti.NERO);
+        scacchiera.posizionaPezzo(valerio, 5, 4);
+        valerio.calcolaMosse(scacchiera);
+        assertEquals(valerio.getMossePossibili().size() , 8);
     }
     
     //////////////////////////
@@ -135,9 +158,53 @@ public class TestMossePezzi extends TestCase{
     
     public void testMosseAlfiereTre(){
         Alfiere romeo = new Alfiere(Costanti.NERO);
+        Alfiere bianco = new Alfiere(Costanti.BIANCO);
+        scacchiera.posizionaPezzo(romeo, 1, 1);
+        scacchiera.posizionaPezzo(bianco, 2, 2);
+        romeo.calcolaMosse(scacchiera);
+        assertEquals(romeo.getMossePossibili().size(), 4);   
+    }
+    
+    public void testMosseAlfiereTre2(){
+        Alfiere romeo = new Alfiere(Costanti.NERO);
+        Alfiere bianco = new Alfiere(Costanti.NERO);
+        scacchiera.posizionaPezzo(romeo, 1, 1);
+        scacchiera.posizionaPezzo(bianco, 2, 2);
+        romeo.calcolaMosse(scacchiera);
+        assertEquals(romeo.getMossePossibili().size(), 3);   
+    }
+    
+    public void testMosseAlfiereTre3(){
+        Alfiere romeo = new Alfiere(Costanti.NERO);
+        Alfiere nemico1 = new Alfiere(Costanti.BIANCO);
+        scacchiera.posizionaPezzo(romeo, 1, 1);
+        scacchiera.posizionaPezzo(nemico1, 0, 2);
+        scacchiera.posizionaPezzo(nemico1, 2, 0);
+        scacchiera.posizionaPezzo(nemico1, 2, 2);
+        romeo.calcolaMosse(scacchiera);
+        assertEquals(romeo.getMossePossibili().size(), 4);   
+    }
+    
+    public void testMosseAlfiereTre4(){
+        Alfiere romeo = new Alfiere(Costanti.NERO);
+        Alfiere amico1 = new Alfiere(Costanti.NERO);
+        scacchiera.posizionaPezzo(romeo, 1, 1);
+        scacchiera.posizionaPezzo(amico1, 0, 2);
+        scacchiera.posizionaPezzo(amico1, 2, 0);
+        scacchiera.posizionaPezzo(amico1, 2, 2);
+        scacchiera.posizionaPezzo(amico1, 0, 0);
+        romeo.calcolaMosse(scacchiera);
+        assertEquals(romeo.getMossePossibili().size(), 0);   
+    }
+    
+    
+    
+    public void testMosseAlfiereQuattro(){
+        Alfiere romeo = new Alfiere(Costanti.NERO);
         scacchiera.posizionaPezzo(romeo, 4, 4);
         romeo.calcolaMosse(scacchiera);
         assertEquals(romeo.getMossePossibili().size(), 13);   
     }
+    
     
 }

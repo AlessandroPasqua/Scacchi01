@@ -44,6 +44,22 @@ public class Cavallo extends AbstractPezzo {
             this.aggiungiMossa(new Mossa(x,y,x-2,y-1));
             log.debug("Aggiunto mossa -2 -1");
         }
+        if ( (x - 2) >= 0 && (y + 1) < Costanti.N && (scacchiera.getPezzo(x-2,y+1) == null || !this.isStessoColore(scacchiera.getPezzo(x-2,y+1))) ){
+            this.aggiungiMossa(new Mossa(x,y,x-2,y+1));
+            log.debug("Aggiunto mossa +2 +1");
+        }
+        if ( (y + 2) < Costanti.N && (x - 1) >= 0 && (scacchiera.getPezzo(x-1,y+2)== null || !this.isStessoColore(scacchiera.getPezzo(x-1,y+2))) ){
+            this.aggiungiMossa(new Mossa(x,y,x-1,y+2));
+            log.debug("Aggiunto mossa +1 +2");
+        }
+        if ( (y - 2) >= 0 && (x + 1) < Costanti.N && (scacchiera.getPezzo(x+1,y-2)== null || !this.isStessoColore(scacchiera.getPezzo(x+1,y-2))) ){
+            this.aggiungiMossa(new Mossa(x,y,x+1,y-2));
+            log.debug("Aggiunto mossa -1 -2");
+        }
+        if ( ( x + 2) < Costanti.N && (y - 1) >= 0 && (scacchiera.getPezzo(x+2,y-1)== null || !this.isStessoColore(scacchiera.getPezzo(x+2,y-1)) )){
+            this.aggiungiMossa(new Mossa(x,y,x+2,y-1));
+            log.debug("Aggiunto mossa -2 -1");
+        }
     }
 
     //Metodi Get e Set

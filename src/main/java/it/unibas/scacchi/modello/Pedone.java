@@ -1,5 +1,7 @@
 package it.unibas.scacchi.modello;
 
+import it.unibas.scacchi.Applicazione;
+
 public class Pedone extends AbstractPezzo {
 
     private boolean primaMossa;
@@ -11,10 +13,16 @@ public class Pedone extends AbstractPezzo {
     }
 
     //Metodi Classe
-
+    
     @Override
     public void calcolaMosse() {
-        Scacchiera scacchiera = new Scacchiera();
+        this.getMossePossibili().clear();
+        Scacchiera scacchiera = (Scacchiera)Applicazione.getInstance().getModello().getBean(Costanti.SCACCHIERA);
+        calcolaMosse(scacchiera);   
+    }
+
+    @Override
+    public void calcolaMosse(Scacchiera scacchiera) {
         Pezzo[][] matrice = scacchiera.getMatriceScacchiera();
 
         //prelevo le possibili caselle dove puo andare il pedone
@@ -42,11 +50,6 @@ public class Pedone extends AbstractPezzo {
         if (pezzoAvanti12 == null && pezzoAvanti12.getColore() != this.getColore()) {
             super.addMossa(new Mossa(x, y, x + 1, y-1));
         }
-    }
-
-    @Override
-    public void calcolaMosse(Scacchiera scacchiera) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     //Metodi Get e Set

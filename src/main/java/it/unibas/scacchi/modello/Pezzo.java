@@ -17,6 +17,7 @@ public interface Pezzo {
     
     public boolean isStessoColore(Pezzo p);
     
+    
     //Metodi Get e Set 
     
     public String getColore();
