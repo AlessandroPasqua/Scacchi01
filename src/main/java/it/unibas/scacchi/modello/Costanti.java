@@ -5,7 +5,8 @@ public class Costanti {
    
     public static final String BIANCO = "BIANCO" ;
     public static final String NERO = "NERO" ;
-    public static final int N = 7 ;
+    public static final int N = 8 ;
+    public static final String SCACCHIERA = "SCACCHIERA";
     
     //Pezzi della Scacchiera 
     //Commentati perchè potrebbero servirci in futuro 

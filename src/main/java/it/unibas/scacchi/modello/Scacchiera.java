@@ -84,9 +84,20 @@ public class Scacchiera {
         siMuove.cambiaPosizione(succX, succY);
     }
     
+    //Metodo creato per effettuare test sui pezzi
+    public void posizionaPezzo(Pezzo p , int x , int y ){
+        p.setPosX(x);
+        p.setPosY(y);
+        this.matriceScacchiera[x][y] = p;
+    }
+    
             ////////////////////////
             ////Metodi Get e Set////
             ////////////////////////
+    
+    public Pezzo getPezzo( int x , int y ){
+        return matriceScacchiera[x][y];
+    }
     
     public Pezzo[][] getMatriceScacchiera() {
         return matriceScacchiera;

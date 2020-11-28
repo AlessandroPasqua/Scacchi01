@@ -27,8 +27,14 @@ public abstract class AbstractPezzo implements Pezzo{
 
     public abstract void calcolaMosse();
     
+    public abstract void calcolaMosse( Scacchiera scacchiera );
+    
     public boolean isStessoColore(Pezzo p){
         return p.getColore().equals(this.colore);
+    }
+    
+    public void aggiungiMossa(Mossa m){
+        this.mossePossibili.add(m);
     }
     
     //Metodi Get e Set
@@ -52,5 +58,15 @@ public abstract class AbstractPezzo implements Pezzo{
     public List<Mossa> getMossePossibili() {
         return mossePossibili;
     }
+
+    public void setPosX(int posX) {
+        this.posX = posX;
+    }
+
+    public void setPosY(int posY) {
+        this.posY = posY;
+    }
+    
+    
     
 }
