@@ -1,5 +1,8 @@
 package it.unibas.scacchi.modello;
 
+import it.unibas.scacchi.Applicazione;
+import java.util.List;
+
 public class Regina extends AbstractPezzo {
     
     //Costruttori
@@ -12,12 +15,26 @@ public class Regina extends AbstractPezzo {
 
     @Override
     public void calcolaMosse() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.getMossePossibili().clear();
+        Scacchiera s = (Scacchiera)Applicazione.getInstance().getModello().getBean(Costanti.SCACCHIERA);
+        calcolaMosse(s);
     }
     
     @Override
     public void calcolaMosse(Scacchiera scacchiera) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        int x = this.getPosX();
+        int y = this.getPosY();
+        Alfiere a = new Alfiere(this.getColore());
+        Torre t = new Torre(this.getColore());
+        a.setPosX(x);
+        a.setPosY(y);
+        t.setPosX(x);
+        t.setPosY(y);
+        a.calcolaMosse(scacchiera);
+        t.calcolaMosse(scacchiera);
+        List<Mossa> mosse = this.getMossePossibili();
+        mosse.addAll(t.getMossePossibili());
+        mosse.addAll(a.getMossePossibili());
     }
     
     //Metodi Get e Set

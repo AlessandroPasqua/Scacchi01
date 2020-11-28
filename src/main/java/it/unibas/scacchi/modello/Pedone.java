@@ -59,8 +59,8 @@ public class Pedone extends AbstractPezzo {
         }
 
         // considero il caso in cui il pedone possa mangiare
-        Pezzo pezzoAvanti11 = matrice[x + 1][y + 1];
-        Pezzo pezzoAvanti12 = matrice[x + 1][y - 1];
+        Pezzo pezzoAvanti11 = matrice[x + 1][y + 1];   //Qui Può lanciare OutBound
+        Pezzo pezzoAvanti12 = matrice[x + 1][y - 1];   //Qui Può lanciare OutBound
 
         int y10 = y - 1;
         int y12 = y + 1;
