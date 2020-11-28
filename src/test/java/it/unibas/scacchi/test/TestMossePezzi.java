@@ -3,6 +3,7 @@ package it.unibas.scacchi.test;
 import it.unibas.scacchi.modello.Alfiere;
 import it.unibas.scacchi.modello.Cavallo;
 import it.unibas.scacchi.modello.Costanti;
+import it.unibas.scacchi.modello.Pedone;
 import it.unibas.scacchi.modello.Scacchiera;
 import it.unibas.scacchi.modello.Torre;
 import junit.framework.*;
@@ -206,5 +207,32 @@ public class TestMossePezzi extends TestCase{
         assertEquals(romeo.getMossePossibili().size(), 13);   
     }
     
+    //////////////////////////
+    ////// Metodi Test Pedone
+    //////////////////////////
     
+    public void testPedone1(){
+        Pedone pedone = new Pedone(Costanti.NERO, true);
+        scacchiera.posizionaPezzo(pedone, 1, 1);
+        pedone.calcolaMosse(scacchiera);
+        assertEquals(pedone.getMossePossibili().size(), 2);
+    }
+    
+    public void testPedone2(){
+        Pedone pedone = new Pedone(Costanti.NERO, true);
+        Pedone pedone1 = new Pedone(Costanti.BIANCO, true);
+        scacchiera.posizionaPezzo(pedone, 1, 1);
+        scacchiera.posizionaPezzo(pedone1, 2, 2);
+        pedone.calcolaMosse(scacchiera);
+        assertEquals(pedone.getMossePossibili().size(), 3);
+    }
+    
+    public void testPedone3(){
+        Pedone pedone = new Pedone(Costanti.NERO, false);
+        Pedone pedone1 = new Pedone(Costanti.BIANCO, true);
+        scacchiera.posizionaPezzo(pedone, 1, 1);
+        scacchiera.posizionaPezzo(pedone1, 2, 2);
+        pedone.calcolaMosse(scacchiera);
+        assertEquals(pedone.getMossePossibili().size(), 2);
+    }
 }

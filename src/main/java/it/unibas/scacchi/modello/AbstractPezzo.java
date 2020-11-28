@@ -104,11 +104,4 @@ public abstract class AbstractPezzo implements Pezzo{
     public void setPosY(int posY) {
         this.posY = posY;
     }
-    
-    
-    
-    
-    public void addMossa(Mossa m) {
-        this.mossePossibili.add(m);
-    }
 }
