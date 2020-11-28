@@ -22,34 +22,34 @@ public class Scacchiera {
         //Ogni colore , liste che saranno utilizzate per effettuare controlli successivamente 
     public void setScacchieraIniziale(Pezzo[][] matriceScacchiera) {
         for (int j = 0; j < Costanti.N; j++) {
-           matriceScacchiera[1][j] = new Pedone(Costanti.NERO, true) ;
-           pezziAttiviBianchi.add(matriceScacchiera[1][j]);
-           matriceScacchiera[Costanti.N - 1][j] = new Pedone(Costanti.BIANCO, true) ;
-           pezziAttiviNeri.add(matriceScacchiera[Costanti.N-1][j]);
+            this.posizionaPezzo(new Pedone(Costanti.NERO,true), 1, j);
+            pezziAttiviBianchi.add(matriceScacchiera[1][j]);
+            this.posizionaPezzo(new Pedone(Costanti.BIANCO,true), Costanti.N-1, j);
+            pezziAttiviNeri.add(matriceScacchiera[Costanti.N-1][j]);
         }        
         
         //posizionamento pezzi bianchi
-        matriceScacchiera[Costanti.N][0] = new Torre(Costanti.BIANCO) ;
-        matriceScacchiera[Costanti.N][1] = new Cavallo(Costanti.BIANCO) ;
-        matriceScacchiera[Costanti.N][2] = new Alfiere(Costanti.BIANCO) ;
-        matriceScacchiera[Costanti.N][3] = new Re(Costanti.BIANCO) ;
-        matriceScacchiera[Costanti.N][4] = new Regina(Costanti.BIANCO) ;
-        matriceScacchiera[Costanti.N][5] = new Alfiere(Costanti.BIANCO) ;
-        matriceScacchiera[Costanti.N][6] = new Cavallo(Costanti.BIANCO) ;
-        matriceScacchiera[Costanti.N][7] = new Torre(Costanti.BIANCO) ;
+        this.posizionaPezzo(new Torre(Costanti.BIANCO), Costanti.N, 0);
+        this.posizionaPezzo(new Cavallo(Costanti.BIANCO), Costanti.N, 1);
+        this.posizionaPezzo(new Alfiere(Costanti.BIANCO), Costanti.N, 2);
+        this.posizionaPezzo(new Re(Costanti.BIANCO), Costanti.N, 3);
+        this.posizionaPezzo(new Regina(Costanti.BIANCO), Costanti.N, 4);
+        this.posizionaPezzo(new Alfiere(Costanti.BIANCO), Costanti.N, 5);
+        this.posizionaPezzo(new Cavallo(Costanti.BIANCO), Costanti.N, 6);
+        this.posizionaPezzo(new Torre(Costanti.BIANCO), Costanti.N, 7);
         for ( int i = 0 ; i < Costanti.N ; i++ ){
             //Aggiungo I Pezzi Del Bianco in una lista dove sarà più facile accedervi
             pezziAttiviBianchi.add(matriceScacchiera[Costanti.N][i]);
         }
         //posizionamento pezzi neri
-        matriceScacchiera[0][0] = new Torre(Costanti.NERO);
-        matriceScacchiera[0][1] = new Cavallo(Costanti.NERO) ;
-        matriceScacchiera[0][2] = new Alfiere(Costanti.NERO) ;
-        matriceScacchiera[0][3] = new Re(Costanti.NERO) ;
-        matriceScacchiera[0][4] = new Regina(Costanti.NERO) ;
-        matriceScacchiera[0][5] = new Alfiere(Costanti.NERO) ;
-        matriceScacchiera[0][6] = new Cavallo(Costanti.NERO) ;
-        matriceScacchiera[0][7] = new Torre(Costanti.NERO) ;
+        this.posizionaPezzo(new Torre(Costanti.NERO), 0, 0);
+        this.posizionaPezzo(new Cavallo(Costanti.NERO), 0, 1);
+        this.posizionaPezzo(new Alfiere(Costanti.NERO), 0, 2);
+        this.posizionaPezzo(new Regina(Costanti.NERO), 0, 3);
+        this.posizionaPezzo(new Re(Costanti.NERO), 0, 4);
+        this.posizionaPezzo(new Alfiere(Costanti.NERO), 0, 5);
+        this.posizionaPezzo(new Cavallo(Costanti.NERO), 0, 6);
+        this.posizionaPezzo(new Torre(Costanti.NERO), 0, 7);
         for ( int i = 0 ; i < Costanti.N ; i++ ){
             //Aggiungo I Pezzi Del Nero in una lista dove sarà più facile accedervi
             pezziAttiviNeri.add(matriceScacchiera[0][i]);
@@ -84,7 +84,7 @@ public class Scacchiera {
         siMuove.cambiaPosizione(succX, succY);
     }
     
-    //Metodo creato per effettuare test sui pezzi
+    //Metodo che inserisce il pezzo nella scacchiera e modifica la posizione di esso nelle sue variabili
     public void posizionaPezzo(Pezzo p , int x , int y ){
         p.setPosX(x);
         p.setPosY(y);

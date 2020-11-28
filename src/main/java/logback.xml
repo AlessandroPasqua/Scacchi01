@@ -13,7 +13,9 @@
     </encoder>
   </appender>
   <logger name="it.unibas.scacchi" level="debug"/>  
-  <root level="debug">
+  <logger name="it.unibas.scacchi.modello.Cavallo" level="warn"/>  
+  <logger name="it.unibas.scacchi.modello.Alfiere" level="warn"/>  
+  <root level="warn">
     <appender-ref ref="stdout"/>
     <!--<appender-ref ref="file"/>-->
   </root>

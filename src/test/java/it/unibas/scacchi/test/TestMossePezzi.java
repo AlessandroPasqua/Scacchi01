@@ -3,6 +3,7 @@ package it.unibas.scacchi.test;
 import it.unibas.scacchi.modello.Cavallo;
 import it.unibas.scacchi.modello.Costanti;
 import it.unibas.scacchi.modello.Scacchiera;
+import it.unibas.scacchi.modello.Torre;
 import junit.framework.*;
 
 public class TestMossePezzi extends TestCase{
@@ -69,6 +70,50 @@ public class TestMossePezzi extends TestCase{
         valerio.calcolaMosse(scacchiera);
         assertEquals(valerio.getMossePossibili().size() , 3);
     }
+    
+    //////////////////////////
+    ////// Metodi Test Torre
+    //////////////////////////
+    
+    public void testMosseTorreUno(){
+        Torre guevara = new Torre(Costanti.NERO);
+        scacchiera.posizionaPezzo(guevara, 0, 0);
+        guevara.calcolaMosse(scacchiera);
+        assertEquals(guevara.getMossePossibili().size(), 14);
+    }
+    
+    public void testMosseTorreDue(){
+        Torre guevara = new Torre(Costanti.NERO);
+        scacchiera.posizionaPezzo(guevara, 7, 7);
+        guevara.calcolaMosse(scacchiera);
+        assertEquals(guevara.getMossePossibili().size(), 14);
+    }
+    
+    public void testMosseTorreTre(){
+        Torre guevara = new Torre(Costanti.NERO);
+        scacchiera.posizionaPezzo(guevara, 4, 4);
+        guevara.calcolaMosse(scacchiera);
+        assertEquals(guevara.getMossePossibili().size(), 14);
+    }
+    
+    public void testMosseTorreAmico(){
+        Torre guevara = new Torre(Costanti.NERO);
+        Torre arcaica = new Torre(Costanti.NERO);
+        scacchiera.posizionaPezzo(guevara, 0, 0);
+        scacchiera.posizionaPezzo(arcaica, 1, 0);
+        guevara.calcolaMosse(scacchiera);
+        assertEquals(guevara.getMossePossibili().size(), 7);
+    }
+    
+    public void testMosseTorreNemico(){
+        Torre guevara = new Torre(Costanti.NERO);
+        Torre arcaica = new Torre(Costanti.BIANCO);
+        scacchiera.posizionaPezzo(guevara, 0, 0);
+        scacchiera.posizionaPezzo(arcaica, 1, 0);
+        guevara.calcolaMosse(scacchiera);
+        assertEquals(guevara.getMossePossibili().size(), 8);
+    }
+    
     
     
     

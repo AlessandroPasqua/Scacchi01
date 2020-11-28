@@ -7,7 +7,9 @@ public interface Pezzo {
     
     public void cambiaPosizione(int x , int y );
     
-    public void reNelleMieMosse();
+    public boolean reNelleMieMosse();
+    
+    public boolean reNelleMieMosse(Scacchiera s);
 
     public void calcolaMosse();
     

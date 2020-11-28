@@ -1,12 +1,15 @@
 package it.unibas.scacchi.modello;
 
+import it.unibas.scacchi.Applicazione;
 import java.util.ArrayList;
 import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public abstract class AbstractPezzo implements Pezzo{
     
+    static Logger log = LoggerFactory.getLogger(Cavallo.class);
     private List<Mossa> mossePossibili = new ArrayList<Mossa>();
-    
     private String colore ;
     private int posX;
     private int posY;
@@ -35,12 +38,33 @@ public abstract class AbstractPezzo implements Pezzo{
         this.posX = x;
         this.posY = y;
     }
-    
-    public abstract void reNelleMieMosse();
 
     public abstract void calcolaMosse();
     
     public abstract void calcolaMosse( Scacchiera scacchiera );
+    
+    public boolean reNelleMieMosse() {
+        Scacchiera s = (Scacchiera)Applicazione.getInstance().getModello().getBean(Costanti.SCACCHIERA);
+        Pezzo p;
+        for ( Mossa m : this.getMossePossibili() ){
+            p = s.getPezzo(m.getSuccX(), m.getSuccY() );
+            if ( p != null && p instanceof Re ){
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public boolean reNelleMieMosse(Scacchiera s) {
+        Pezzo p;
+        for ( Mossa m : this.getMossePossibili() ){
+            p = s.getPezzo(m.getSuccX(), m.getSuccY() );
+            if ( p != null && p instanceof Re ){
+                return true;
+            }
+        }
+        return false;
+    }
     
     public boolean isStessoColore(Pezzo p){
         return p.getColore().equals(this.colore);

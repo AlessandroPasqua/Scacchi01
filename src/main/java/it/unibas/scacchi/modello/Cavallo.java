@@ -1,12 +1,8 @@
 package it.unibas.scacchi.modello;
 
 import it.unibas.scacchi.Applicazione;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 public class Cavallo extends AbstractPezzo {
-    
-    private static Logger log = LoggerFactory.getLogger(Cavallo.class);
 
     //Costruttori
     
@@ -16,15 +12,11 @@ public class Cavallo extends AbstractPezzo {
 
     //Metodi Classe
 
-    @Override
-    public void reNelleMieMosse() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     //Metodo che calcola le Mosse del cavallo , crea oggetti mossa e li aggiunge ad una lista di mosse
     // Possibili Movimenti del Cavallo x + 2 e y + 1 , y + 2 e x  + 1 , corrispettivi con il meno
     @Override
     public void calcolaMosse() {
+        this.getMossePossibili().clear();
         //Temporale , dobbiamo valutare la possibilità di mettere un collegamento pezzo astratto scacchiera
         Scacchiera scacchiera = (Scacchiera)Applicazione.getInstance().getModello().getBean(Costanti.SCACCHIERA);
         int x = this.getPosX();
@@ -44,7 +36,9 @@ public class Cavallo extends AbstractPezzo {
     }
     
     //Metodo creato per Testare La funzionalità del sottoprogramma , ma possibile candidato a sostituire il precedente
+    @Override
     public void calcolaMosse( Scacchiera scacchiera) {
+        this.getMossePossibili().clear();
         int x = this.getPosX();
         int y = this.getPosY();
         if ( (x + 2) < Costanti.N && (y + 1) < Costanti.N && (scacchiera.getPezzo(x+2,y+1)== null || !this.isStessoColore(scacchiera.getPezzo(x+2,y+1))) ){
