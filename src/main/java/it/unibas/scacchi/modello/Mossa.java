@@ -18,6 +18,17 @@ public class Mossa {
 
     //Metodi Classe
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Mossa{prevX=").append(prevX);
+        sb.append(", prevY=").append(prevY);
+        sb.append(", succX=").append(succX);
+        sb.append(", succY=").append(succY);
+        sb.append('}');
+        return sb.toString();
+    }
+
     
     
     //Metodi Get e Set

@@ -1,16 +1,21 @@
 package it.unibas.scacchi.test;
 
+import it.unibas.scacchi.modello.AbstractPezzo;
 import it.unibas.scacchi.modello.Alfiere;
 import it.unibas.scacchi.modello.Cavallo;
 import it.unibas.scacchi.modello.Costanti;
+import it.unibas.scacchi.modello.Mossa;
 import it.unibas.scacchi.modello.Pedone;
 import it.unibas.scacchi.modello.Scacchiera;
 import it.unibas.scacchi.modello.Torre;
 import junit.framework.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class TestMossePezzi extends TestCase{
     
     private Scacchiera scacchiera;
+    static Logger log = LoggerFactory.getLogger(TestMossePezzi.class);
     
     public void setUp(){
         scacchiera = new Scacchiera();
@@ -218,6 +223,7 @@ public class TestMossePezzi extends TestCase{
         assertEquals(pedone.getMossePossibili().size(), 2);
     }
     
+    //pedone con prima mossa == true con possibilita di mangiare
     public void testPedone2(){
         Pedone pedone = new Pedone(Costanti.NERO, true);
         Pedone pedone1 = new Pedone(Costanti.BIANCO, true);
@@ -227,6 +233,7 @@ public class TestMossePezzi extends TestCase{
         assertEquals(pedone.getMossePossibili().size(), 3);
     }
     
+    //pedone con prima mossa == false con possibilita di mangiare
     public void testPedone3(){
         Pedone pedone = new Pedone(Costanti.NERO, false);
         Pedone pedone1 = new Pedone(Costanti.BIANCO, true);
@@ -234,5 +241,47 @@ public class TestMossePezzi extends TestCase{
         scacchiera.posizionaPezzo(pedone1, 2, 2);
         pedone.calcolaMosse(scacchiera);
         assertEquals(pedone.getMossePossibili().size(), 2);
+    }
+    
+    //test pedone nero bloccato con pezzo subito avanti
+    public void testPedone4(){
+        Pedone pedone = new Pedone(Costanti.NERO, false);
+        Pedone pedone1 = new Pedone(Costanti.NERO, true);
+        scacchiera.posizionaPezzo(pedone, 1, 1);
+        scacchiera.posizionaPezzo(pedone1, 2, 1);
+        pedone.calcolaMosse(scacchiera);
+        assertEquals(pedone.getMossePossibili().size(), 0);
+    }
+    
+    public void testPedone5(){
+        Pedone pedone = new Pedone(Costanti.BIANCO, false);
+        scacchiera.posizionaPezzo(pedone, 6, 1);
+        pedone.calcolaMosse(scacchiera);
+        assertEquals(pedone.getMossePossibili().size(), 1);
+    }
+    
+    public void testPedone6(){
+        Pedone pedone = new Pedone(Costanti.BIANCO, true);
+        scacchiera.posizionaPezzo(pedone, 6, 1);
+        pedone.calcolaMosse(scacchiera);
+        assertEquals(pedone.getMossePossibili().size(), 2);
+    }
+    
+    public void testPedone7(){
+        Pedone pedone = new Pedone(Costanti.BIANCO, true);
+        Pedone pedone1 = new Pedone(Costanti.NERO, false);
+        scacchiera.posizionaPezzo(pedone1, 5, 1);
+        scacchiera.posizionaPezzo(pedone, 6, 1);
+        pedone.calcolaMosse(scacchiera);
+        assertEquals(pedone.getMossePossibili().size(), 0);
+    }
+    
+    public void testPedone8(){
+        Pedone pedone = new Pedone(Costanti.BIANCO, true);
+        Pedone pedone1 = new Pedone(Costanti.NERO, true);
+        scacchiera.posizionaPezzo(pedone1, 5, 2);
+        scacchiera.posizionaPezzo(pedone, 6, 1);
+        pedone.calcolaMosse(scacchiera);
+        assertEquals(pedone.getMossePossibili().size(), 3);
     }
 }
