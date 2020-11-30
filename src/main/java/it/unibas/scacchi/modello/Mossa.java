@@ -48,6 +48,30 @@ public class Mossa {
     public int getSuccY() {
         return succY;
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Mossa other = (Mossa) obj;
+        if (this.succX != other.succX) {
+            return false;
+        }
+        if (this.succY != other.succY) {
+            return false;
+        }
+        return true;
+    }
+
+
+    
     
     
     

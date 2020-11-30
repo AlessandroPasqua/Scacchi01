@@ -6,6 +6,8 @@ import java.util.List;
 public class Scacchiera {
     
    private Pezzo[][] matriceScacchiera = new Pezzo[Costanti.N][Costanti.N];
+   private Re reNero;
+   private Re reBianco;
    private List<Pezzo> pezziAttiviBianchi = new ArrayList<Pezzo>();
    private List<Pezzo> pezziAttiviNeri = new ArrayList<Pezzo>();
    private List<Pezzo> pezziMangiatiBianchi = new ArrayList<Pezzo>();
@@ -32,7 +34,8 @@ public class Scacchiera {
         this.posizionaPezzo(new Torre(Costanti.BIANCO), Costanti.N, 0);
         this.posizionaPezzo(new Cavallo(Costanti.BIANCO), Costanti.N, 1);
         this.posizionaPezzo(new Alfiere(Costanti.BIANCO), Costanti.N, 2);
-        this.posizionaPezzo(new Re(Costanti.BIANCO), Costanti.N, 3);
+        reBianco = new Re(Costanti.BIANCO);
+        this.posizionaPezzo(reBianco, Costanti.N, 3);
         this.posizionaPezzo(new Regina(Costanti.BIANCO), Costanti.N, 4);
         this.posizionaPezzo(new Alfiere(Costanti.BIANCO), Costanti.N, 5);
         this.posizionaPezzo(new Cavallo(Costanti.BIANCO), Costanti.N, 6);
@@ -46,7 +49,8 @@ public class Scacchiera {
         this.posizionaPezzo(new Cavallo(Costanti.NERO), 0, 1);
         this.posizionaPezzo(new Alfiere(Costanti.NERO), 0, 2);
         this.posizionaPezzo(new Regina(Costanti.NERO), 0, 3);
-        this.posizionaPezzo(new Re(Costanti.NERO), 0, 4);
+        reNero = new Re(Costanti.NERO);
+        this.posizionaPezzo(reNero, 0, 4);
         this.posizionaPezzo(new Alfiere(Costanti.NERO), 0, 5);
         this.posizionaPezzo(new Cavallo(Costanti.NERO), 0, 6);
         this.posizionaPezzo(new Torre(Costanti.NERO), 0, 7);
@@ -75,9 +79,9 @@ public class Scacchiera {
         int succY = m.getSuccY();
         int prevX = m.getPrevX();
         int prevY = m.getPrevY();
-        if ( matriceScacchiera[succX][succY] != null ){
+        if ( this.getPezzo(succX,succY) != null ){
             //I controlli che quel pezzo non sia dello stesso colore dobbiamo farlo nella classe Pezzo
-            pezzoMangiato(matriceScacchiera[succX][succY]);
+            pezzoMangiato(this.getPezzo(succX,succY));
         }
         matriceScacchiera[succX][succY] = matriceScacchiera[prevX][prevY];
         matriceScacchiera[prevX][prevY] = null;
@@ -88,7 +92,81 @@ public class Scacchiera {
     public void posizionaPezzo(Pezzo p , int x , int y ){
         p.setPosX(x);
         p.setPosY(y);
+        if ( p instanceof Re ){
+           if ( p.getColore().equals(Costanti.BIANCO)){
+               reBianco = (Re)p;
+           } else {
+               reNero = (Re)p;
+           }
+        }
+        aggiungiPezzoAListaAttivi(p);
         this.matriceScacchiera[x][y] = p;
+    }
+    
+    //All'aggiunta di un pezzo nella scacchiera a seconda del suo colore viene aggiunto ad una lista
+    //utile al ricapitolo dei pezzi ancora attivi sulla scacchiera per ogni colore
+    public void aggiungiPezzoAListaAttivi(Pezzo p){
+        if ( p.getColore().equals(Costanti.BIANCO)){
+            this.pezziAttiviBianchi.add(p);
+        } else {
+            this.pezziAttiviNeri.add(p);
+        }
+    }
+    
+    //Metodo che crea una lista di mosse totali dei pezzi dell'avversario
+    //N.B. La condizione che esclude il re nella scansione dei pezzi è dovuta al fatto
+    // Che si creava un loop infinito di chiamate dei sottoprogrammi e lanciava eccezione
+    // Motivo per cui si è supposto che MAI un re possa mettere sotto scacco un altro
+    public List<Mossa> getMosseTotaliAvversario(String colore) {
+        List<Pezzo> pezzi;
+        List<Mossa> mosse = new ArrayList<Mossa>();
+        if ( colore.equals(Costanti.BIANCO) ){
+           pezzi = this.pezziAttiviNeri; 
+        } else {
+            pezzi = this.pezziAttiviBianchi;
+        }
+        for ( Pezzo p : pezzi ){
+            if ( !(p instanceof Re)){
+                p.calcolaMosse(this);
+                mosse.addAll(p.getMossePossibili());
+            }
+        }
+        return mosse;
+    }
+    
+    //Metodo che viene chiamato per primo per verificare se il re di un dato colore sia sotto scacco , scacco verificato vedendo se la sua posizione
+    //Sia nelle mosse di almeno un pezzo del colore avversario
+    public boolean verificaScacco(String colore){
+        Re tmp;
+        if ( colore.equals(Costanti.BIANCO)){
+            tmp = this.reBianco;
+        } else {
+            tmp = this.reNero;
+        }
+        List<Mossa> mosse = this.getMosseTotaliAvversario(colore);
+        if ( mosse.contains(new Mossa(0,0,tmp.getPosX(),tmp.getPosY())) ){
+            return true;
+        }        
+        return false;
+    }
+    
+    //Metodo che viene chiamato dopo aver chiamato il metodo precedente , dopo aver verificato che esso sia sotto scacco
+    //Verifichiamo se abbia qualche mossa possibile per scappare da questo , se non può è matto.  
+    // N.B. Per semplicità non abbbiamo aggiunto la possibilità che un pezzo possa mettersi nella traiettoria dello scacco
+    // Cosi' annullandolo 
+    //TODO : FEATURE DA AGGIUNGERE
+    public boolean verificaScaccoMatto(String colore){
+        Re tmp;
+        if ( colore.equals(Costanti.BIANCO)){
+            tmp = this.reBianco;
+        } else {
+            tmp = this.reNero;
+        }
+        List<Mossa> mosse = tmp.getMossePossibili();
+        if ( mosse.isEmpty() ){
+            return true;
+        }
+        return false;
     }
     
             ////////////////////////

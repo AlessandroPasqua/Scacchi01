@@ -6,6 +6,7 @@ import it.unibas.scacchi.modello.Cavallo;
 import it.unibas.scacchi.modello.Costanti;
 import it.unibas.scacchi.modello.Mossa;
 import it.unibas.scacchi.modello.Pedone;
+import it.unibas.scacchi.modello.Re;
 import it.unibas.scacchi.modello.Regina;
 import it.unibas.scacchi.modello.Scacchiera;
 import it.unibas.scacchi.modello.Torre;
@@ -285,11 +286,12 @@ public class TestMossePezzi extends TestCase{
         pedone.calcolaMosse(scacchiera);
         assertEquals(pedone.getMossePossibili().size(), 3);
     }
+    
     //Test Che Lancia NullPointer per non aver calcolato gli strabordi di y 0=<y<Costanti.N
     public void testPedone4(){
         Pedone pedone = new Pedone(Costanti.NERO, true);
         scacchiera.posizionaPezzo(pedone, 0, 0);
-        pedone.calcolaMosse();
+        pedone.calcolaMosse(scacchiera);
         assertEquals(pedone.getMossePossibili().size(), 2);
     }
     
@@ -335,4 +337,69 @@ public class TestMossePezzi extends TestCase{
         r.calcolaMosse(scacchiera);
         assertEquals(r.getMossePossibili().size(), 15);
     }
+    
+    //////////////////////////
+    ////// Metodi Test Re
+    //////////////////////////
+    
+    public void testMosseReUno(){
+        Re re = new Re(Costanti.BIANCO);
+        scacchiera.posizionaPezzo(re,0,0);
+        re.calcolaMosse(scacchiera);
+        assertEquals(re.getMossePossibili().size(),3);
+    }
+    
+    public void testMosseReDue(){
+        Re re = new Re(Costanti.BIANCO);
+        scacchiera.posizionaPezzo(re,7,7);
+        re.calcolaMosse(scacchiera);
+        assertEquals(re.getMossePossibili().size(),3);
+    }
+    
+    public void testMosseReTre(){
+        Re re = new Re(Costanti.BIANCO);
+        scacchiera.posizionaPezzo(re,4,4);
+        re.calcolaMosse(scacchiera);
+        assertEquals(re.getMossePossibili().size(),8);
+    }
+    
+    public void testMosseReAmico(){
+        Re re = new Re(Costanti.BIANCO);
+        Re re2 = new Re(Costanti.BIANCO);
+        scacchiera.posizionaPezzo(re,0,0);
+        scacchiera.posizionaPezzo(re2,1,0);
+        re.calcolaMosse(scacchiera);
+        assertEquals(re.getMossePossibili().size(),2);
+    }
+    
+    public void testMosseReNemico(){
+        Re re = new Re(Costanti.BIANCO);
+        Re re2 = new Re(Costanti.NERO);
+        scacchiera.posizionaPezzo(re,0,0);
+        scacchiera.posizionaPezzo(re2,1,0);
+        re.calcolaMosse(scacchiera);
+        assertEquals(re.getMossePossibili().size(),3);
+    }
+    
+    public void testMosseReRidottePerSuicidio(){
+        Re re = new Re(Costanti.BIANCO);
+        Torre t = new Torre(Costanti.NERO);
+        scacchiera.posizionaPezzo(re,0,0);
+        scacchiera.posizionaPezzo(t,7,1);
+        re.calcolaMosse(scacchiera);
+        assertEquals(re.getMossePossibili().size(),1);
+    }
+    
+    public void testMosseReRidottePerSuicidio2(){
+        Re re = new Re(Costanti.BIANCO);
+        Torre t = new Torre(Costanti.NERO);
+        Torre t2 = new Torre(Costanti.NERO);
+        scacchiera.posizionaPezzo(re,4,4);
+        scacchiera.posizionaPezzo(t,7,5);
+        scacchiera.posizionaPezzo(t2,7,3);
+        re.calcolaMosse(scacchiera);
+        assertEquals(re.getMossePossibili().size(),2);
+    }
+    
+    
 }
