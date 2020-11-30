@@ -246,12 +246,13 @@ public class TestMossePezzi extends TestCase{
     }
     
     //test pedone nero bloccato con pezzo subito avanti
-    public void testPedone44(){
+    public void testPedone4(){
         Pedone pedone = new Pedone(Costanti.NERO, false);
         Pedone pedone1 = new Pedone(Costanti.NERO, true);
         scacchiera.posizionaPezzo(pedone, 1, 1);
         scacchiera.posizionaPezzo(pedone1, 2, 1);
         pedone.calcolaMosse(scacchiera);
+        //log.debug(pedone.getMossePossibili().toString());
         assertEquals(pedone.getMossePossibili().size(), 0);
     }
     
@@ -288,7 +289,7 @@ public class TestMossePezzi extends TestCase{
     }
     
     //Test Che Lancia NullPointer per non aver calcolato gli strabordi di y 0=<y<Costanti.N
-    public void testPedone4(){
+    public void testPedone4Null(){
         Pedone pedone = new Pedone(Costanti.NERO, true);
         scacchiera.posizionaPezzo(pedone, 0, 0);
         pedone.calcolaMosse(scacchiera);

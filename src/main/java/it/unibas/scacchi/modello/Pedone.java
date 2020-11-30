@@ -32,98 +32,91 @@ public class Pedone extends AbstractPezzo {
     }
 
     public void calcolaMossaNero(Scacchiera scacchiera) {
-        Pezzo[][] matrice = scacchiera.getMatriceScacchiera();
-
         //prelevo le possibili caselle dove puo andare il pedone
         // verifico se non sono accupate da altri pezzi e aggiungo alla lista
         int x = super.getPosX();
-        int y = super.getPosY();;
-
-        int x1 = x + 1;
-        int x2 = x + 2;
-
+        int y = super.getPosY();
         //non faccio il controllo che esce fuori dalla matrice perche secondo alepa non ha senso.
         //poiche puo avanzare di 2 caselle sono alla prima mossa , e quando arriva in capo alla scacchiera , il pedone è in promozione
-        Pezzo pezzoAvanti2 = matrice[x + 2][y];
-        Pezzo pezzoAvanti1 = matrice[x + 1][y];
+        Pezzo pezzoAvanti2 = scacchiera.getPezzo(x+2,y);
+        Pezzo pezzoAvanti1 = scacchiera.getPezzo(x+1,y);
         
-        if (pezzoAvanti2 == null && pezzoAvanti1 == null) {
-            if (this.primaMossa) {
+        if (pezzoAvanti1 == null) {
+            if ( this.primaMossa && pezzoAvanti2==null ) {
                 this.aggiungiMossa(new Mossa(x, y, x + 2, y));
             }
             this.aggiungiMossa(new Mossa(x, y, x + 1, y));
         }
+        
 
         // considero il caso in cui il pedone possa mangiare
 
-        int y10 = y - 1;
-        int y12 = y + 1;
-        if (y10 < Costanti.N && y12 < Costanti.N) {
-            
-            Pezzo pezzoAvanti11 = matrice[x + 1][y + 1];
-            Pezzo pezzoAvanti12 = matrice[x + 1][y - 1];
-            
-            if (pezzoAvanti11 != null && pezzoAvanti11.getColore() != this.getColore()) {
-                log.debug("fammi vedere se entri in mangio a sinistra");
-                this.aggiungiMossa(new Mossa(x, y, x + 1, y + 1));
-            }
+        //Caso in cui diminuisco la y , da verificare che sia maggiore di 0
+        if ( (y-1) >= 0 ) {
+            Pezzo pezzoAvanti12 = scacchiera.getPezzo(x+1, y-1);
 
             if (pezzoAvanti12 != null && pezzoAvanti12.getColore() != this.getColore()) {
                 log.debug("fammi vedere se entri in mangio a sinistra");
                 this.aggiungiMossa(new Mossa(x, y, x + 1, y - 1));
             }
         }
+        //Caso in cui aumento y , da verificare che sia minore di N
+        if ( (y+1) < Costanti.N) {
+            Pezzo pezzoAvanti11 = scacchiera.getPezzo(x+1,y+1);
+            if (pezzoAvanti11 != null && pezzoAvanti11.getColore() != this.getColore()) {
+                log.debug("fammi vedere se entri in mangio a sinistra");
+                this.aggiungiMossa(new Mossa(x, y, x + 1, y + 1));
+            }
+        }
     }
 
     public void calcolaMossaBianco(Scacchiera scacchiera) {
-        Pezzo[][] matrice = scacchiera.getMatriceScacchiera();
-
         //prelevo le possibili caselle dove puo andare il pedone
         // verifico se non sono accupate da altri pezzi e aggiungo alla lista
         int x = super.getPosX();
         int y = super.getPosY();;
-
-        int x1 = x - 1;
-        int x2 = x - 2;
-
         //non faccio il controllo che esce fuori dalla matrice perche secondo alepa non ha senso.
         //poiche puo avanzare di 2 caselle sono alla prima mossa , e quando arriva in capo alla scacchiera , il pedone è in promozione
-        Pezzo pezzoAvanti2 = matrice[x - 2][y];
-        Pezzo pezzoAvanti1 = matrice[x - 1][y];
+        Pezzo pezzoAvanti2 = scacchiera.getPezzo(x - 2,y);
+        Pezzo pezzoAvanti1 = scacchiera.getPezzo(x - 1,y);
         
-        if (pezzoAvanti2 == null && pezzoAvanti1 == null) {
-            if (this.primaMossa) {
+        if ( pezzoAvanti1 == null) {
+            if (this.primaMossa && pezzoAvanti2 == null ) {
                 this.aggiungiMossa(new Mossa(x, y, x - 2, y));
             }
             this.aggiungiMossa(new Mossa(x, y, x - 1, y));
         }
-
-        // considero il caso in cui il pedone possa mangiare
         
-
-        int y10 = y - 1;
-        int y12 = y + 1;
-        if (y10 < Costanti.N && y12 < Costanti.N) {
-            
-            Pezzo pezzoAvanti11 = matrice[x - 1][y + 1];
-            Pezzo pezzoAvanti12 = matrice[x - 1][y - 1];
-            
-            if (pezzoAvanti11 != null && pezzoAvanti11.getColore() != this.getColore()) {
-                log.debug("fammi vedere se entri in mangio a sinistra");
-                this.aggiungiMossa(new Mossa(x, y, x - 1, y + 1));
-            }
-
+        // considero il caso in cui il pedone possa mangiare
+        //Caso in cui diminuisco la y , da verificare che sia maggiore di 0
+        if ( (y-1) >= 0 ) {
+            Pezzo pezzoAvanti12 = scacchiera.getPezzo(x-1, y-1);
             if (pezzoAvanti12 != null && pezzoAvanti12.getColore() != this.getColore()) {
                 log.debug("fammi vedere se entri in mangio a sinistra");
                 this.aggiungiMossa(new Mossa(x, y, x - 1, y - 1));
             }
         }
+        //Caso in cui aumento y , da verificare che sia minore di N
+        if ( (y+1) < Costanti.N) {
+            Pezzo pezzoAvanti11 = scacchiera.getPezzo(x-1,y+1);
+            if (pezzoAvanti11 != null && pezzoAvanti11.getColore() != this.getColore()) {
+                log.debug("fammi vedere se entri in mangio a sinistra");
+                this.aggiungiMossa(new Mossa(x, y, x - 1, y + 1));
+            }
+        }
     }
 
     //Metodi Get e Set
+    
     public boolean isPrimaMossa() {
         return primaMossa;
     }
+
+    public void setPrimaMossa(boolean primaMossa) {
+        this.primaMossa = primaMossa;
+    }
+    
+    
     
     
 }

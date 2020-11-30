@@ -79,6 +79,10 @@ public class Scacchiera {
         int succY = m.getSuccY();
         int prevX = m.getPrevX();
         int prevY = m.getPrevY();
+        if ( siMuove instanceof Pedone  ){
+            Pedone p = (Pedone)siMuove;
+            p.setPrimaMossa(false);
+        }
         if ( this.getPezzo(succX,succY) != null ){
             //I controlli che quel pezzo non sia dello stesso colore dobbiamo farlo nella classe Pezzo
             pezzoMangiato(this.getPezzo(succX,succY));
