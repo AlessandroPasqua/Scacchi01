@@ -55,7 +55,6 @@ public class Pedone extends AbstractPezzo {
         }
 
         // considero il caso in cui il pedone possa mangiare
-        
 
         int y10 = y - 1;
         int y12 = y + 1;

@@ -6,6 +6,7 @@ import it.unibas.scacchi.modello.Cavallo;
 import it.unibas.scacchi.modello.Costanti;
 import it.unibas.scacchi.modello.Mossa;
 import it.unibas.scacchi.modello.Pedone;
+import it.unibas.scacchi.modello.Regina;
 import it.unibas.scacchi.modello.Scacchiera;
 import it.unibas.scacchi.modello.Torre;
 import junit.framework.*;
@@ -244,7 +245,7 @@ public class TestMossePezzi extends TestCase{
     }
     
     //test pedone nero bloccato con pezzo subito avanti
-    public void testPedone4(){
+    public void testPedone44(){
         Pedone pedone = new Pedone(Costanti.NERO, false);
         Pedone pedone1 = new Pedone(Costanti.NERO, true);
         scacchiera.posizionaPezzo(pedone, 1, 1);
@@ -283,5 +284,55 @@ public class TestMossePezzi extends TestCase{
         scacchiera.posizionaPezzo(pedone, 6, 1);
         pedone.calcolaMosse(scacchiera);
         assertEquals(pedone.getMossePossibili().size(), 3);
+    }
+    //Test Che Lancia NullPointer per non aver calcolato gli strabordi di y 0=<y<Costanti.N
+    public void testPedone4(){
+        Pedone pedone = new Pedone(Costanti.NERO, true);
+        scacchiera.posizionaPezzo(pedone, 0, 0);
+        pedone.calcolaMosse();
+        assertEquals(pedone.getMossePossibili().size(), 2);
+    }
+    
+    //////////////////////////
+    ////// Metodi Test Regina
+    //////////////////////////
+    
+    public void testMosseReginaUno(){
+        Regina r = new Regina(Costanti.BIANCO);
+        scacchiera.posizionaPezzo(r, 0, 0);
+        r.calcolaMosse(scacchiera);
+        assertEquals(r.getMossePossibili().size(), 21);
+    }
+    
+    public void testMosseReginaDue(){
+        Regina r = new Regina(Costanti.BIANCO);
+        scacchiera.posizionaPezzo(r, 7, 7);
+        r.calcolaMosse(scacchiera);
+        assertEquals(r.getMossePossibili().size(), 21);
+    }
+    
+    public void testMosseReginaTre(){
+        Regina r = new Regina(Costanti.BIANCO);
+        scacchiera.posizionaPezzo(r, 4, 4);
+        r.calcolaMosse(scacchiera);
+        assertEquals(r.getMossePossibili().size(), 27);
+    }
+    
+    public void testMosseReginaAmico(){
+        Regina r = new Regina(Costanti.BIANCO);
+        Regina re = new Regina(Costanti.BIANCO);
+        scacchiera.posizionaPezzo(r, 0, 0);
+        scacchiera.posizionaPezzo(re, 1, 1);
+        r.calcolaMosse(scacchiera);
+        assertEquals(r.getMossePossibili().size(), 14);
+    }
+    
+    public void testMosseReginaNemico(){
+        Regina r = new Regina(Costanti.BIANCO);
+        Regina re = new Regina(Costanti.NERO);
+        scacchiera.posizionaPezzo(r, 0, 0);
+        scacchiera.posizionaPezzo(re, 1, 1);
+        r.calcolaMosse(scacchiera);
+        assertEquals(r.getMossePossibili().size(), 15);
     }
 }
