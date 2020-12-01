@@ -1,4 +1,4 @@
-package it.unibas.scacchi.modello;
+package it.unibas.scacchi;
 
 
 public class Costanti {
@@ -7,6 +7,8 @@ public class Costanti {
     public static final String NERO = "NERO" ;
     public static final int N = 8 ;
     public static final String SCACCHIERA = "SCACCHIERA";
+    
+    public static final String FOTO_RE = "/risorse/renero.png";
     
     //Pezzi della Scacchiera 
     //Commentati perchè potrebbero servirci in futuro 

@@ -1,5 +1,6 @@
 package it.unibas.scacchi.modello;
 
+import it.unibas.scacchi.Costanti;
 import it.unibas.scacchi.Applicazione;
 import java.util.ArrayList;
 import java.util.List;

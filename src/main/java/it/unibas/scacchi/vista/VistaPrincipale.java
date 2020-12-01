@@ -1,19 +1,59 @@
 package it.unibas.scacchi.vista;
 
-public class VistaPrincipale extends javax.swing.JPanel {
+import it.unibas.scacchi.Applicazione;
+import it.unibas.scacchi.Costanti;
+import it.unibas.scacchi.modello.Scacchiera;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.GridLayout;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JLayeredPane;
+import javax.swing.JPanel;
+
+public class VistaPrincipale extends javax.swing.JLayeredPane {
+    
+    private JPanel chessBoard;
 
     public void inizializza() {
         initComponents();
-        
         inizializzaComponenti();
+        impostaScacchieraIniziale();
         assegnaControllo();
     }
-    
+     
     private void inizializzaComponenti(){
-        
+        Dimension boardSize = new Dimension(600,600);
+        this.setPreferredSize(boardSize);
+        chessBoard = new JPanel();
+        this.add(chessBoard, JLayeredPane.DEFAULT_LAYER);
+        chessBoard.setLayout(new GridLayout(8,8));
+        chessBoard.setPreferredSize(boardSize);
+        chessBoard.setBounds(0, 0, boardSize.width, boardSize.height);
+        for (int i = 0; i < 64; i++) {
+            JPanel square = new JPanel( new BorderLayout() );
+            chessBoard.add( square );
+            int row = (i / 8) % 2;
+            if (row == 0){
+                square.setBackground( i % 2 == 0 ? Color.gray : Color.white );
+            } else {
+                square.setBackground( i % 2 == 0 ? Color.white : Color.gray );
+            }
+        }  
     }
     
     private void assegnaControllo(){
+        this.addMouseListener( null ); //Da aggiungere Listener Mouse
+        this.addMouseMotionListener( null ); //Da aggiungere Listener Mouse 2
+    }
+    
+    private void impostaScacchieraIniziale(){
+        //Prova
+        JLabel label = new JLabel( Applicazione.getInstance().getResourceManager().getImageResource(Costanti.FOTO_RE) );
+        JPanel panel = (JPanel)chessBoard.getComponent(0);
+        panel.add(label);
+        
         
     }
 
@@ -26,37 +66,19 @@ public class VistaPrincipale extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        scacchiera = new javax.swing.JTable();
-
-        scacchiera.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
-            }
-        ));
-        jScrollPane1.setViewportView(scacchiera);
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+            .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+            .addGap(0, 300, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable scacchiera;
     // End of variables declaration//GEN-END:variables
 }

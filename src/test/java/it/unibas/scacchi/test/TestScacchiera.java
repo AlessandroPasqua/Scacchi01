@@ -1,6 +1,6 @@
 package it.unibas.scacchi.test;
 
-import it.unibas.scacchi.modello.Costanti;
+import it.unibas.scacchi.Costanti;
 import it.unibas.scacchi.modello.Re;
 import it.unibas.scacchi.modello.Scacchiera;
 import it.unibas.scacchi.modello.Torre;

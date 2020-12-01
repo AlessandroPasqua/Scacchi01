@@ -17,6 +17,7 @@ public class Applicazione {
     private ControlloPrincipale controlloPrincipale;
     private ControlloMenu controlloMenu;
     private Modello modello;
+    private ResourceManager resourceManager;
 
     public static Applicazione getInstance() {
         return singleton;
@@ -37,6 +38,7 @@ public class Applicazione {
         controlloPrincipale = new ControlloPrincipale();
         controlloMenu = new ControlloMenu();
         modello = new Modello();
+        resourceManager = new ResourceManager();
         vistaPrincipale.inizializza();
         frame.inizializza();
         
@@ -62,6 +64,10 @@ public class Applicazione {
 
     public Modello getModello() {
         return modello;
-    }
+}
 
+    public ResourceManager getResourceManager() {
+        return resourceManager;
+    }
+    
 }

@@ -3,7 +3,7 @@ package it.unibas.scacchi.test;
 import it.unibas.scacchi.modello.AbstractPezzo;
 import it.unibas.scacchi.modello.Alfiere;
 import it.unibas.scacchi.modello.Cavallo;
-import it.unibas.scacchi.modello.Costanti;
+import it.unibas.scacchi.Costanti;
 import it.unibas.scacchi.modello.Mossa;
 import it.unibas.scacchi.modello.Pedone;
 import it.unibas.scacchi.modello.Re;

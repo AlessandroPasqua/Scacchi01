@@ -21,6 +21,7 @@ public class Frame extends javax.swing.JFrame {
         
         this.setContentPane(new JScrollPane(Applicazione.getInstance().getVistaPrincipale()));
         this.pack();
+        this.setLocationRelativeTo(null);
         this.setVisible(true);
     }
 
