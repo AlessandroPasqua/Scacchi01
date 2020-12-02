@@ -13,6 +13,11 @@ public class Pedone extends AbstractPezzo {
     public Pedone(String colore, boolean primaMossa) {
         super(colore);
         this.primaMossa = primaMossa;
+        if ( colore.equals(Costanti.BIANCO) ){
+            this.setPercorsoImmagine(Costanti.PEDONEBIANCO);
+        } else {
+            this.setPercorsoImmagine(Costanti.PEDONENERO);
+        }
     }
 
     //Metodi Classe

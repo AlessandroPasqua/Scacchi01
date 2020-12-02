@@ -1,32 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package it.unibas.scacchi.vista;
 
 import it.unibas.scacchi.Applicazione;
 import javax.swing.JScrollPane;
+import javax.swing.UIManager;
 
-/**
- *
- * @author santo
- */
 public class Frame extends javax.swing.JFrame {
 
     public void inizializza() {
         initComponents();
         inizializzaComponenti();
         assegnaControllo();
-        
-        this.setContentPane(new JScrollPane(Applicazione.getInstance().getVistaPrincipale()));
+        //this.setResizable(false);
+        this.setIconImage(Applicazione.getInstance().getResourceManager().getImageResource("/chess.png").getImage());
+        this.setContentPane(Applicazione.getInstance().getVistaPrincipale());
         this.pack();
         this.setLocationRelativeTo(null);
         this.setVisible(true);
     }
 
     private void inizializzaComponenti(){
-        
     }
        
     private void assegnaControllo(){
@@ -47,6 +39,7 @@ public class Frame extends javax.swing.JFrame {
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
+        jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -59,7 +52,10 @@ public class Frame extends javax.swing.JFrame {
         jMenu4.setText("Edit");
         jMenuBar2.add(jMenu4);
 
+        jLabel1.setText("jLabel1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Scacchi");
 
         jMenu1.setText("File");
 
@@ -80,11 +76,11 @@ public class Frame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 858, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 278, Short.MAX_VALUE)
+            .addGap(0, 651, Short.MAX_VALUE)
         );
 
         pack();
@@ -93,7 +89,7 @@ public class Frame extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-  static  {
+    static  {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -102,7 +98,7 @@ public class Frame extends javax.swing.JFrame {
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    javax.swing.UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName() );
                     break;
                 }
             }
@@ -122,6 +118,7 @@ public class Frame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;

@@ -10,6 +10,11 @@ public class Regina extends AbstractPezzo {
 
     public Regina(String colore) {
         super(colore);
+        if ( colore.equals(Costanti.BIANCO) ){
+            this.setPercorsoImmagine(Costanti.REGINABIANCO);
+        } else {
+            this.setPercorsoImmagine(Costanti.REGINANERO);
+        }
     }
 
     //Metodi Classe

@@ -9,6 +9,11 @@ public class Alfiere extends AbstractPezzo {
 
     public Alfiere(String colore) {
         super(colore);
+        if ( colore.equals(Costanti.BIANCO) ){
+            this.setPercorsoImmagine(Costanti.ALFIEREBIANCO);
+        } else {
+            this.setPercorsoImmagine(Costanti.ALFIERENERO);
+        }
     }
 
     //Metodi Classe

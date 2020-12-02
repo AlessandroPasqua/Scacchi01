@@ -12,6 +12,7 @@ public abstract class AbstractPezzo implements Pezzo{
     static Logger log = LoggerFactory.getLogger(AbstractPezzo.class);
     private final List<Mossa> mossePossibili = new ArrayList<Mossa>();
     private String colore ;
+    private String percorsoImmagine;
     private int posX;
     private int posY;
 
@@ -105,4 +106,14 @@ public abstract class AbstractPezzo implements Pezzo{
     public void setPosY(int posY) {
         this.posY = posY;
     }
+
+    public String getPercorsoImmagine() {
+        return percorsoImmagine;
+    }
+
+    public void setPercorsoImmagine(String percorsoImmagine) {
+        this.percorsoImmagine = percorsoImmagine;
+    }
+    
+    
 }

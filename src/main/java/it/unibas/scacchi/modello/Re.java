@@ -6,11 +6,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Re extends AbstractPezzo{
-
+    
     //Costruttori
     
     public Re(String colore) {
         super(colore);
+        if ( colore.equals(Costanti.BIANCO) ){
+            this.setPercorsoImmagine(Costanti.REBIANCO);
+        } else {
+            this.setPercorsoImmagine(Costanti.RENERO);
+        }
     }
     
     //Metodi Classe

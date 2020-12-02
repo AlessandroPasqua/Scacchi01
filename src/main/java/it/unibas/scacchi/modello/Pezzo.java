@@ -28,4 +28,6 @@ public interface Pezzo {
             
     public void setPosY(int posY);
     
+    public String getPercorsoImmagine();
+    
 }

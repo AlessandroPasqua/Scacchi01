@@ -9,6 +9,11 @@ public class Torre extends AbstractPezzo {
     
     public Torre(String colore) {
         super(colore);
+        if ( colore.equals(Costanti.BIANCO) ){
+            this.setPercorsoImmagine(Costanti.TORREBIANCO);
+        } else {
+            this.setPercorsoImmagine(Costanti.TORRENERO);
+        }
     }
 
     //Metodi Classe

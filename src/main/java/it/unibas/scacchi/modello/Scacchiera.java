@@ -23,27 +23,27 @@ public class Scacchiera {
     
         //Metodo che inizializza la scacchiera con i suoi pezzi in posizione iniziale e li inserisce in due liste "PezziAttivi" per 
         //Ogni colore , liste che saranno utilizzate per effettuare controlli successivamente 
-    public void setScacchieraIniziale(Pezzo[][] matriceScacchiera) {
+    public void setScacchieraIniziale() {
         for (int j = 0; j < Costanti.N; j++) {
             this.posizionaPezzo(new Pedone(Costanti.NERO,true), 1, j);
             pezziAttiviBianchi.add(matriceScacchiera[1][j]);
-            this.posizionaPezzo(new Pedone(Costanti.BIANCO,true), Costanti.N-1, j);
+            this.posizionaPezzo(new Pedone(Costanti.BIANCO,true), Costanti.N-2, j);
             pezziAttiviNeri.add(matriceScacchiera[Costanti.N-1][j]);
         }        
         
         //posizionamento pezzi bianchi
-        this.posizionaPezzo(new Torre(Costanti.BIANCO), Costanti.N, 0);
-        this.posizionaPezzo(new Cavallo(Costanti.BIANCO), Costanti.N, 1);
-        this.posizionaPezzo(new Alfiere(Costanti.BIANCO), Costanti.N, 2);
+        this.posizionaPezzo(new Torre(Costanti.BIANCO), Costanti.N-1, 0);
+        this.posizionaPezzo(new Cavallo(Costanti.BIANCO), Costanti.N-1, 1);
+        this.posizionaPezzo(new Alfiere(Costanti.BIANCO), Costanti.N-1, 2);
         reBianco = new Re(Costanti.BIANCO);
-        this.posizionaPezzo(reBianco, Costanti.N, 3);
-        this.posizionaPezzo(new Regina(Costanti.BIANCO), Costanti.N, 4);
-        this.posizionaPezzo(new Alfiere(Costanti.BIANCO), Costanti.N, 5);
-        this.posizionaPezzo(new Cavallo(Costanti.BIANCO), Costanti.N, 6);
-        this.posizionaPezzo(new Torre(Costanti.BIANCO), Costanti.N, 7);
+        this.posizionaPezzo(reBianco, Costanti.N-1, 3);
+        this.posizionaPezzo(new Regina(Costanti.BIANCO), Costanti.N-1, 4);
+        this.posizionaPezzo(new Alfiere(Costanti.BIANCO), Costanti.N-1, 5);
+        this.posizionaPezzo(new Cavallo(Costanti.BIANCO), Costanti.N-1, 6);
+        this.posizionaPezzo(new Torre(Costanti.BIANCO), Costanti.N-1, 7);
         for ( int i = 0 ; i < Costanti.N ; i++ ){
             //Aggiungo I Pezzi Del Bianco in una lista dove sarà più facile accedervi
-            pezziAttiviBianchi.add(matriceScacchiera[Costanti.N][i]);
+            pezziAttiviBianchi.add(matriceScacchiera[Costanti.N-1][i]);
         }
         //posizionamento pezzi neri
         this.posizionaPezzo(new Torre(Costanti.NERO), 0, 0);

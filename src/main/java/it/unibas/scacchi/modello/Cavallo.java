@@ -9,6 +9,11 @@ public class Cavallo extends AbstractPezzo {
     
     public Cavallo(String colore) {
         super(colore);
+        if ( colore.equals(Costanti.BIANCO) ){
+            this.setPercorsoImmagine(Costanti.CAVALLOBIANCO);
+        } else {
+            this.setPercorsoImmagine(Costanti.CAVALLONERO);
+        }
     }
 
     //Metodi Classe

@@ -1,6 +1,5 @@
 package it.unibas.scacchi;
 
-
 public class Costanti {
    
     public static final String BIANCO = "BIANCO" ;
@@ -8,7 +7,18 @@ public class Costanti {
     public static final int N = 8 ;
     public static final String SCACCHIERA = "SCACCHIERA";
     
-    public static final String FOTO_RE = "/risorse/renero.png";
+    public static final String RENERO = "/renero.png";
+    public static final String REGINANERO = "/reginanera.png";
+    public static final String ALFIERENERO = "/alfierenero.png";
+    public static final String CAVALLONERO = "/cavallonero.png";
+    public static final String TORRENERO = "/torrenera.png";
+    public static final String REBIANCO = "/rebianco.png";
+    public static final String REGINABIANCO = "/reginabianca.png";
+    public static final String ALFIEREBIANCO = "/alfierebianco.png";
+    public static final String CAVALLOBIANCO = "/cavallobianco.png";
+    public static final String TORREBIANCO = "/torrebianca.png";
+    public static final String PEDONENERO = "/pedonenero.png";
+    public static final String PEDONEBIANCO = "/pedonebianco.png";
     
     //Pezzi della Scacchiera 
     //Commentati perchè potrebbero servirci in futuro 

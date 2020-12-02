@@ -1,33 +1,57 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package it.unibas.scacchi.vista;
 
 import it.unibas.scacchi.Applicazione;
 import it.unibas.scacchi.Costanti;
+import it.unibas.scacchi.ResourceManager;
+import it.unibas.scacchi.modello.Pezzo;
 import it.unibas.scacchi.modello.Scacchiera;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridLayout;
-import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
 
-public class VistaPrincipale extends javax.swing.JLayeredPane {
-    
-    private JPanel chessBoard;
+/**
+ *
+ * @author santo
+ */
+public class VistaPrincipale extends javax.swing.JPanel {
 
     public void inizializza() {
         initComponents();
+        //PROVA
+        Scacchiera s = new Scacchiera();
+        s.setScacchieraIniziale();
+        Applicazione.getInstance().getModello().insertBean(Costanti.SCACCHIERA, s);
+        //
         inizializzaComponenti();
-        impostaScacchieraIniziale();
-        assegnaControllo();
+        inizializzaPanelScacchiera();
+        assegnaControlloScacchiera();
+        aggiornaScacchiera();
+        this.setVisible(true);
     }
-     
+    
     private void inizializzaComponenti(){
+
+    }
+    
+    private void assegnaControlloScacchiera(){
+        this.addMouseListener( null ); //Da aggiungere Listener Mouse
+        this.addMouseMotionListener( null ); //Da aggiungere Listener Mouse 2
+    }
+    
+    private void inizializzaPanelScacchiera(){
         Dimension boardSize = new Dimension(600,600);
-        this.setPreferredSize(boardSize);
+        paneScacchiera.setPreferredSize(boardSize);
         chessBoard = new JPanel();
-        this.add(chessBoard, JLayeredPane.DEFAULT_LAYER);
+        paneScacchiera.add(chessBoard, JLayeredPane.DEFAULT_LAYER);
         chessBoard.setLayout(new GridLayout(8,8));
         chessBoard.setPreferredSize(boardSize);
         chessBoard.setBounds(0, 0, boardSize.width, boardSize.height);
@@ -43,18 +67,25 @@ public class VistaPrincipale extends javax.swing.JLayeredPane {
         }  
     }
     
-    private void assegnaControllo(){
-        this.addMouseListener( null ); //Da aggiungere Listener Mouse
-        this.addMouseMotionListener( null ); //Da aggiungere Listener Mouse 2
-    }
-    
-    private void impostaScacchieraIniziale(){
-        //Prova
-        JLabel label = new JLabel( Applicazione.getInstance().getResourceManager().getImageResource(Costanti.FOTO_RE) );
-        JPanel panel = (JPanel)chessBoard.getComponent(0);
-        panel.add(label);
-        
-        
+    private void aggiornaScacchiera(){
+        Scacchiera s = (Scacchiera)Applicazione.getInstance().getModello().getBean(Costanti.SCACCHIERA);
+        ResourceManager r = Applicazione.getInstance().getResourceManager();
+        Pezzo p;
+        int c = 0;
+        JLabel label ;
+        JPanel panel ;
+        for ( int i = 0 ; i < Costanti.N ; i++  ){
+            for ( int y = 0 ; y < Costanti.N ; y++ ){
+                p = s.getPezzo(i, y);
+                if ( p != null ){
+                    label = new JLabel( r.getImageResource( p.getPercorsoImmagine() ) );
+                    panel = (JPanel)chessBoard.getComponent(c);
+                    panel.add(label);
+                }
+                c++;
+            }
+        }
+
     }
 
     /**
@@ -66,19 +97,61 @@ public class VistaPrincipale extends javax.swing.JLayeredPane {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        panelInfoPartita = new javax.swing.JPanel();
+        paneScacchiera = new javax.swing.JLayeredPane();
+
+        panelInfoPartita.setBorder(javax.swing.BorderFactory.createTitledBorder("Informazioni Partita"));
+
+        javax.swing.GroupLayout panelInfoPartitaLayout = new javax.swing.GroupLayout(panelInfoPartita);
+        panelInfoPartita.setLayout(panelInfoPartitaLayout);
+        panelInfoPartitaLayout.setHorizontalGroup(
+            panelInfoPartitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 123, Short.MAX_VALUE)
+        );
+        panelInfoPartitaLayout.setVerticalGroup(
+            panelInfoPartitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 367, Short.MAX_VALUE)
+        );
+
+        paneScacchiera.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        javax.swing.GroupLayout paneScacchieraLayout = new javax.swing.GroupLayout(paneScacchiera);
+        paneScacchiera.setLayout(paneScacchieraLayout);
+        paneScacchieraLayout.setHorizontalGroup(
+            paneScacchieraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 395, Short.MAX_VALUE)
+        );
+        paneScacchieraLayout.setVerticalGroup(
+            paneScacchieraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(panelInfoPartita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(paneScacchiera)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(paneScacchiera)
+                    .addComponent(panelInfoPartita, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLayeredPane paneScacchiera;
+    private javax.swing.JPanel panelInfoPartita;
     // End of variables declaration//GEN-END:variables
+    private JPanel chessBoard;
 }
