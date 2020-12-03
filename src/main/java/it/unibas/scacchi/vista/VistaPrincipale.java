@@ -98,19 +98,91 @@ public class VistaPrincipale extends javax.swing.JPanel {
     private void initComponents() {
 
         panelInfoPartita = new javax.swing.JPanel();
+        javax.swing.JLabel jLabel1 = new javax.swing.JLabel();
+        javax.swing.JLabel jLabel2 = new javax.swing.JLabel();
+        nomeUtente1 = new javax.swing.JLabel();
+        nomePlayer2 = new javax.swing.JLabel();
+        javax.swing.JLabel jLabel3 = new javax.swing.JLabel();
+        tempoRimanente1 = new javax.swing.JLabel();
+        javax.swing.JLabel jLabel6 = new javax.swing.JLabel();
+        tempoRimanenteAvversario = new javax.swing.JLabel();
         paneScacchiera = new javax.swing.JLayeredPane();
 
         panelInfoPartita.setBorder(javax.swing.BorderFactory.createTitledBorder("Informazioni Partita"));
+
+        jLabel1.setText("Nome Player 1 :");
+
+        jLabel2.setText("Nome Player 2 : ");
+
+        nomeUtente1.setText("jLabel4");
+
+        nomePlayer2.setText("Ciro ");
+
+        jLabel3.setText("Tempo Rimanente :");
+
+        tempoRimanente1.setText("jLabel5");
+
+        jLabel6.setText("Tempo Rimanente :");
+
+        tempoRimanenteAvversario.setText("jLabel7");
 
         javax.swing.GroupLayout panelInfoPartitaLayout = new javax.swing.GroupLayout(panelInfoPartita);
         panelInfoPartita.setLayout(panelInfoPartitaLayout);
         panelInfoPartitaLayout.setHorizontalGroup(
             panelInfoPartitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 123, Short.MAX_VALUE)
+            .addGroup(panelInfoPartitaLayout.createSequentialGroup()
+                .addGroup(panelInfoPartitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelInfoPartitaLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(tempoRimanente1)
+                        .addGap(53, 77, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInfoPartitaLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(nomeUtente1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelInfoPartitaLayout.createSequentialGroup()
+                        .addGroup(panelInfoPartitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelInfoPartitaLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel3))
+                            .addGroup(panelInfoPartitaLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel1))
+                            .addGroup(panelInfoPartitaLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel2))
+                            .addGroup(panelInfoPartitaLayout.createSequentialGroup()
+                                .addGap(48, 48, 48)
+                                .addComponent(nomePlayer2))
+                            .addGroup(panelInfoPartitaLayout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel6)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(panelInfoPartitaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(tempoRimanenteAvversario)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelInfoPartitaLayout.setVerticalGroup(
             panelInfoPartitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 367, Short.MAX_VALUE)
+            .addGroup(panelInfoPartitaLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nomeUtente1)
+                .addGap(24, 24, 24)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tempoRimanente1)
+                .addGap(72, 72, 72)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nomePlayer2)
+                .addGap(24, 24, 24)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tempoRimanenteAvversario)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         paneScacchiera.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -119,11 +191,11 @@ public class VistaPrincipale extends javax.swing.JPanel {
         paneScacchiera.setLayout(paneScacchieraLayout);
         paneScacchieraLayout.setHorizontalGroup(
             paneScacchieraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 395, Short.MAX_VALUE)
+            .addGap(0, 602, Short.MAX_VALUE)
         );
         paneScacchieraLayout.setVerticalGroup(
             paneScacchieraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 459, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -150,8 +222,12 @@ public class VistaPrincipale extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel nomePlayer2;
+    private javax.swing.JLabel nomeUtente1;
     private javax.swing.JLayeredPane paneScacchiera;
     private javax.swing.JPanel panelInfoPartita;
+    private javax.swing.JLabel tempoRimanente1;
+    private javax.swing.JLabel tempoRimanenteAvversario;
     // End of variables declaration//GEN-END:variables
     private JPanel chessBoard;
 }
