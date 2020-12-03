@@ -1,7 +1,6 @@
 package it.unibas.scacchi.vista;
 
 import it.unibas.scacchi.Applicazione;
-import javax.swing.JScrollPane;
 import javax.swing.UIManager;
 
 public class Frame extends javax.swing.JFrame {
@@ -41,10 +40,10 @@ public class Frame extends javax.swing.JFrame {
         jMenu4 = new javax.swing.JMenu();
         jLabel1 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        javax.swing.JMenu jMenu1 = new javax.swing.JMenu();
+        salvaPartita = new javax.swing.JMenuItem();
+        caricaPartita = new javax.swing.JMenuItem();
+        buttonEsci = new javax.swing.JMenuItem();
 
         jMenu3.setText("File");
         jMenuBar2.add(jMenu3);
@@ -59,14 +58,14 @@ public class Frame extends javax.swing.JFrame {
 
         jMenu1.setText("File");
 
-        jMenuItem1.setText("jMenuItem1");
-        jMenu1.add(jMenuItem1);
+        salvaPartita.setText("Salva Partita ");
+        jMenu1.add(salvaPartita);
 
-        jMenuItem2.setText("jMenuItem2");
-        jMenu1.add(jMenuItem2);
+        caricaPartita.setText("Carica Partita");
+        jMenu1.add(caricaPartita);
 
-        jMenuItem3.setText("jMenuItem3");
-        jMenu1.add(jMenuItem3);
+        buttonEsci.setText("Exit");
+        jMenu1.add(buttonEsci);
 
         jMenuBar1.add(jMenu1);
 
@@ -118,14 +117,13 @@ public class Frame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem buttonEsci;
+    private javax.swing.JMenuItem caricaPartita;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem salvaPartita;
     // End of variables declaration//GEN-END:variables
 }
