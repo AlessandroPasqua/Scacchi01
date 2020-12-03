@@ -10,7 +10,7 @@ public class Frame extends javax.swing.JFrame {
         initComponents();
         inizializzaComponenti();
         assegnaControllo();
-        //this.setResizable(false);
+        this.setResizable(false);
         this.setIconImage(Applicazione.getInstance().getResourceManager().getImageResource("/chess.png").getImage());
         this.setContentPane(Applicazione.getInstance().getVistaPrincipale());
         this.pack();
