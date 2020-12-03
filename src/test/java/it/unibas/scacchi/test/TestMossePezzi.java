@@ -1,11 +1,10 @@
 package it.unibas.scacchi.test;
 
-import it.unibas.scacchi.modello.AbstractPezzo;
 import it.unibas.scacchi.modello.Alfiere;
 import it.unibas.scacchi.modello.Cavallo;
 import it.unibas.scacchi.modello.Costanti;
-import it.unibas.scacchi.modello.Mossa;
 import it.unibas.scacchi.modello.Pedone;
+import it.unibas.scacchi.modello.Pezzo;
 import it.unibas.scacchi.modello.Re;
 import it.unibas.scacchi.modello.Regina;
 import it.unibas.scacchi.modello.Scacchiera;
@@ -402,5 +401,39 @@ public class TestMossePezzi extends TestCase{
         assertEquals(re.getMossePossibili().size(),2);
     }
     
+//    
+//    TEST PEDEONE A PROMOZIONE
+//    
+    public void testPedoneBiancoAPromozione() {
+        Pedone pedoneB = new Pedone(Costanti.BIANCO, false);
+        pedoneB.setPosX(0);
+        pedoneB.setPosY(2);
+        scacchiera.posizionaPezzo(pedoneB, 0, 2);
+        Regina nuovaRegina = new Regina(Costanti.BIANCO);
+        pedoneB.cambiaPedone(nuovaRegina, scacchiera);
+        Pezzo pezzoInPos = scacchiera.getPezzo(0, 2);
+        assertEquals(nuovaRegina, pezzoInPos);
+    }
     
+    public void testPedoneNeroAPromozione() {
+        Pedone pedoneB = new Pedone(Costanti.NERO, false);
+        pedoneB.setPosX(7);
+        pedoneB.setPosY(2);
+        scacchiera.posizionaPezzo(pedoneB, 7, 2);
+        Regina nuovaRegina = new Regina(Costanti.NERO);
+        pedoneB.cambiaPedone(nuovaRegina, scacchiera);
+        Pezzo pezzoInPos = scacchiera.getPezzo(7, 2);
+        assertEquals(nuovaRegina, pezzoInPos);
+    }
+    
+    public void testPedoneNonAPromozione() {
+        Pedone pedoneB = new Pedone(Costanti.NERO, false);
+        pedoneB.setPosX(6);
+        pedoneB.setPosY(2);
+        scacchiera.posizionaPezzo(pedoneB, 6, 2);
+        Regina nuovaRegina = new Regina(Costanti.BIANCO);
+        pedoneB.cambiaPedone(nuovaRegina, scacchiera);
+        Pezzo pezzoInPos = scacchiera.getPezzo(6, 2);
+        assertEquals(pedoneB, pezzoInPos);
+    }
 }

@@ -105,6 +105,23 @@ public class Pedone extends AbstractPezzo {
             }
         }
     }
+    
+    public void cambiaPedone (Pezzo pezzo, Scacchiera scacchiera) {
+        if(!pezzo.getColore().equals(this.getColore())) {
+            log.debug("Inserire un pezzo con lo stesso colore del pedone");
+        }else if(this.isAPromozione()) {
+            scacchiera.posizionaPezzo(pezzo, this.getPosX(), this.getPosY());
+        }
+    }
+    
+    private boolean isAPromozione() {
+        if(this.getColore().equals(Costanti.BIANCO) && this.getPosX() == 0) {
+            return true;
+        } else if(this.getColore().equals(Costanti.NERO) && this.getPosX() == 7) {
+            return true;
+        }
+        return false;
+    }
 
     //Metodi Get e Set
     
