@@ -21,6 +21,7 @@ public class WorkerCaricaScacchiera extends SwingWorker {
     @Override
     protected Object doInBackground() throws Exception {
         String stringaFile = fileDaCaricare.toString();
+        logger.debug("LA stringa del file da caricare e'" + stringaFile);
         try {
             Scacchiera scacchiera = Applicazione.getInstance().getDao().carica(stringaFile);
             logger.debug("Scacchiera caricata");
@@ -40,11 +41,14 @@ public class WorkerCaricaScacchiera extends SwingWorker {
                 Applicazione.getInstance().getFrame().nascondiCursoreCaricamento();
                 return;
             }
+            logger.debug("nella posizione (0,0) trovo  " + scacchiera.getPezzo(0, 0).getColore());
             Applicazione.getInstance().getModello().insertBean(Costanti.SCACCHIERA, scacchiera);
             Applicazione.getInstance().getFrame().nascondiCursoreCaricamento();
             Applicazione.getInstance().getVistaPrincipale().aggiornaScacchiera();
+//            Applicazione.getInstance().getVistaPrincipale().setVisible(true);
             Applicazione.getInstance().getFrame().mostraMessaggio("Caricata la partita precedente");
         } catch (Exception ex) {
+            logger.debug(ex.getMessage());
             Applicazione.getInstance().getFrame().mostraMessaggioErrore("Impossibile caricare la partita");
         }
     }

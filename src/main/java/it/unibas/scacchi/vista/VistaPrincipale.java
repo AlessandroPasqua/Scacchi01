@@ -17,13 +17,17 @@ import java.awt.GridLayout;
 import javax.swing.JLabel;
 import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
  * @author santo
  */
 public class VistaPrincipale extends javax.swing.JPanel {
-
+    private Logger logger = LoggerFactory.getLogger(VistaPrincipale.class);
+    
+    
     public void inizializza() {
         initComponents();
         //PROVA
@@ -47,7 +51,7 @@ public class VistaPrincipale extends javax.swing.JPanel {
         this.addMouseMotionListener( null ); //Da aggiungere Listener Mouse 2
     }
     
-    private void inizializzaPanelScacchiera(){
+    public void inizializzaPanelScacchiera(){
         Dimension boardSize = new Dimension(600,600);
         paneScacchiera.setPreferredSize(boardSize);
         chessBoard = new JPanel();
@@ -79,13 +83,23 @@ public class VistaPrincipale extends javax.swing.JPanel {
                 p = s.getPezzo(i, y);
                 if ( p != null ){
                     label = new JLabel( r.getImageResource( p.getPercorsoImmagine() ) );
+                    label.setSize(75, 75);
                     panel = (JPanel)chessBoard.getComponent(c);
                     panel.add(label);
+                    paneScacchiera.setPosition(panel, c);
+                    
+                } else {
+                    panel = (JPanel)chessBoard.getComponent(c);
+                    int row = (c / 8) % 2;
+                    if (row == 0){
+                        panel.setForeground(i % 2 == 0 ? Color.gray : Color.white );
+                    } else {
+                        panel.setForeground(i % 2 == 0 ? Color.white : Color.gray );
+                    }
                 }
                 c++;
             }
         }
-
     }
 
     /**
@@ -208,7 +222,7 @@ public class VistaPrincipale extends javax.swing.JPanel {
                     .addComponent(paneScacchiera)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(panelInfoPartita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 214, Short.MAX_VALUE)))
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents

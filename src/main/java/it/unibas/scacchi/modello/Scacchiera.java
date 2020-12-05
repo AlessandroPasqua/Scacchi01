@@ -76,6 +76,8 @@ public class Scacchiera {
         }
     }
     
+    
+    
         //Metodo che dato in input il pezzo e la sua mossa effettuata verifica se sia un movimento normale o un movimento per mangiare
         //Un pezzo , se è quest'ultimo il caso richiama il metodo precedente
     public void movimentoPezzo(Pezzo siMuove , Mossa m ){

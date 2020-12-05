@@ -1,0 +1,1000 @@
+{
+  "matriceScacchiera": [
+    [
+      null,
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Cavallo",
+        "DATA": {
+          "mossePossibili": [],
+          "colore": "NERO",
+          "percorsoImmagine": "/cavallonero.png",
+          "posX": 0,
+          "posY": 1
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Alfiere",
+        "DATA": {
+          "mossePossibili": [],
+          "colore": "NERO",
+          "percorsoImmagine": "/alfierenero.png",
+          "posX": 0,
+          "posY": 2
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Regina",
+        "DATA": {
+          "mossePossibili": [],
+          "colore": "NERO",
+          "percorsoImmagine": "/reginanera.png",
+          "posX": 0,
+          "posY": 3
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Re",
+        "DATA": {
+          "mossePossibili": [],
+          "colore": "NERO",
+          "percorsoImmagine": "/renero.png",
+          "posX": 0,
+          "posY": 4
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Alfiere",
+        "DATA": {
+          "mossePossibili": [],
+          "colore": "NERO",
+          "percorsoImmagine": "/alfierenero.png",
+          "posX": 0,
+          "posY": 5
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Cavallo",
+        "DATA": {
+          "mossePossibili": [],
+          "colore": "NERO",
+          "percorsoImmagine": "/cavallonero.png",
+          "posX": 0,
+          "posY": 6
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Torre",
+        "DATA": {
+          "mossePossibili": [],
+          "colore": "NERO",
+          "percorsoImmagine": "/torrenera.png",
+          "posX": 0,
+          "posY": 7
+        }
+      }
+    ],
+    [
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+        "DATA": {
+          "primaMossa": true,
+          "mossePossibili": [],
+          "colore": "NERO",
+          "percorsoImmagine": "/pedonenero.png",
+          "posX": 1,
+          "posY": 0
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+        "DATA": {
+          "primaMossa": true,
+          "mossePossibili": [],
+          "colore": "NERO",
+          "percorsoImmagine": "/pedonenero.png",
+          "posX": 1,
+          "posY": 1
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+        "DATA": {
+          "primaMossa": true,
+          "mossePossibili": [],
+          "colore": "NERO",
+          "percorsoImmagine": "/pedonenero.png",
+          "posX": 1,
+          "posY": 2
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+        "DATA": {
+          "primaMossa": true,
+          "mossePossibili": [],
+          "colore": "NERO",
+          "percorsoImmagine": "/pedonenero.png",
+          "posX": 1,
+          "posY": 3
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+        "DATA": {
+          "primaMossa": true,
+          "mossePossibili": [],
+          "colore": "NERO",
+          "percorsoImmagine": "/pedonenero.png",
+          "posX": 1,
+          "posY": 4
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+        "DATA": {
+          "primaMossa": true,
+          "mossePossibili": [],
+          "colore": "NERO",
+          "percorsoImmagine": "/pedonenero.png",
+          "posX": 1,
+          "posY": 5
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+        "DATA": {
+          "primaMossa": true,
+          "mossePossibili": [],
+          "colore": "NERO",
+          "percorsoImmagine": "/pedonenero.png",
+          "posX": 1,
+          "posY": 6
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+        "DATA": {
+          "primaMossa": true,
+          "mossePossibili": [],
+          "colore": "NERO",
+          "percorsoImmagine": "/pedonenero.png",
+          "posX": 1,
+          "posY": 7
+        }
+      }
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Torre",
+        "DATA": {
+          "mossePossibili": [],
+          "colore": "NERO",
+          "percorsoImmagine": "/torrenera.png",
+          "posX": 4,
+          "posY": 4
+        }
+      },
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+        "DATA": {
+          "primaMossa": true,
+          "mossePossibili": [],
+          "colore": "BIANCO",
+          "percorsoImmagine": "/pedonebianco.png",
+          "posX": 6,
+          "posY": 0
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+        "DATA": {
+          "primaMossa": true,
+          "mossePossibili": [],
+          "colore": "BIANCO",
+          "percorsoImmagine": "/pedonebianco.png",
+          "posX": 6,
+          "posY": 1
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+        "DATA": {
+          "primaMossa": true,
+          "mossePossibili": [],
+          "colore": "BIANCO",
+          "percorsoImmagine": "/pedonebianco.png",
+          "posX": 6,
+          "posY": 2
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+        "DATA": {
+          "primaMossa": true,
+          "mossePossibili": [],
+          "colore": "BIANCO",
+          "percorsoImmagine": "/pedonebianco.png",
+          "posX": 6,
+          "posY": 3
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+        "DATA": {
+          "primaMossa": true,
+          "mossePossibili": [],
+          "colore": "BIANCO",
+          "percorsoImmagine": "/pedonebianco.png",
+          "posX": 6,
+          "posY": 4
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+        "DATA": {
+          "primaMossa": true,
+          "mossePossibili": [],
+          "colore": "BIANCO",
+          "percorsoImmagine": "/pedonebianco.png",
+          "posX": 6,
+          "posY": 5
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+        "DATA": {
+          "primaMossa": true,
+          "mossePossibili": [],
+          "colore": "BIANCO",
+          "percorsoImmagine": "/pedonebianco.png",
+          "posX": 6,
+          "posY": 6
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+        "DATA": {
+          "primaMossa": true,
+          "mossePossibili": [],
+          "colore": "BIANCO",
+          "percorsoImmagine": "/pedonebianco.png",
+          "posX": 6,
+          "posY": 7
+        }
+      }
+    ],
+    [
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Torre",
+        "DATA": {
+          "mossePossibili": [],
+          "colore": "BIANCO",
+          "percorsoImmagine": "/torrebianca.png",
+          "posX": 7,
+          "posY": 0
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Cavallo",
+        "DATA": {
+          "mossePossibili": [],
+          "colore": "BIANCO",
+          "percorsoImmagine": "/cavallobianco.png",
+          "posX": 7,
+          "posY": 1
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Alfiere",
+        "DATA": {
+          "mossePossibili": [],
+          "colore": "BIANCO",
+          "percorsoImmagine": "/alfierebianco.png",
+          "posX": 7,
+          "posY": 2
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Re",
+        "DATA": {
+          "mossePossibili": [],
+          "colore": "BIANCO",
+          "percorsoImmagine": "/rebianco.png",
+          "posX": 7,
+          "posY": 3
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Regina",
+        "DATA": {
+          "mossePossibili": [],
+          "colore": "BIANCO",
+          "percorsoImmagine": "/reginabianca.png",
+          "posX": 7,
+          "posY": 4
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Alfiere",
+        "DATA": {
+          "mossePossibili": [],
+          "colore": "BIANCO",
+          "percorsoImmagine": "/alfierebianco.png",
+          "posX": 7,
+          "posY": 5
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Cavallo",
+        "DATA": {
+          "mossePossibili": [],
+          "colore": "BIANCO",
+          "percorsoImmagine": "/cavallobianco.png",
+          "posX": 7,
+          "posY": 6
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Torre",
+        "DATA": {
+          "mossePossibili": [],
+          "colore": "BIANCO",
+          "percorsoImmagine": "/torrebianca.png",
+          "posX": 7,
+          "posY": 7
+        }
+      }
+    ]
+  ],
+  "reNero": {
+    "mossePossibili": [],
+    "colore": "NERO",
+    "percorsoImmagine": "/renero.png",
+    "posX": 0,
+    "posY": 4
+  },
+  "reBianco": {
+    "mossePossibili": [],
+    "colore": "BIANCO",
+    "percorsoImmagine": "/rebianco.png",
+    "posX": 7,
+    "posY": 3
+  },
+  "pezziAttiviBianchi": [
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/pedonenero.png",
+        "posX": 1,
+        "posY": 0
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/pedonebianco.png",
+        "posX": 6,
+        "posY": 0
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/pedonenero.png",
+        "posX": 1,
+        "posY": 1
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/pedonebianco.png",
+        "posX": 6,
+        "posY": 1
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/pedonenero.png",
+        "posX": 1,
+        "posY": 2
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/pedonebianco.png",
+        "posX": 6,
+        "posY": 2
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/pedonenero.png",
+        "posX": 1,
+        "posY": 3
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/pedonebianco.png",
+        "posX": 6,
+        "posY": 3
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/pedonenero.png",
+        "posX": 1,
+        "posY": 4
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/pedonebianco.png",
+        "posX": 6,
+        "posY": 4
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/pedonenero.png",
+        "posX": 1,
+        "posY": 5
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/pedonebianco.png",
+        "posX": 6,
+        "posY": 5
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/pedonenero.png",
+        "posX": 1,
+        "posY": 6
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/pedonebianco.png",
+        "posX": 6,
+        "posY": 6
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/pedonenero.png",
+        "posX": 1,
+        "posY": 7
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/pedonebianco.png",
+        "posX": 6,
+        "posY": 7
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Torre",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/torrebianca.png",
+        "posX": 7,
+        "posY": 0
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Cavallo",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/cavallobianco.png",
+        "posX": 7,
+        "posY": 1
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Alfiere",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/alfierebianco.png",
+        "posX": 7,
+        "posY": 2
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Re",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/rebianco.png",
+        "posX": 7,
+        "posY": 3
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Regina",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/reginabianca.png",
+        "posX": 7,
+        "posY": 4
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Alfiere",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/alfierebianco.png",
+        "posX": 7,
+        "posY": 5
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Cavallo",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/cavallobianco.png",
+        "posX": 7,
+        "posY": 6
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Torre",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/torrebianca.png",
+        "posX": 7,
+        "posY": 7
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Torre",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/torrebianca.png",
+        "posX": 7,
+        "posY": 0
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Cavallo",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/cavallobianco.png",
+        "posX": 7,
+        "posY": 1
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Alfiere",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/alfierebianco.png",
+        "posX": 7,
+        "posY": 2
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Re",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/rebianco.png",
+        "posX": 7,
+        "posY": 3
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Regina",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/reginabianca.png",
+        "posX": 7,
+        "posY": 4
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Alfiere",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/alfierebianco.png",
+        "posX": 7,
+        "posY": 5
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Cavallo",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/cavallobianco.png",
+        "posX": 7,
+        "posY": 6
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Torre",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/torrebianca.png",
+        "posX": 7,
+        "posY": 7
+      }
+    }
+  ],
+  "pezziAttiviNeri": [
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/pedonenero.png",
+        "posX": 1,
+        "posY": 0
+      }
+    },
+    null,
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/pedonenero.png",
+        "posX": 1,
+        "posY": 1
+      }
+    },
+    null,
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/pedonenero.png",
+        "posX": 1,
+        "posY": 2
+      }
+    },
+    null,
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/pedonenero.png",
+        "posX": 1,
+        "posY": 3
+      }
+    },
+    null,
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/pedonenero.png",
+        "posX": 1,
+        "posY": 4
+      }
+    },
+    null,
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/pedonenero.png",
+        "posX": 1,
+        "posY": 5
+      }
+    },
+    null,
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/pedonenero.png",
+        "posX": 1,
+        "posY": 6
+      }
+    },
+    null,
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/pedonenero.png",
+        "posX": 1,
+        "posY": 7
+      }
+    },
+    null,
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Torre",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/torrenera.png",
+        "posX": 0,
+        "posY": 0
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Cavallo",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/cavallonero.png",
+        "posX": 0,
+        "posY": 1
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Alfiere",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/alfierenero.png",
+        "posX": 0,
+        "posY": 2
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Regina",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/reginanera.png",
+        "posX": 0,
+        "posY": 3
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Re",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/renero.png",
+        "posX": 0,
+        "posY": 4
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Alfiere",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/alfierenero.png",
+        "posX": 0,
+        "posY": 5
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Cavallo",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/cavallonero.png",
+        "posX": 0,
+        "posY": 6
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Torre",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/torrenera.png",
+        "posX": 0,
+        "posY": 7
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Torre",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/torrenera.png",
+        "posX": 0,
+        "posY": 0
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Cavallo",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/cavallonero.png",
+        "posX": 0,
+        "posY": 1
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Alfiere",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/alfierenero.png",
+        "posX": 0,
+        "posY": 2
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Regina",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/reginanera.png",
+        "posX": 0,
+        "posY": 3
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Re",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/renero.png",
+        "posX": 0,
+        "posY": 4
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Alfiere",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/alfierenero.png",
+        "posX": 0,
+        "posY": 5
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Cavallo",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/cavallonero.png",
+        "posX": 0,
+        "posY": 6
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Torre",
+      "DATA": {
+        "mossePossibili": [],
+        "colore": "NERO",
+        "percorsoImmagine": "/torrenera.png",
+        "posX": 0,
+        "posY": 7
+      }
+    }
+  ],
+  "pezziMangiatiBianchi": [],
+  "pezziMangiatiNeri": []
+}

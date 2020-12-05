@@ -7,15 +7,16 @@ import it.unibas.scacchi.persistenza.DAOException;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 import java.io.File;
-import java.util.logging.Level;
+
 import javax.swing.AbstractAction;
 import javax.swing.Action;
-import javax.swing.JFileChooser;
+
 import javax.swing.KeyStroke;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class ControlloMenu {
+
     private final Logger logger = LoggerFactory.getLogger(ControlloMenu.class);
     private final Action azioneSalva = new AzioneSalva();
     private final Action azioneCarica = new AzioneCarica();
@@ -44,7 +45,7 @@ public class ControlloMenu {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            
+
             try {
                 Scacchiera scacchieraAttuale = (Scacchiera) Applicazione.getInstance().getModello().getBean(Costanti.SCACCHIERA);
                 Applicazione.getInstance().getDao().salva(scacchieraAttuale, "./Scacchiera.json");
@@ -71,7 +72,7 @@ public class ControlloMenu {
             logger.debug("file selezionato" + fileSelezionato);
             Applicazione.getInstance().getFrame().mostraCursoreCaricamento();
             WorkerCaricaScacchiera worker = new WorkerCaricaScacchiera(fileSelezionato);
-            worker.execute(); 
+            worker.execute();
         }
 
     }

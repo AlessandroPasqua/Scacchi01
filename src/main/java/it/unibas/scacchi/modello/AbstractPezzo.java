@@ -22,7 +22,8 @@ public abstract class AbstractPezzo implements Pezzo{
     }
     
     
-      
+   
+    
     public AbstractPezzo(String colore) {
         this.colore = colore;
     }
