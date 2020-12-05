@@ -8,6 +8,11 @@ public class Regina extends AbstractPezzo {
     
     //Costruttori
 
+    
+    
+    public Regina() {
+    }
+
     public Regina(String colore) {
         super(colore);
         if ( colore.equals(Costanti.BIANCO) ){

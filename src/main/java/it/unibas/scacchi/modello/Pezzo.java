@@ -5,6 +5,8 @@ import java.util.List;
 
 public interface Pezzo {
     
+    
+    
     public void cambiaPosizione(int x , int y );
     
     public boolean reNelleMieMosse();
@@ -19,6 +21,7 @@ public interface Pezzo {
     
     
     //Metodi Get e Set 
+    
     
     public String getColore();
     

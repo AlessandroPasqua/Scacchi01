@@ -6,6 +6,11 @@ public class Gioco {
     private String nomePlayer2;
     private Scacchiera scacchiera;
 
+    public Gioco() {
+    }
+    
+    
+
     public Gioco(String nomePlayer1, String nomePlayer2) {
         this.nomePlayer1 = nomePlayer1;
         this.nomePlayer2 = nomePlayer2;

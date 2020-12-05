@@ -9,6 +9,11 @@ public class Re extends AbstractPezzo{
     
     //Costruttori
     
+    
+    
+    public Re() {
+    }
+
     public Re(String colore) {
         super(colore);
         if ( colore.equals(Costanti.BIANCO) ){

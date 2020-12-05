@@ -1,13 +1,15 @@
 package it.unibas.scacchi.vista;
 
 import it.unibas.scacchi.Applicazione;
+import java.awt.Cursor;
+import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
 public class Frame extends javax.swing.JFrame {
 
     public void inizializza() {
         initComponents();
-        inizializzaComponenti();
+        inizializzaAzioni();
         assegnaControllo();
         this.setResizable(false);
         this.setIconImage(Applicazione.getInstance().getResourceManager().getImageResource("/chess.png").getImage());
@@ -17,7 +19,26 @@ public class Frame extends javax.swing.JFrame {
         this.setVisible(true);
     }
 
-    private void inizializzaComponenti(){
+    private void inizializzaAzioni(){
+        this.salvaPartita.setAction(Applicazione.getInstance().getControlloMenu().getAzioneSalva());
+        this.caricaPartita.setAction(Applicazione.getInstance().getControlloMenu().getAzioneCarica());
+        this.buttonEsci.setAction(Applicazione.getInstance().getControlloMenu().getAzioneEsci());
+    }
+    
+    public void mostraMessaggioErrore (String messaggio) {
+        JOptionPane.showMessageDialog(this, messaggio, "Errore", JOptionPane.ERROR_MESSAGE);
+    }
+    
+    public void mostraMessaggio (String messaggio) {
+        JOptionPane.showMessageDialog(this, messaggio, "Info", JOptionPane.INFORMATION_MESSAGE);
+    }
+    
+    public void mostraCursoreCaricamento() {
+        this.setCursor(new Cursor(Cursor.WAIT_CURSOR));
+    }
+    
+    public void nascondiCursoreCaricamento() {
+        this.setCursor(Cursor.getDefaultCursor());
     }
        
     private void assegnaControllo(){

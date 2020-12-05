@@ -67,7 +67,7 @@ public class VistaPrincipale extends javax.swing.JPanel {
         }  
     }
     
-    private void aggiornaScacchiera(){
+    public void aggiornaScacchiera(){
         Scacchiera s = (Scacchiera)Applicazione.getInstance().getModello().getBean(Costanti.SCACCHIERA);
         ResourceManager r = Applicazione.getInstance().getResourceManager();
         Pezzo p;

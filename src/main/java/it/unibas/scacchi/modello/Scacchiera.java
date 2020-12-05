@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Scacchiera {
-    
+   
    private Pezzo[][] matriceScacchiera = new Pezzo[Costanti.N][Costanti.N];
    private Re reNero;
    private Re reBianco;
@@ -17,6 +17,9 @@ public class Scacchiera {
    //Costruttori
 
     public Scacchiera() {}
+    
+    
+
    
     
     //Metodi Classe

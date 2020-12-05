@@ -17,6 +17,11 @@ public abstract class AbstractPezzo implements Pezzo{
     private int posY;
 
     //Costruttori
+
+    public AbstractPezzo() {
+    }
+    
+    
       
     public AbstractPezzo(String colore) {
         this.colore = colore;

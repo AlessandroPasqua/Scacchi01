@@ -10,6 +10,12 @@ public class Pedone extends AbstractPezzo {
     private boolean primaMossa;
 
     // Costruttori
+
+    public Pedone() {
+    }
+    
+    
+    
     public Pedone(String colore, boolean primaMossa) {
         super(colore);
         this.primaMossa = primaMossa;

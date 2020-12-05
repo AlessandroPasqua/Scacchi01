@@ -16,6 +16,8 @@
   <logger name="it.unibas.scacchi.modello.Cavallo" level="warn"/>  
   <logger name="it.unibas.scacchi.modello.Alfiere" level="warn"/>  
   <logger name="it.unibas.scacchi.modello.Pedone" level="debug"/>  
+  <logger name="it.unibas.scacchi.test" level="debug"/>  
+  <logger name="it.unibas.scacchi.controllo" level="debug"/>  
   <root level="warn">
     <appender-ref ref="stdout"/>
     <!--<appender-ref ref="file"/>-->

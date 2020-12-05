@@ -7,6 +7,11 @@ public class Alfiere extends AbstractPezzo {
     
     //Costruttori
 
+    
+    
+    public Alfiere() {
+    }
+
     public Alfiere(String colore) {
         super(colore);
         if ( colore.equals(Costanti.BIANCO) ){

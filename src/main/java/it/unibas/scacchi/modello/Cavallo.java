@@ -7,6 +7,11 @@ public class Cavallo extends AbstractPezzo {
 
     //Costruttori
     
+    
+    
+    public Cavallo() {
+    }
+
     public Cavallo(String colore) {
         super(colore);
         if ( colore.equals(Costanti.BIANCO) ){

@@ -4,6 +4,8 @@ import it.unibas.scacchi.controllo.ControlloMenu;
 import it.unibas.scacchi.controllo.ControlloPrincipale;
 import it.unibas.scacchi.modello.Gioco;
 import it.unibas.scacchi.modello.Modello;
+import it.unibas.scacchi.persistenza.DAOScacchieraJson;
+import it.unibas.scacchi.persistenza.IDAOScacchiera;
 import it.unibas.scacchi.vista.Frame;
 import it.unibas.scacchi.vista.VistaPrincipale;
 import javax.swing.SwingUtilities;
@@ -18,6 +20,9 @@ public class Applicazione {
     private ControlloMenu controlloMenu;
     private Modello modello;
     private ResourceManager resourceManager;
+    private IDAOScacchiera dao;
+    
+    
 
     public static Applicazione getInstance() {
         return singleton;
@@ -39,6 +44,7 @@ public class Applicazione {
         controlloMenu = new ControlloMenu();
         modello = new Modello();
         resourceManager = new ResourceManager();
+        dao = new DAOScacchieraJson();
         vistaPrincipale.inizializza();
         frame.inizializza();
         
@@ -49,6 +55,12 @@ public class Applicazione {
     public Frame getFrame() {
         return frame;
     }
+
+    public IDAOScacchiera getDao() {
+        return dao;
+    }
+    
+    
 
     public VistaPrincipale getVistaPrincipale() {
         return vistaPrincipale;

@@ -7,6 +7,11 @@ public class Torre extends AbstractPezzo {
 
     //Costruttori
     
+    
+    
+    public Torre() {
+    }
+
     public Torre(String colore) {
         super(colore);
         if ( colore.equals(Costanti.BIANCO) ){

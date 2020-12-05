@@ -8,6 +8,11 @@ public class Mossa {
     private int succY;
 
     //Costruttori
+
+    public Mossa() {
+    }
+    
+    
     
     public Mossa(int prevX, int prevY, int succX, int succY) {
         this.prevX = prevX;
