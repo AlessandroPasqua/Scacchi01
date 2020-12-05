@@ -90,6 +90,9 @@ public class VistaPrincipale extends javax.swing.JPanel {
                     
                 } else {
                     panel = (JPanel)chessBoard.getComponent(c);
+                    panel.removeAll();
+                    panel.validate();
+                    panel.repaint();
                     int row = (c / 8) % 2;
                     if (row == 0){
                         panel.setForeground(i % 2 == 0 ? Color.gray : Color.white );
