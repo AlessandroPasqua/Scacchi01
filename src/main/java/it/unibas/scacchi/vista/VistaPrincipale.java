@@ -47,12 +47,12 @@ public class VistaPrincipale extends javax.swing.JPanel {
     }
     
     private void assegnaControlloScacchiera(){
-        this.addMouseListener( null ); //Da aggiungere Listener Mouse
-        this.addMouseMotionListener( null ); //Da aggiungere Listener Mouse 2
+        chessBoard.addMouseListener( Applicazione.getInstance().getControlloPrincipale().getMouseClick() ); //Da aggiungere Listener Mouse
+        chessBoard.addMouseMotionListener( Applicazione.getInstance().getControlloPrincipale().getMouseMovimento() ); //Da aggiungere Listener Mouse 2
     }
     
     public void inizializzaPanelScacchiera(){
-        Dimension boardSize = new Dimension(600,600);
+        Dimension boardSize = new Dimension(800,800);
         paneScacchiera.setPreferredSize(boardSize);
         chessBoard = new JPanel();
         paneScacchiera.add(chessBoard, JLayeredPane.DEFAULT_LAYER);
@@ -240,4 +240,10 @@ public class VistaPrincipale extends javax.swing.JPanel {
     private javax.swing.JLabel tempoRimanenteAvversario;
     // End of variables declaration//GEN-END:variables
     private JPanel chessBoard;
+
+    public JPanel getChessBoard() {
+        return chessBoard;
+    }
+    
+    
 }
