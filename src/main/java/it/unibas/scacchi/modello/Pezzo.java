@@ -19,7 +19,10 @@ public interface Pezzo {
     
     public boolean isStessoColore(Pezzo p);
     
+    public Mossa cercaMossa(int x , int y);
+            
     public int getPosX();
+    
     public int getPosY();
     //Metodi Get e Set 
     

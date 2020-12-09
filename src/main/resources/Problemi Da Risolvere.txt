@@ -1,0 +1,15 @@
+1) Quando Si Carica una partita le mosse dei pedoni neri non vanno e alla 2 mossa lancia scacco matto
+
+2) Implementare Nel controllo o nel modello "Se muovo questo pezzo il mio re va sotto scacco?"
+
+3) Controllare Le mosse del re e come vengono calcolate perchè probabilmente c'è un errore
+
+4) Controllare conseguentemente I controlli di scacco e scacco Matto
+
+5) Implementare Un timer per indicare quanto tempo un utente ci ha messo per Fare le sue mosse totalmente , (o in avanti o in indietro)
+ 
+6) Implementare un JDialog Iniziale dove fai inserire i nomi utente , selezionare Se incominciare una nuova partita o ricominciare da una salvata
+
+7) Implementare Undo , e Salva e CArica sulla vista principale
+
+8) Troppa roba da fare 

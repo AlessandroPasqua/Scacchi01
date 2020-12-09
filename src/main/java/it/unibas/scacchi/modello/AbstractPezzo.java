@@ -21,9 +21,6 @@ public abstract class AbstractPezzo implements Pezzo{
     public AbstractPezzo() {
     }
     
-    
-   
-    
     public AbstractPezzo(String colore) {
         this.colore = colore;
     }
@@ -45,6 +42,15 @@ public abstract class AbstractPezzo implements Pezzo{
     public void cambiaPosizione(int x , int y ){
         this.posX = x;
         this.posY = y;
+    }
+    
+    public Mossa cercaMossa(int x , int y){
+        for ( Mossa m : this.mossePossibili ){
+            if ( m.getSuccX() == x && m.getSuccY() == y ){
+                return m;
+            }
+        }
+        return null;
     }
     
     

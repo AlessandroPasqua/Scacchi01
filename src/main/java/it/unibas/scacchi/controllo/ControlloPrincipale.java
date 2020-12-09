@@ -5,17 +5,12 @@ import it.unibas.scacchi.Costanti;
 import it.unibas.scacchi.modello.Mossa;
 import it.unibas.scacchi.modello.Pezzo;
 import it.unibas.scacchi.modello.Scacchiera;
-import it.unibas.scacchi.vista.VistaPrincipale;
 import java.awt.Color;
-import java.awt.Component;
-import java.awt.Point;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.util.ArrayList;
 import java.util.List;
-import javax.swing.JLabel;
-import javax.swing.JLayeredPane;
 import javax.swing.JPanel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,14 +19,17 @@ public class ControlloPrincipale {
     
     private static final Logger log = LoggerFactory.getLogger(ControlloPrincipale.class);
     private final MouseListener mouseClick = new MouseClick();
-    private final MouseMotionListener mouseMovimento = new MouseMovimento();
     
     private class MouseClick implements MouseListener{
         
         private List<JPanel> ripristinaColore = new ArrayList<JPanel>();
-
-        @Override
-        public void mouseClicked(MouseEvent e) {
+        
+        public void mouseClicked(MouseEvent e){}
+        
+        //Al click del mouse calcola le mosse per il pezzo scelto e colora le caselle possibili delle mosse
+        
+        public void mouseClicke(MouseEvent e) {
+            //DEVI FARE IL CONTROLLO SUL TURNO
             ripristinaColori();
             int riga = e.getY()/100;
             int colonna = e.getX()/100;
@@ -75,17 +73,73 @@ public class ControlloPrincipale {
 
         @Override
         public void mousePressed(MouseEvent e) {
-            this.mouseClicked(e);
+            int riga = e.getY()/100;
+            int colonna = e.getX()/100;
+            Scacchiera s = (Scacchiera)Applicazione.getInstance().getModello().getBean(Costanti.SCACCHIERA);
+            Pezzo p = s.getPezzo(riga, colonna);
+            if ( p == null ){
+                //this.ripristinaColori();
+                return;
+            }
+            if ( p.getColore().equals(Costanti.NERO) && s.isTurnoBianco() ){
+                return;
+            }
+            if ( p.getColore().equals(Costanti.BIANCO) && !s.isTurnoBianco() ){
+                return;
+            }
+            Applicazione.getInstance().getModello().insertBean(Costanti.PEZZOATTIVO,p);
+            this.mouseClicke(e);
         }
 
+        //Al rilascio del mouse si verifica la casella dove si ha rilasciato , se fa parte delle mosse (colorata di verde) si attiva il modello
         @Override
         public void mouseReleased(MouseEvent e) {
-            
+            Pezzo p = (Pezzo)Applicazione.getInstance().getModello().getBean(Costanti.PEZZOATTIVO);
+            if ( p == null ){
+                this.ripristinaColori();
+                return;
+            }
+            int riga = e.getY()/100;
+            int colonna = e.getX()/100;
+            JPanel chessBoard = Applicazione.getInstance().getVistaPrincipale().getChessBoard();
+            JPanel panel = (JPanel)chessBoard.getComponentAt( e.getX(), e.getY() );
+            if ( !panel.getBackground().equals(new Color(128,255,128)) /*VERDE CHIARO*/  && !panel.getBackground().equals(new Color(0,128,0))  /*VERDE SCURO*/ ){
+                this.ripristinaColori();
+                return;
+            }
+            Scacchiera s = (Scacchiera)Applicazione.getInstance().getModello().getBean(Costanti.SCACCHIERA);
+            Mossa m = p.cercaMossa(riga, colonna);
+            if ( m == null ){
+                return;
+            }
+            s.movimentoPezzo(p, m );
+            s.cambiaTurno();
+            if ( s.isTurnoBianco() ){
+                Applicazione.getInstance().getVistaPrincipale().getColoreTurno().setText("Bianco");
+            } else {
+                Applicazione.getInstance().getVistaPrincipale().getColoreTurno().setText("Nero");
+            }
+            //Da aggiungere un controllo del tipo "Se muovo questo pezzo il mio re va sotto scacco?"
+            String colore;
+            if ( p.getColore().equals(Costanti.BIANCO) ){
+                colore = Costanti.NERO;
+            } else {
+                colore = Costanti.BIANCO;
+            }
+            this.ripristinaColori();
+            Applicazione.getInstance().getVistaPrincipale().aggiornaScacchiera();
+            if ( s.verificaScacco(colore) ) {
+                if ( s.verificaScaccoMatto(colore) ){
+                    Applicazione.getInstance().getFrame().mostraMessaggio("Scacco matto!");
+                } else {
+                    Applicazione.getInstance().getFrame().mostraMessaggio("Scacco!");
+                }
+            }
         }
 
         @Override
         public void mouseEntered(MouseEvent e) {
-             //To change body of generated methods, choose Tools | Templates.
+            //To change body of generated methods, choose Tools | Templates.
         }
 
         @Override
@@ -95,28 +149,9 @@ public class ControlloPrincipale {
         
         
     }
-    
-    private class MouseMovimento implements MouseMotionListener{
-
-        @Override
-        public void mouseDragged(MouseEvent e) {
-            //log.debug("Dragged "+e.getX() + " y : " + e.getY());
-        }
-
-        @Override
-        public void mouseMoved(MouseEvent e) {
-             //To change body of generated methods, choose Tools | Templates.
-        }
-        
-    }
 
     public MouseListener getMouseClick() {
         return mouseClick;
     }
-
-    public MouseMotionListener getMouseMovimento() {
-        return mouseMovimento;
-    }
-    
     
 }

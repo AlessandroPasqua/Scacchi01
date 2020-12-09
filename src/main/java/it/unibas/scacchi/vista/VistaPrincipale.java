@@ -25,6 +25,7 @@ import org.slf4j.LoggerFactory;
  * @author santo
  */
 public class VistaPrincipale extends javax.swing.JPanel {
+    
     private Logger logger = LoggerFactory.getLogger(VistaPrincipale.class);
     
     
@@ -48,7 +49,6 @@ public class VistaPrincipale extends javax.swing.JPanel {
     
     private void assegnaControlloScacchiera(){
         chessBoard.addMouseListener( Applicazione.getInstance().getControlloPrincipale().getMouseClick() ); //Da aggiungere Listener Mouse
-        chessBoard.addMouseMotionListener( Applicazione.getInstance().getControlloPrincipale().getMouseMovimento() ); //Da aggiungere Listener Mouse 2
     }
     
     public void inizializzaPanelScacchiera(){
@@ -83,8 +83,12 @@ public class VistaPrincipale extends javax.swing.JPanel {
                 p = s.getPezzo(i, y);
                 if ( p != null ){
                     label = new JLabel( r.getImageResource( p.getPercorsoImmagine() ) );
-                    label.setSize(75, 75);
+                    label.setSize(100, 100);
                     panel = (JPanel)chessBoard.getComponent(c);
+                    panel.removeAll();
+                    panel.validate();
+                    panel.repaint();
+                    panel.setLayout(new BorderLayout());
                     panel.add(label);
                     paneScacchiera.setPosition(panel, c);
                     
@@ -124,52 +128,54 @@ public class VistaPrincipale extends javax.swing.JPanel {
         javax.swing.JLabel jLabel6 = new javax.swing.JLabel();
         tempoRimanenteAvversario = new javax.swing.JLabel();
         paneScacchiera = new javax.swing.JLayeredPane();
+        jPanel1 = new javax.swing.JPanel();
+        javax.swing.JLabel LabelTurno = new javax.swing.JLabel();
+        coloreTurno = new javax.swing.JLabel();
 
         panelInfoPartita.setBorder(javax.swing.BorderFactory.createTitledBorder("Informazioni Partita"));
 
-        jLabel1.setText("Nome Player 1 :");
+        jLabel1.setText("Player 1 :");
 
-        jLabel2.setText("Nome Player 2 : ");
+        jLabel2.setText("Player 2 : ");
 
-        nomeUtente1.setText("jLabel4");
+        nomeUtente1.setFont(new java.awt.Font("Impact", 2, 18)); // NOI18N
+        nomeUtente1.setText("Ciruzz U meccanic");
 
-        nomePlayer2.setText("Ciro ");
+        nomePlayer2.setFont(new java.awt.Font("Impact", 2, 18)); // NOI18N
+        nomePlayer2.setText("Diego Armando Scarpar");
 
         jLabel3.setText("Tempo Rimanente :");
 
-        tempoRimanente1.setText("jLabel5");
+        tempoRimanente1.setText("0");
 
         jLabel6.setText("Tempo Rimanente :");
 
-        tempoRimanenteAvversario.setText("jLabel7");
+        tempoRimanenteAvversario.setText("0");
 
         javax.swing.GroupLayout panelInfoPartitaLayout = new javax.swing.GroupLayout(panelInfoPartita);
         panelInfoPartita.setLayout(panelInfoPartitaLayout);
         panelInfoPartitaLayout.setHorizontalGroup(
             panelInfoPartitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelInfoPartitaLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(panelInfoPartitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelInfoPartitaLayout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(panelInfoPartitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3)
+                            .addComponent(nomeUtente1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addGroup(panelInfoPartitaLayout.createSequentialGroup()
-                                .addGap(6, 6, 6)
                                 .addGroup(panelInfoPartitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(nomeUtente1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(nomePlayer2)
-                                    .addComponent(tempoRimanente1))))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelInfoPartitaLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel6))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(nomePlayer2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap())
+                    .addGroup(panelInfoPartitaLayout.createSequentialGroup()
                         .addGroup(panelInfoPartitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelInfoPartitaLayout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(tempoRimanenteAvversario))
-                            .addComponent(jLabel6))))
-                .addContainerGap())
+                            .addComponent(tempoRimanente1)
+                            .addComponent(tempoRimanenteAvversario))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         panelInfoPartitaLayout.setVerticalGroup(
             panelInfoPartitaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -178,32 +184,62 @@ public class VistaPrincipale extends javax.swing.JPanel {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(nomeUtente1)
-                .addGap(24, 24, 24)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tempoRimanente1)
-                .addGap(18, 18, 18)
+                .addGap(36, 36, 36)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(nomePlayer2)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tempoRimanenteAvversario)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
-        paneScacchiera.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        paneScacchiera.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout paneScacchieraLayout = new javax.swing.GroupLayout(paneScacchiera);
         paneScacchiera.setLayout(paneScacchieraLayout);
         paneScacchieraLayout.setHorizontalGroup(
             paneScacchieraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 630, Short.MAX_VALUE)
+            .addGap(0, 773, Short.MAX_VALUE)
         );
         paneScacchieraLayout.setVerticalGroup(
             paneScacchieraLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 459, Short.MAX_VALUE)
+            .addGap(0, 672, Short.MAX_VALUE)
+        );
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        LabelTurno.setText("E' Il Turno Del Player Che Gioca Il Colore ");
+
+        coloreTurno.setFont(new java.awt.Font("Bradley Hand ITC", 1, 18)); // NOI18N
+        coloreTurno.setText("Bianco");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(LabelTurno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(85, 85, 85)
+                .addComponent(coloreTurno)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(LabelTurno)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(coloreTurno)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -212,9 +248,11 @@ public class VistaPrincipale extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(panelInfoPartita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panelInfoPartita, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(paneScacchiera)
+                .addComponent(paneScacchiera, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -225,13 +263,17 @@ public class VistaPrincipale extends javax.swing.JPanel {
                     .addComponent(paneScacchiera)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(panelInfoPartita, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 214, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel coloreTurno;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel nomePlayer2;
     private javax.swing.JLabel nomeUtente1;
     private javax.swing.JLayeredPane paneScacchiera;
@@ -244,6 +286,12 @@ public class VistaPrincipale extends javax.swing.JPanel {
     public JPanel getChessBoard() {
         return chessBoard;
     }
+
+    public JLabel getColoreTurno() {
+        return this.coloreTurno;
+    }
+    
+    
     
     
 }

@@ -14,7 +14,20 @@
       {
         "CLASSNAME": "it.unibas.scacchi.modello.Cavallo",
         "DATA": {
-          "mossePossibili": [],
+          "mossePossibili": [
+            {
+              "prevX": 0,
+              "prevY": 1,
+              "succX": 2,
+              "succY": 2
+            },
+            {
+              "prevX": 0,
+              "prevY": 1,
+              "succX": 2,
+              "succY": 0
+            }
+          ],
           "colore": "NERO",
           "percorsoImmagine": "/cavallonero.png",
           "posX": 0,
@@ -24,7 +37,56 @@
       {
         "CLASSNAME": "it.unibas.scacchi.modello.Alfiere",
         "DATA": {
-          "mossePossibili": [],
+          "mossePossibili": [
+            {
+              "prevX": 0,
+              "prevY": 2,
+              "succX": 1,
+              "succY": 1
+            },
+            {
+              "prevX": 0,
+              "prevY": 2,
+              "succX": 2,
+              "succY": 0
+            },
+            {
+              "prevX": 0,
+              "prevY": 2,
+              "succX": 1,
+              "succY": 1
+            },
+            {
+              "prevX": 0,
+              "prevY": 2,
+              "succX": 2,
+              "succY": 0
+            },
+            {
+              "prevX": 0,
+              "prevY": 2,
+              "succX": 1,
+              "succY": 1
+            },
+            {
+              "prevX": 0,
+              "prevY": 2,
+              "succX": 2,
+              "succY": 0
+            },
+            {
+              "prevX": 0,
+              "prevY": 2,
+              "succX": 1,
+              "succY": 1
+            },
+            {
+              "prevX": 0,
+              "prevY": 2,
+              "succX": 2,
+              "succY": 0
+            }
+          ],
           "colore": "NERO",
           "percorsoImmagine": "/alfierenero.png",
           "posX": 0,
@@ -61,20 +123,24 @@
           "posY": 5
         }
       },
-      {
-        "CLASSNAME": "it.unibas.scacchi.modello.Cavallo",
-        "DATA": {
-          "mossePossibili": [],
-          "colore": "NERO",
-          "percorsoImmagine": "/cavallonero.png",
-          "posX": 0,
-          "posY": 6
-        }
-      },
+      null,
       {
         "CLASSNAME": "it.unibas.scacchi.modello.Torre",
         "DATA": {
-          "mossePossibili": [],
+          "mossePossibili": [
+            {
+              "prevX": 0,
+              "prevY": 7,
+              "succX": 0,
+              "succY": 6
+            },
+            {
+              "prevX": 0,
+              "prevY": 7,
+              "succX": 0,
+              "succY": 6
+            }
+          ],
           "colore": "NERO",
           "percorsoImmagine": "/torrenera.png",
           "posX": 0,
@@ -83,27 +149,482 @@
       }
     ],
     [
-      null,
-      null,
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+        "DATA": {
+          "primaMossa": true,
+          "mossePossibili": [
+            {
+              "prevX": 1,
+              "prevY": 0,
+              "succX": 3,
+              "succY": 0
+            },
+            {
+              "prevX": 1,
+              "prevY": 0,
+              "succX": 2,
+              "succY": 0
+            },
+            {
+              "prevX": 1,
+              "prevY": 0,
+              "succX": 3,
+              "succY": 0
+            },
+            {
+              "prevX": 1,
+              "prevY": 0,
+              "succX": 2,
+              "succY": 0
+            },
+            {
+              "prevX": 1,
+              "prevY": 0,
+              "succX": 3,
+              "succY": 0
+            },
+            {
+              "prevX": 1,
+              "prevY": 0,
+              "succX": 2,
+              "succY": 0
+            },
+            {
+              "prevX": 1,
+              "prevY": 0,
+              "succX": 3,
+              "succY": 0
+            },
+            {
+              "prevX": 1,
+              "prevY": 0,
+              "succX": 2,
+              "succY": 0
+            },
+            {
+              "prevX": 1,
+              "prevY": 0,
+              "succX": 3,
+              "succY": 0
+            },
+            {
+              "prevX": 1,
+              "prevY": 0,
+              "succX": 2,
+              "succY": 0
+            },
+            {
+              "prevX": 1,
+              "prevY": 0,
+              "succX": 3,
+              "succY": 0
+            },
+            {
+              "prevX": 1,
+              "prevY": 0,
+              "succX": 2,
+              "succY": 0
+            },
+            {
+              "prevX": 1,
+              "prevY": 0,
+              "succX": 3,
+              "succY": 0
+            },
+            {
+              "prevX": 1,
+              "prevY": 0,
+              "succX": 2,
+              "succY": 0
+            }
+          ],
+          "colore": "NERO",
+          "percorsoImmagine": "/pedonenero.png",
+          "posX": 1,
+          "posY": 0
+        }
+      },
       null,
       {
         "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
         "DATA": {
           "primaMossa": true,
-          "mossePossibili": [],
+          "mossePossibili": [
+            {
+              "prevX": 1,
+              "prevY": 2,
+              "succX": 3,
+              "succY": 2
+            },
+            {
+              "prevX": 1,
+              "prevY": 2,
+              "succX": 2,
+              "succY": 2
+            },
+            {
+              "prevX": 1,
+              "prevY": 2,
+              "succX": 3,
+              "succY": 2
+            },
+            {
+              "prevX": 1,
+              "prevY": 2,
+              "succX": 2,
+              "succY": 2
+            },
+            {
+              "prevX": 1,
+              "prevY": 2,
+              "succX": 3,
+              "succY": 2
+            },
+            {
+              "prevX": 1,
+              "prevY": 2,
+              "succX": 2,
+              "succY": 2
+            },
+            {
+              "prevX": 1,
+              "prevY": 2,
+              "succX": 3,
+              "succY": 2
+            },
+            {
+              "prevX": 1,
+              "prevY": 2,
+              "succX": 2,
+              "succY": 2
+            },
+            {
+              "prevX": 1,
+              "prevY": 2,
+              "succX": 3,
+              "succY": 2
+            },
+            {
+              "prevX": 1,
+              "prevY": 2,
+              "succX": 2,
+              "succY": 2
+            },
+            {
+              "prevX": 1,
+              "prevY": 2,
+              "succX": 3,
+              "succY": 2
+            },
+            {
+              "prevX": 1,
+              "prevY": 2,
+              "succX": 2,
+              "succY": 2
+            },
+            {
+              "prevX": 1,
+              "prevY": 2,
+              "succX": 3,
+              "succY": 2
+            },
+            {
+              "prevX": 1,
+              "prevY": 2,
+              "succX": 2,
+              "succY": 2
+            }
+          ],
+          "colore": "NERO",
+          "percorsoImmagine": "/pedonenero.png",
+          "posX": 1,
+          "posY": 2
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+        "DATA": {
+          "primaMossa": true,
+          "mossePossibili": [
+            {
+              "prevX": 1,
+              "prevY": 3,
+              "succX": 3,
+              "succY": 3
+            },
+            {
+              "prevX": 1,
+              "prevY": 3,
+              "succX": 2,
+              "succY": 3
+            },
+            {
+              "prevX": 1,
+              "prevY": 3,
+              "succX": 3,
+              "succY": 3
+            },
+            {
+              "prevX": 1,
+              "prevY": 3,
+              "succX": 2,
+              "succY": 3
+            },
+            {
+              "prevX": 1,
+              "prevY": 3,
+              "succX": 3,
+              "succY": 3
+            },
+            {
+              "prevX": 1,
+              "prevY": 3,
+              "succX": 2,
+              "succY": 3
+            },
+            {
+              "prevX": 1,
+              "prevY": 3,
+              "succX": 3,
+              "succY": 3
+            },
+            {
+              "prevX": 1,
+              "prevY": 3,
+              "succX": 2,
+              "succY": 3
+            },
+            {
+              "prevX": 1,
+              "prevY": 3,
+              "succX": 3,
+              "succY": 3
+            },
+            {
+              "prevX": 1,
+              "prevY": 3,
+              "succX": 2,
+              "succY": 3
+            },
+            {
+              "prevX": 1,
+              "prevY": 3,
+              "succX": 3,
+              "succY": 3
+            },
+            {
+              "prevX": 1,
+              "prevY": 3,
+              "succX": 2,
+              "succY": 3
+            },
+            {
+              "prevX": 1,
+              "prevY": 3,
+              "succX": 3,
+              "succY": 3
+            },
+            {
+              "prevX": 1,
+              "prevY": 3,
+              "succX": 2,
+              "succY": 3
+            }
+          ],
           "colore": "NERO",
           "percorsoImmagine": "/pedonenero.png",
           "posX": 1,
           "posY": 3
         }
       },
-      null,
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+        "DATA": {
+          "primaMossa": true,
+          "mossePossibili": [
+            {
+              "prevX": 1,
+              "prevY": 4,
+              "succX": 3,
+              "succY": 4
+            },
+            {
+              "prevX": 1,
+              "prevY": 4,
+              "succX": 2,
+              "succY": 4
+            },
+            {
+              "prevX": 1,
+              "prevY": 4,
+              "succX": 3,
+              "succY": 4
+            },
+            {
+              "prevX": 1,
+              "prevY": 4,
+              "succX": 2,
+              "succY": 4
+            },
+            {
+              "prevX": 1,
+              "prevY": 4,
+              "succX": 3,
+              "succY": 4
+            },
+            {
+              "prevX": 1,
+              "prevY": 4,
+              "succX": 2,
+              "succY": 4
+            },
+            {
+              "prevX": 1,
+              "prevY": 4,
+              "succX": 3,
+              "succY": 4
+            },
+            {
+              "prevX": 1,
+              "prevY": 4,
+              "succX": 2,
+              "succY": 4
+            },
+            {
+              "prevX": 1,
+              "prevY": 4,
+              "succX": 3,
+              "succY": 4
+            },
+            {
+              "prevX": 1,
+              "prevY": 4,
+              "succX": 2,
+              "succY": 4
+            },
+            {
+              "prevX": 1,
+              "prevY": 4,
+              "succX": 3,
+              "succY": 4
+            },
+            {
+              "prevX": 1,
+              "prevY": 4,
+              "succX": 2,
+              "succY": 4
+            },
+            {
+              "prevX": 1,
+              "prevY": 4,
+              "succX": 3,
+              "succY": 4
+            },
+            {
+              "prevX": 1,
+              "prevY": 4,
+              "succX": 2,
+              "succY": 4
+            }
+          ],
+          "colore": "NERO",
+          "percorsoImmagine": "/pedonenero.png",
+          "posX": 1,
+          "posY": 4
+        }
+      },
       null,
       {
         "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
         "DATA": {
           "primaMossa": true,
-          "mossePossibili": [],
+          "mossePossibili": [
+            {
+              "prevX": 1,
+              "prevY": 6,
+              "succX": 3,
+              "succY": 6
+            },
+            {
+              "prevX": 1,
+              "prevY": 6,
+              "succX": 2,
+              "succY": 6
+            },
+            {
+              "prevX": 1,
+              "prevY": 6,
+              "succX": 3,
+              "succY": 6
+            },
+            {
+              "prevX": 1,
+              "prevY": 6,
+              "succX": 2,
+              "succY": 6
+            },
+            {
+              "prevX": 1,
+              "prevY": 6,
+              "succX": 3,
+              "succY": 6
+            },
+            {
+              "prevX": 1,
+              "prevY": 6,
+              "succX": 2,
+              "succY": 6
+            },
+            {
+              "prevX": 1,
+              "prevY": 6,
+              "succX": 3,
+              "succY": 6
+            },
+            {
+              "prevX": 1,
+              "prevY": 6,
+              "succX": 2,
+              "succY": 6
+            },
+            {
+              "prevX": 1,
+              "prevY": 6,
+              "succX": 3,
+              "succY": 6
+            },
+            {
+              "prevX": 1,
+              "prevY": 6,
+              "succX": 2,
+              "succY": 6
+            },
+            {
+              "prevX": 1,
+              "prevY": 6,
+              "succX": 3,
+              "succY": 6
+            },
+            {
+              "prevX": 1,
+              "prevY": 6,
+              "succX": 2,
+              "succY": 6
+            },
+            {
+              "prevX": 1,
+              "prevY": 6,
+              "succX": 3,
+              "succY": 6
+            },
+            {
+              "prevX": 1,
+              "prevY": 6,
+              "succX": 2,
+              "succY": 6
+            }
+          ],
           "colore": "NERO",
           "percorsoImmagine": "/pedonenero.png",
           "posX": 1,
@@ -114,7 +635,68 @@
         "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
         "DATA": {
           "primaMossa": true,
-          "mossePossibili": [],
+          "mossePossibili": [
+            {
+              "prevX": 1,
+              "prevY": 7,
+              "succX": 3,
+              "succY": 7
+            },
+            {
+              "prevX": 1,
+              "prevY": 7,
+              "succX": 2,
+              "succY": 7
+            },
+            {
+              "prevX": 1,
+              "prevY": 7,
+              "succX": 3,
+              "succY": 7
+            },
+            {
+              "prevX": 1,
+              "prevY": 7,
+              "succX": 2,
+              "succY": 7
+            },
+            {
+              "prevX": 1,
+              "prevY": 7,
+              "succX": 3,
+              "succY": 7
+            },
+            {
+              "prevX": 1,
+              "prevY": 7,
+              "succX": 2,
+              "succY": 7
+            },
+            {
+              "prevX": 1,
+              "prevY": 7,
+              "succX": 3,
+              "succY": 7
+            },
+            {
+              "prevX": 1,
+              "prevY": 7,
+              "succX": 2,
+              "succY": 7
+            },
+            {
+              "prevX": 1,
+              "prevY": 7,
+              "succX": 3,
+              "succY": 7
+            },
+            {
+              "prevX": 1,
+              "prevY": 7,
+              "succX": 2,
+              "succY": 7
+            }
+          ],
           "colore": "NERO",
           "percorsoImmagine": "/pedonenero.png",
           "posX": 1,
@@ -123,56 +705,65 @@
       }
     ],
     [
-      {
-        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
-        "DATA": {
-          "primaMossa": false,
-          "mossePossibili": [],
-          "colore": "NERO",
-          "percorsoImmagine": "/pedonenero.png",
-          "posX": 2,
-          "posY": 0
-        }
-      },
-      {
-        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
-        "DATA": {
-          "primaMossa": false,
-          "mossePossibili": [],
-          "colore": "NERO",
-          "percorsoImmagine": "/pedonenero.png",
-          "posX": 2,
-          "posY": 1
-        }
-      },
-      {
-        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
-        "DATA": {
-          "primaMossa": false,
-          "mossePossibili": [],
-          "colore": "NERO",
-          "percorsoImmagine": "/pedonenero.png",
-          "posX": 2,
-          "posY": 2
-        }
-      },
+      null,
+      null,
+      null,
+      null,
       null,
       {
         "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
         "DATA": {
           "primaMossa": false,
-          "mossePossibili": [],
-          "colore": "NERO",
-          "percorsoImmagine": "/pedonenero.png",
-          "posX": 2,
-          "posY": 4
-        }
-      },
-      {
-        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
-        "DATA": {
-          "primaMossa": false,
-          "mossePossibili": [],
+          "mossePossibili": [
+            {
+              "prevX": 1,
+              "prevY": 5,
+              "succX": 3,
+              "succY": 5
+            },
+            {
+              "prevX": 1,
+              "prevY": 5,
+              "succX": 2,
+              "succY": 5
+            },
+            {
+              "prevX": 2,
+              "prevY": 5,
+              "succX": 3,
+              "succY": 5
+            },
+            {
+              "prevX": 2,
+              "prevY": 5,
+              "succX": 3,
+              "succY": 5
+            },
+            {
+              "prevX": 2,
+              "prevY": 5,
+              "succX": 3,
+              "succY": 5
+            },
+            {
+              "prevX": 2,
+              "prevY": 5,
+              "succX": 3,
+              "succY": 5
+            },
+            {
+              "prevX": 2,
+              "prevY": 5,
+              "succX": 3,
+              "succY": 5
+            },
+            {
+              "prevX": 2,
+              "prevY": 5,
+              "succX": 3,
+              "succY": 5
+            }
+          ],
           "colore": "NERO",
           "percorsoImmagine": "/pedonenero.png",
           "posX": 2,
@@ -180,27 +771,41 @@
         }
       },
       null,
-      null
-    ],
-    [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ],
-    [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Cavallo",
+        "DATA": {
+          "mossePossibili": [
+            {
+              "prevX": 2,
+              "prevY": 7,
+              "succX": 1,
+              "succY": 5
+            },
+            {
+              "prevX": 2,
+              "prevY": 7,
+              "succX": 0,
+              "succY": 6
+            },
+            {
+              "prevX": 2,
+              "prevY": 7,
+              "succX": 3,
+              "succY": 5
+            },
+            {
+              "prevX": 2,
+              "prevY": 7,
+              "succX": 4,
+              "succY": 6
+            }
+          ],
+          "colore": "NERO",
+          "percorsoImmagine": "/cavallonero.png",
+          "posX": 2,
+          "posY": 7
+        }
+      }
     ],
     [
       null,
@@ -208,53 +813,256 @@
         "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
         "DATA": {
           "primaMossa": false,
-          "mossePossibili": [],
-          "colore": "BIANCO",
-          "percorsoImmagine": "/pedonebianco.png",
-          "posX": 5,
+          "mossePossibili": [
+            {
+              "prevX": 1,
+              "prevY": 1,
+              "succX": 3,
+              "succY": 1
+            },
+            {
+              "prevX": 1,
+              "prevY": 1,
+              "succX": 2,
+              "succY": 1
+            },
+            {
+              "prevX": 3,
+              "prevY": 1,
+              "succX": 4,
+              "succY": 1
+            },
+            {
+              "prevX": 3,
+              "prevY": 1,
+              "succX": 4,
+              "succY": 1
+            },
+            {
+              "prevX": 3,
+              "prevY": 1,
+              "succX": 4,
+              "succY": 1
+            },
+            {
+              "prevX": 3,
+              "prevY": 1,
+              "succX": 4,
+              "succY": 1
+            }
+          ],
+          "colore": "NERO",
+          "percorsoImmagine": "/pedonenero.png",
+          "posX": 3,
           "posY": 1
         }
       },
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    [
+      null,
+      null,
+      null,
       {
         "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
         "DATA": {
           "primaMossa": false,
-          "mossePossibili": [],
+          "mossePossibili": [
+            {
+              "prevX": 6,
+              "prevY": 3,
+              "succX": 4,
+              "succY": 3
+            },
+            {
+              "prevX": 6,
+              "prevY": 3,
+              "succX": 5,
+              "succY": 3
+            },
+            {
+              "prevX": 4,
+              "prevY": 3,
+              "succX": 3,
+              "succY": 3
+            },
+            {
+              "prevX": 4,
+              "prevY": 3,
+              "succX": 3,
+              "succY": 3
+            },
+            {
+              "prevX": 4,
+              "prevY": 3,
+              "succX": 3,
+              "succY": 3
+            },
+            {
+              "prevX": 4,
+              "prevY": 3,
+              "succX": 3,
+              "succY": 3
+            },
+            {
+              "prevX": 4,
+              "prevY": 3,
+              "succX": 3,
+              "succY": 3
+            },
+            {
+              "prevX": 4,
+              "prevY": 3,
+              "succX": 3,
+              "succY": 3
+            },
+            {
+              "prevX": 4,
+              "prevY": 3,
+              "succX": 3,
+              "succY": 3
+            }
+          ],
           "colore": "BIANCO",
           "percorsoImmagine": "/pedonebianco.png",
+          "posX": 4,
+          "posY": 3
+        }
+      },
+      null,
+      null,
+      null,
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+        "DATA": {
+          "primaMossa": false,
+          "mossePossibili": [
+            {
+              "prevX": 6,
+              "prevY": 7,
+              "succX": 4,
+              "succY": 7
+            },
+            {
+              "prevX": 6,
+              "prevY": 7,
+              "succX": 5,
+              "succY": 7
+            },
+            {
+              "prevX": 4,
+              "prevY": 7,
+              "succX": 3,
+              "succY": 7
+            },
+            {
+              "prevX": 4,
+              "prevY": 7,
+              "succX": 3,
+              "succY": 7
+            },
+            {
+              "prevX": 4,
+              "prevY": 7,
+              "succX": 3,
+              "succY": 7
+            }
+          ],
+          "colore": "BIANCO",
+          "percorsoImmagine": "/pedonebianco.png",
+          "posX": 4,
+          "posY": 7
+        }
+      }
+    ],
+    [
+      null,
+      null,
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Cavallo",
+        "DATA": {
+          "mossePossibili": [
+            {
+              "prevX": 5,
+              "prevY": 2,
+              "succX": 4,
+              "succY": 0
+            },
+            {
+              "prevX": 5,
+              "prevY": 2,
+              "succX": 3,
+              "succY": 1
+            },
+            {
+              "prevX": 5,
+              "prevY": 2,
+              "succX": 3,
+              "succY": 3
+            },
+            {
+              "prevX": 5,
+              "prevY": 2,
+              "succX": 4,
+              "succY": 4
+            },
+            {
+              "prevX": 5,
+              "prevY": 2,
+              "succX": 7,
+              "succY": 1
+            }
+          ],
+          "colore": "BIANCO",
+          "percorsoImmagine": "/cavallobianco.png",
           "posX": 5,
           "posY": 2
         }
       },
+      null,
+      null,
       {
-        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+        "CLASSNAME": "it.unibas.scacchi.modello.Cavallo",
         "DATA": {
-          "primaMossa": false,
-          "mossePossibili": [],
+          "mossePossibili": [
+            {
+              "prevX": 5,
+              "prevY": 5,
+              "succX": 7,
+              "succY": 6
+            },
+            {
+              "prevX": 5,
+              "prevY": 5,
+              "succX": 6,
+              "succY": 7
+            },
+            {
+              "prevX": 5,
+              "prevY": 5,
+              "succX": 3,
+              "succY": 4
+            },
+            {
+              "prevX": 5,
+              "prevY": 5,
+              "succX": 3,
+              "succY": 6
+            },
+            {
+              "prevX": 5,
+              "prevY": 5,
+              "succX": 6,
+              "succY": 3
+            }
+          ],
           "colore": "BIANCO",
-          "percorsoImmagine": "/pedonebianco.png",
-          "posX": 5,
-          "posY": 3
-        }
-      },
-      {
-        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
-        "DATA": {
-          "primaMossa": false,
-          "mossePossibili": [],
-          "colore": "BIANCO",
-          "percorsoImmagine": "/pedonebianco.png",
-          "posX": 5,
-          "posY": 4
-        }
-      },
-      {
-        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
-        "DATA": {
-          "primaMossa": false,
-          "mossePossibili": [],
-          "colore": "BIANCO",
-          "percorsoImmagine": "/pedonebianco.png",
+          "percorsoImmagine": "/cavallobianco.png",
           "posX": 5,
           "posY": 5
         }
@@ -267,66 +1075,803 @@
         "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
         "DATA": {
           "primaMossa": true,
-          "mossePossibili": [],
+          "mossePossibili": [
+            {
+              "prevX": 6,
+              "prevY": 0,
+              "succX": 4,
+              "succY": 0
+            },
+            {
+              "prevX": 6,
+              "prevY": 0,
+              "succX": 5,
+              "succY": 0
+            },
+            {
+              "prevX": 6,
+              "prevY": 0,
+              "succX": 4,
+              "succY": 0
+            },
+            {
+              "prevX": 6,
+              "prevY": 0,
+              "succX": 5,
+              "succY": 0
+            },
+            {
+              "prevX": 6,
+              "prevY": 0,
+              "succX": 4,
+              "succY": 0
+            },
+            {
+              "prevX": 6,
+              "prevY": 0,
+              "succX": 5,
+              "succY": 0
+            },
+            {
+              "prevX": 6,
+              "prevY": 0,
+              "succX": 4,
+              "succY": 0
+            },
+            {
+              "prevX": 6,
+              "prevY": 0,
+              "succX": 5,
+              "succY": 0
+            },
+            {
+              "prevX": 6,
+              "prevY": 0,
+              "succX": 4,
+              "succY": 0
+            },
+            {
+              "prevX": 6,
+              "prevY": 0,
+              "succX": 5,
+              "succY": 0
+            },
+            {
+              "prevX": 6,
+              "prevY": 0,
+              "succX": 4,
+              "succY": 0
+            },
+            {
+              "prevX": 6,
+              "prevY": 0,
+              "succX": 5,
+              "succY": 0
+            },
+            {
+              "prevX": 6,
+              "prevY": 0,
+              "succX": 4,
+              "succY": 0
+            },
+            {
+              "prevX": 6,
+              "prevY": 0,
+              "succX": 5,
+              "succY": 0
+            }
+          ],
           "colore": "BIANCO",
           "percorsoImmagine": "/pedonebianco.png",
           "posX": 6,
           "posY": 0
         }
       },
-      null,
-      null,
-      null,
-      null,
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+        "DATA": {
+          "primaMossa": true,
+          "mossePossibili": [
+            {
+              "prevX": 6,
+              "prevY": 1,
+              "succX": 4,
+              "succY": 1
+            },
+            {
+              "prevX": 6,
+              "prevY": 1,
+              "succX": 5,
+              "succY": 1
+            },
+            {
+              "prevX": 6,
+              "prevY": 1,
+              "succX": 4,
+              "succY": 1
+            },
+            {
+              "prevX": 6,
+              "prevY": 1,
+              "succX": 5,
+              "succY": 1
+            },
+            {
+              "prevX": 6,
+              "prevY": 1,
+              "succX": 4,
+              "succY": 1
+            },
+            {
+              "prevX": 6,
+              "prevY": 1,
+              "succX": 5,
+              "succY": 1
+            },
+            {
+              "prevX": 6,
+              "prevY": 1,
+              "succX": 4,
+              "succY": 1
+            },
+            {
+              "prevX": 6,
+              "prevY": 1,
+              "succX": 5,
+              "succY": 1
+            },
+            {
+              "prevX": 6,
+              "prevY": 1,
+              "succX": 4,
+              "succY": 1
+            },
+            {
+              "prevX": 6,
+              "prevY": 1,
+              "succX": 5,
+              "succY": 1
+            },
+            {
+              "prevX": 6,
+              "prevY": 1,
+              "succX": 4,
+              "succY": 1
+            },
+            {
+              "prevX": 6,
+              "prevY": 1,
+              "succX": 5,
+              "succY": 1
+            },
+            {
+              "prevX": 6,
+              "prevY": 1,
+              "succX": 4,
+              "succY": 1
+            },
+            {
+              "prevX": 6,
+              "prevY": 1,
+              "succX": 5,
+              "succY": 1
+            }
+          ],
+          "colore": "BIANCO",
+          "percorsoImmagine": "/pedonebianco.png",
+          "posX": 6,
+          "posY": 1
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+        "DATA": {
+          "primaMossa": true,
+          "mossePossibili": [
+            {
+              "prevX": 6,
+              "prevY": 2,
+              "succX": 4,
+              "succY": 2
+            },
+            {
+              "prevX": 6,
+              "prevY": 2,
+              "succX": 5,
+              "succY": 2
+            },
+            {
+              "prevX": 6,
+              "prevY": 2,
+              "succX": 4,
+              "succY": 2
+            },
+            {
+              "prevX": 6,
+              "prevY": 2,
+              "succX": 5,
+              "succY": 2
+            }
+          ],
+          "colore": "BIANCO",
+          "percorsoImmagine": "/pedonebianco.png",
+          "posX": 6,
+          "posY": 2
+        }
+      },
       null,
       {
         "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
         "DATA": {
           "primaMossa": true,
-          "mossePossibili": [],
+          "mossePossibili": [
+            {
+              "prevX": 6,
+              "prevY": 4,
+              "succX": 4,
+              "succY": 4
+            },
+            {
+              "prevX": 6,
+              "prevY": 4,
+              "succX": 5,
+              "succY": 4
+            },
+            {
+              "prevX": 6,
+              "prevY": 4,
+              "succX": 4,
+              "succY": 4
+            },
+            {
+              "prevX": 6,
+              "prevY": 4,
+              "succX": 5,
+              "succY": 4
+            },
+            {
+              "prevX": 6,
+              "prevY": 4,
+              "succX": 4,
+              "succY": 4
+            },
+            {
+              "prevX": 6,
+              "prevY": 4,
+              "succX": 5,
+              "succY": 4
+            },
+            {
+              "prevX": 6,
+              "prevY": 4,
+              "succX": 4,
+              "succY": 4
+            },
+            {
+              "prevX": 6,
+              "prevY": 4,
+              "succX": 5,
+              "succY": 4
+            },
+            {
+              "prevX": 6,
+              "prevY": 4,
+              "succX": 4,
+              "succY": 4
+            },
+            {
+              "prevX": 6,
+              "prevY": 4,
+              "succX": 5,
+              "succY": 4
+            },
+            {
+              "prevX": 6,
+              "prevY": 4,
+              "succX": 4,
+              "succY": 4
+            },
+            {
+              "prevX": 6,
+              "prevY": 4,
+              "succX": 5,
+              "succY": 4
+            },
+            {
+              "prevX": 6,
+              "prevY": 4,
+              "succX": 4,
+              "succY": 4
+            },
+            {
+              "prevX": 6,
+              "prevY": 4,
+              "succX": 5,
+              "succY": 4
+            }
+          ],
+          "colore": "BIANCO",
+          "percorsoImmagine": "/pedonebianco.png",
+          "posX": 6,
+          "posY": 4
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+        "DATA": {
+          "primaMossa": true,
+          "mossePossibili": [
+            {
+              "prevX": 6,
+              "prevY": 5,
+              "succX": 4,
+              "succY": 5
+            },
+            {
+              "prevX": 6,
+              "prevY": 5,
+              "succX": 5,
+              "succY": 5
+            },
+            {
+              "prevX": 6,
+              "prevY": 5,
+              "succX": 4,
+              "succY": 5
+            },
+            {
+              "prevX": 6,
+              "prevY": 5,
+              "succX": 5,
+              "succY": 5
+            },
+            {
+              "prevX": 6,
+              "prevY": 5,
+              "succX": 4,
+              "succY": 5
+            },
+            {
+              "prevX": 6,
+              "prevY": 5,
+              "succX": 5,
+              "succY": 5
+            },
+            {
+              "prevX": 6,
+              "prevY": 5,
+              "succX": 4,
+              "succY": 5
+            },
+            {
+              "prevX": 6,
+              "prevY": 5,
+              "succX": 5,
+              "succY": 5
+            },
+            {
+              "prevX": 6,
+              "prevY": 5,
+              "succX": 4,
+              "succY": 5
+            },
+            {
+              "prevX": 6,
+              "prevY": 5,
+              "succX": 5,
+              "succY": 5
+            },
+            {
+              "prevX": 6,
+              "prevY": 5,
+              "succX": 4,
+              "succY": 5
+            },
+            {
+              "prevX": 6,
+              "prevY": 5,
+              "succX": 5,
+              "succY": 5
+            }
+          ],
+          "colore": "BIANCO",
+          "percorsoImmagine": "/pedonebianco.png",
+          "posX": 6,
+          "posY": 5
+        }
+      },
+      {
+        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+        "DATA": {
+          "primaMossa": true,
+          "mossePossibili": [
+            {
+              "prevX": 6,
+              "prevY": 6,
+              "succX": 4,
+              "succY": 6
+            },
+            {
+              "prevX": 6,
+              "prevY": 6,
+              "succX": 5,
+              "succY": 6
+            },
+            {
+              "prevX": 6,
+              "prevY": 6,
+              "succX": 4,
+              "succY": 6
+            },
+            {
+              "prevX": 6,
+              "prevY": 6,
+              "succX": 5,
+              "succY": 6
+            },
+            {
+              "prevX": 6,
+              "prevY": 6,
+              "succX": 4,
+              "succY": 6
+            },
+            {
+              "prevX": 6,
+              "prevY": 6,
+              "succX": 5,
+              "succY": 6
+            },
+            {
+              "prevX": 6,
+              "prevY": 6,
+              "succX": 4,
+              "succY": 6
+            },
+            {
+              "prevX": 6,
+              "prevY": 6,
+              "succX": 5,
+              "succY": 6
+            },
+            {
+              "prevX": 6,
+              "prevY": 6,
+              "succX": 4,
+              "succY": 6
+            },
+            {
+              "prevX": 6,
+              "prevY": 6,
+              "succX": 5,
+              "succY": 6
+            },
+            {
+              "prevX": 6,
+              "prevY": 6,
+              "succX": 4,
+              "succY": 6
+            },
+            {
+              "prevX": 6,
+              "prevY": 6,
+              "succX": 5,
+              "succY": 6
+            },
+            {
+              "prevX": 6,
+              "prevY": 6,
+              "succX": 4,
+              "succY": 6
+            },
+            {
+              "prevX": 6,
+              "prevY": 6,
+              "succX": 5,
+              "succY": 6
+            }
+          ],
           "colore": "BIANCO",
           "percorsoImmagine": "/pedonebianco.png",
           "posX": 6,
           "posY": 6
         }
       },
-      {
-        "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
-        "DATA": {
-          "primaMossa": true,
-          "mossePossibili": [],
-          "colore": "BIANCO",
-          "percorsoImmagine": "/pedonebianco.png",
-          "posX": 6,
-          "posY": 7
-        }
-      }
+      null
     ],
     [
       {
         "CLASSNAME": "it.unibas.scacchi.modello.Torre",
         "DATA": {
-          "mossePossibili": [],
+          "mossePossibili": [
+            {
+              "prevX": 7,
+              "prevY": 0,
+              "succX": 7,
+              "succY": 1
+            },
+            {
+              "prevX": 7,
+              "prevY": 0,
+              "succX": 7,
+              "succY": 1
+            },
+            {
+              "prevX": 7,
+              "prevY": 0,
+              "succX": 7,
+              "succY": 1
+            },
+            {
+              "prevX": 7,
+              "prevY": 0,
+              "succX": 7,
+              "succY": 1
+            },
+            {
+              "prevX": 7,
+              "prevY": 0,
+              "succX": 7,
+              "succY": 1
+            },
+            {
+              "prevX": 7,
+              "prevY": 0,
+              "succX": 7,
+              "succY": 1
+            }
+          ],
           "colore": "BIANCO",
           "percorsoImmagine": "/torrebianca.png",
           "posX": 7,
           "posY": 0
         }
       },
-      {
-        "CLASSNAME": "it.unibas.scacchi.modello.Cavallo",
-        "DATA": {
-          "mossePossibili": [],
-          "colore": "BIANCO",
-          "percorsoImmagine": "/cavallobianco.png",
-          "posX": 7,
-          "posY": 1
-        }
-      },
+      null,
       {
         "CLASSNAME": "it.unibas.scacchi.modello.Alfiere",
         "DATA": {
-          "mossePossibili": [],
+          "mossePossibili": [
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 6,
+              "succY": 3
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 5,
+              "succY": 4
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 4,
+              "succY": 5
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 3,
+              "succY": 6
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 2,
+              "succY": 7
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 6,
+              "succY": 3
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 5,
+              "succY": 4
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 4,
+              "succY": 5
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 3,
+              "succY": 6
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 2,
+              "succY": 7
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 6,
+              "succY": 3
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 5,
+              "succY": 4
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 4,
+              "succY": 5
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 3,
+              "succY": 6
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 2,
+              "succY": 7
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 6,
+              "succY": 3
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 5,
+              "succY": 4
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 4,
+              "succY": 5
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 3,
+              "succY": 6
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 2,
+              "succY": 7
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 6,
+              "succY": 3
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 5,
+              "succY": 4
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 4,
+              "succY": 5
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 3,
+              "succY": 6
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 2,
+              "succY": 7
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 6,
+              "succY": 3
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 5,
+              "succY": 4
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 4,
+              "succY": 5
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 3,
+              "succY": 6
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 2,
+              "succY": 7
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 6,
+              "succY": 3
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 5,
+              "succY": 4
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 4,
+              "succY": 5
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 3,
+              "succY": 6
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 2,
+              "succY": 7
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 6,
+              "succY": 3
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 5,
+              "succY": 4
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 4,
+              "succY": 5
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 3,
+              "succY": 6
+            },
+            {
+              "prevX": 7,
+              "prevY": 2,
+              "succX": 2,
+              "succY": 7
+            }
+          ],
           "colore": "BIANCO",
           "percorsoImmagine": "/alfierebianco.png",
           "posX": 7,
@@ -346,7 +1891,92 @@
       {
         "CLASSNAME": "it.unibas.scacchi.modello.Regina",
         "DATA": {
-          "mossePossibili": [],
+          "mossePossibili": [
+            {
+              "prevX": 7,
+              "prevY": 4,
+              "succX": 6,
+              "succY": 3
+            },
+            {
+              "prevX": 7,
+              "prevY": 4,
+              "succX": 5,
+              "succY": 2
+            },
+            {
+              "prevX": 7,
+              "prevY": 4,
+              "succX": 4,
+              "succY": 1
+            },
+            {
+              "prevX": 7,
+              "prevY": 4,
+              "succX": 3,
+              "succY": 0
+            },
+            {
+              "prevX": 7,
+              "prevY": 4,
+              "succX": 6,
+              "succY": 3
+            },
+            {
+              "prevX": 7,
+              "prevY": 4,
+              "succX": 5,
+              "succY": 2
+            },
+            {
+              "prevX": 7,
+              "prevY": 4,
+              "succX": 4,
+              "succY": 1
+            },
+            {
+              "prevX": 7,
+              "prevY": 4,
+              "succX": 3,
+              "succY": 0
+            },
+            {
+              "prevX": 7,
+              "prevY": 4,
+              "succX": 6,
+              "succY": 3
+            },
+            {
+              "prevX": 7,
+              "prevY": 4,
+              "succX": 6,
+              "succY": 3
+            },
+            {
+              "prevX": 7,
+              "prevY": 4,
+              "succX": 6,
+              "succY": 3
+            },
+            {
+              "prevX": 7,
+              "prevY": 4,
+              "succX": 6,
+              "succY": 3
+            },
+            {
+              "prevX": 7,
+              "prevY": 4,
+              "succX": 6,
+              "succY": 3
+            },
+            {
+              "prevX": 7,
+              "prevY": 4,
+              "succX": 6,
+              "succY": 3
+            }
+          ],
           "colore": "BIANCO",
           "percorsoImmagine": "/reginabianca.png",
           "posX": 7,
@@ -363,20 +1993,72 @@
           "posY": 5
         }
       },
-      {
-        "CLASSNAME": "it.unibas.scacchi.modello.Cavallo",
-        "DATA": {
-          "mossePossibili": [],
-          "colore": "BIANCO",
-          "percorsoImmagine": "/cavallobianco.png",
-          "posX": 7,
-          "posY": 6
-        }
-      },
+      null,
       {
         "CLASSNAME": "it.unibas.scacchi.modello.Torre",
         "DATA": {
-          "mossePossibili": [],
+          "mossePossibili": [
+            {
+              "prevX": 7,
+              "prevY": 7,
+              "succX": 6,
+              "succY": 7
+            },
+            {
+              "prevX": 7,
+              "prevY": 7,
+              "succX": 5,
+              "succY": 7
+            },
+            {
+              "prevX": 7,
+              "prevY": 7,
+              "succX": 6,
+              "succY": 7
+            },
+            {
+              "prevX": 7,
+              "prevY": 7,
+              "succX": 5,
+              "succY": 7
+            },
+            {
+              "prevX": 7,
+              "prevY": 7,
+              "succX": 6,
+              "succY": 7
+            },
+            {
+              "prevX": 7,
+              "prevY": 7,
+              "succX": 5,
+              "succY": 7
+            },
+            {
+              "prevX": 7,
+              "prevY": 7,
+              "succX": 7,
+              "succY": 6
+            },
+            {
+              "prevX": 7,
+              "prevY": 7,
+              "succX": 6,
+              "succY": 7
+            },
+            {
+              "prevX": 7,
+              "prevY": 7,
+              "succX": 5,
+              "succY": 7
+            },
+            {
+              "prevX": 7,
+              "prevY": 7,
+              "succX": 7,
+              "succY": 6
+            }
+          ],
           "colore": "BIANCO",
           "percorsoImmagine": "/torrebianca.png",
           "posX": 7,
@@ -404,7 +2086,92 @@
       "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
       "DATA": {
         "primaMossa": true,
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 3,
+            "succY": 0
+          },
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 2,
+            "succY": 0
+          },
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 3,
+            "succY": 0
+          },
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 2,
+            "succY": 0
+          },
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 3,
+            "succY": 0
+          },
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 2,
+            "succY": 0
+          },
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 3,
+            "succY": 0
+          },
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 2,
+            "succY": 0
+          },
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 3,
+            "succY": 0
+          },
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 2,
+            "succY": 0
+          },
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 3,
+            "succY": 0
+          },
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 2,
+            "succY": 0
+          },
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 3,
+            "succY": 0
+          },
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 2,
+            "succY": 0
+          }
+        ],
         "colore": "NERO",
         "percorsoImmagine": "/pedonenero.png",
         "posX": 1,
@@ -415,7 +2182,92 @@
       "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
       "DATA": {
         "primaMossa": true,
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 4,
+            "succY": 0
+          },
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 5,
+            "succY": 0
+          },
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 4,
+            "succY": 0
+          },
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 5,
+            "succY": 0
+          },
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 4,
+            "succY": 0
+          },
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 5,
+            "succY": 0
+          },
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 4,
+            "succY": 0
+          },
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 5,
+            "succY": 0
+          },
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 4,
+            "succY": 0
+          },
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 5,
+            "succY": 0
+          },
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 4,
+            "succY": 0
+          },
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 5,
+            "succY": 0
+          },
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 4,
+            "succY": 0
+          },
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 5,
+            "succY": 0
+          }
+        ],
         "colore": "BIANCO",
         "percorsoImmagine": "/pedonebianco.png",
         "posX": 6,
@@ -425,11 +2277,48 @@
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
       "DATA": {
-        "primaMossa": true,
-        "mossePossibili": [],
+        "primaMossa": false,
+        "mossePossibili": [
+          {
+            "prevX": 1,
+            "prevY": 1,
+            "succX": 3,
+            "succY": 1
+          },
+          {
+            "prevX": 1,
+            "prevY": 1,
+            "succX": 2,
+            "succY": 1
+          },
+          {
+            "prevX": 3,
+            "prevY": 1,
+            "succX": 4,
+            "succY": 1
+          },
+          {
+            "prevX": 3,
+            "prevY": 1,
+            "succX": 4,
+            "succY": 1
+          },
+          {
+            "prevX": 3,
+            "prevY": 1,
+            "succX": 4,
+            "succY": 1
+          },
+          {
+            "prevX": 3,
+            "prevY": 1,
+            "succX": 4,
+            "succY": 1
+          }
+        ],
         "colore": "NERO",
         "percorsoImmagine": "/pedonenero.png",
-        "posX": 1,
+        "posX": 3,
         "posY": 1
       }
     },
@@ -437,7 +2326,92 @@
       "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
       "DATA": {
         "primaMossa": true,
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 4,
+            "succY": 1
+          },
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 5,
+            "succY": 1
+          },
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 4,
+            "succY": 1
+          },
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 5,
+            "succY": 1
+          },
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 4,
+            "succY": 1
+          },
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 5,
+            "succY": 1
+          },
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 4,
+            "succY": 1
+          },
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 5,
+            "succY": 1
+          },
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 4,
+            "succY": 1
+          },
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 5,
+            "succY": 1
+          },
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 4,
+            "succY": 1
+          },
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 5,
+            "succY": 1
+          },
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 4,
+            "succY": 1
+          },
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 5,
+            "succY": 1
+          }
+        ],
         "colore": "BIANCO",
         "percorsoImmagine": "/pedonebianco.png",
         "posX": 6,
@@ -448,7 +2422,92 @@
       "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
       "DATA": {
         "primaMossa": true,
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 2
+          },
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 2
+          },
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 2
+          },
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 2
+          },
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 2
+          },
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 2
+          },
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 2
+          },
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 2
+          },
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 2
+          },
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 2
+          },
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 2
+          },
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 2
+          },
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 2
+          },
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 2
+          }
+        ],
         "colore": "NERO",
         "percorsoImmagine": "/pedonenero.png",
         "posX": 1,
@@ -459,7 +2518,32 @@
       "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
       "DATA": {
         "primaMossa": true,
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 6,
+            "prevY": 2,
+            "succX": 4,
+            "succY": 2
+          },
+          {
+            "prevX": 6,
+            "prevY": 2,
+            "succX": 5,
+            "succY": 2
+          },
+          {
+            "prevX": 6,
+            "prevY": 2,
+            "succX": 4,
+            "succY": 2
+          },
+          {
+            "prevX": 6,
+            "prevY": 2,
+            "succX": 5,
+            "succY": 2
+          }
+        ],
         "colore": "BIANCO",
         "percorsoImmagine": "/pedonebianco.png",
         "posX": 6,
@@ -470,7 +2554,92 @@
       "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
       "DATA": {
         "primaMossa": true,
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 2,
+            "succY": 3
+          },
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 2,
+            "succY": 3
+          },
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 2,
+            "succY": 3
+          },
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 2,
+            "succY": 3
+          },
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 2,
+            "succY": 3
+          },
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 2,
+            "succY": 3
+          },
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 2,
+            "succY": 3
+          }
+        ],
         "colore": "NERO",
         "percorsoImmagine": "/pedonenero.png",
         "posX": 1,
@@ -480,11 +2649,66 @@
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
       "DATA": {
-        "primaMossa": true,
-        "mossePossibili": [],
+        "primaMossa": false,
+        "mossePossibili": [
+          {
+            "prevX": 6,
+            "prevY": 3,
+            "succX": 4,
+            "succY": 3
+          },
+          {
+            "prevX": 6,
+            "prevY": 3,
+            "succX": 5,
+            "succY": 3
+          },
+          {
+            "prevX": 4,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 4,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 4,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 4,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 4,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 4,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 4,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          }
+        ],
         "colore": "BIANCO",
         "percorsoImmagine": "/pedonebianco.png",
-        "posX": 6,
+        "posX": 4,
         "posY": 3
       }
     },
@@ -492,7 +2716,92 @@
       "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
       "DATA": {
         "primaMossa": true,
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 3,
+            "succY": 4
+          },
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 2,
+            "succY": 4
+          },
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 3,
+            "succY": 4
+          },
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 2,
+            "succY": 4
+          },
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 3,
+            "succY": 4
+          },
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 2,
+            "succY": 4
+          },
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 3,
+            "succY": 4
+          },
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 2,
+            "succY": 4
+          },
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 3,
+            "succY": 4
+          },
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 2,
+            "succY": 4
+          },
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 3,
+            "succY": 4
+          },
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 2,
+            "succY": 4
+          },
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 3,
+            "succY": 4
+          },
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 2,
+            "succY": 4
+          }
+        ],
         "colore": "NERO",
         "percorsoImmagine": "/pedonenero.png",
         "posX": 1,
@@ -503,7 +2812,92 @@
       "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
       "DATA": {
         "primaMossa": true,
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 4,
+            "succY": 4
+          },
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 4,
+            "succY": 4
+          },
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 4,
+            "succY": 4
+          },
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 4,
+            "succY": 4
+          },
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 4,
+            "succY": 4
+          },
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 4,
+            "succY": 4
+          },
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 4,
+            "succY": 4
+          },
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 5,
+            "succY": 4
+          }
+        ],
         "colore": "BIANCO",
         "percorsoImmagine": "/pedonebianco.png",
         "posX": 6,
@@ -513,11 +2907,60 @@
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
       "DATA": {
-        "primaMossa": true,
-        "mossePossibili": [],
+        "primaMossa": false,
+        "mossePossibili": [
+          {
+            "prevX": 1,
+            "prevY": 5,
+            "succX": 3,
+            "succY": 5
+          },
+          {
+            "prevX": 1,
+            "prevY": 5,
+            "succX": 2,
+            "succY": 5
+          },
+          {
+            "prevX": 2,
+            "prevY": 5,
+            "succX": 3,
+            "succY": 5
+          },
+          {
+            "prevX": 2,
+            "prevY": 5,
+            "succX": 3,
+            "succY": 5
+          },
+          {
+            "prevX": 2,
+            "prevY": 5,
+            "succX": 3,
+            "succY": 5
+          },
+          {
+            "prevX": 2,
+            "prevY": 5,
+            "succX": 3,
+            "succY": 5
+          },
+          {
+            "prevX": 2,
+            "prevY": 5,
+            "succX": 3,
+            "succY": 5
+          },
+          {
+            "prevX": 2,
+            "prevY": 5,
+            "succX": 3,
+            "succY": 5
+          }
+        ],
         "colore": "NERO",
         "percorsoImmagine": "/pedonenero.png",
-        "posX": 1,
+        "posX": 2,
         "posY": 5
       }
     },
@@ -525,7 +2968,80 @@
       "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
       "DATA": {
         "primaMossa": true,
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 6,
+            "prevY": 5,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 6,
+            "prevY": 5,
+            "succX": 5,
+            "succY": 5
+          },
+          {
+            "prevX": 6,
+            "prevY": 5,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 6,
+            "prevY": 5,
+            "succX": 5,
+            "succY": 5
+          },
+          {
+            "prevX": 6,
+            "prevY": 5,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 6,
+            "prevY": 5,
+            "succX": 5,
+            "succY": 5
+          },
+          {
+            "prevX": 6,
+            "prevY": 5,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 6,
+            "prevY": 5,
+            "succX": 5,
+            "succY": 5
+          },
+          {
+            "prevX": 6,
+            "prevY": 5,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 6,
+            "prevY": 5,
+            "succX": 5,
+            "succY": 5
+          },
+          {
+            "prevX": 6,
+            "prevY": 5,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 6,
+            "prevY": 5,
+            "succX": 5,
+            "succY": 5
+          }
+        ],
         "colore": "BIANCO",
         "percorsoImmagine": "/pedonebianco.png",
         "posX": 6,
@@ -536,7 +3052,92 @@
       "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
       "DATA": {
         "primaMossa": true,
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 2,
+            "succY": 6
+          },
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 2,
+            "succY": 6
+          },
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 2,
+            "succY": 6
+          },
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 2,
+            "succY": 6
+          },
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 2,
+            "succY": 6
+          },
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 2,
+            "succY": 6
+          },
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 2,
+            "succY": 6
+          }
+        ],
         "colore": "NERO",
         "percorsoImmagine": "/pedonenero.png",
         "posX": 1,
@@ -547,7 +3148,92 @@
       "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
       "DATA": {
         "primaMossa": true,
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 4,
+            "succY": 6
+          },
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 5,
+            "succY": 6
+          },
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 4,
+            "succY": 6
+          },
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 5,
+            "succY": 6
+          },
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 4,
+            "succY": 6
+          },
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 5,
+            "succY": 6
+          },
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 4,
+            "succY": 6
+          },
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 5,
+            "succY": 6
+          },
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 4,
+            "succY": 6
+          },
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 5,
+            "succY": 6
+          },
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 4,
+            "succY": 6
+          },
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 5,
+            "succY": 6
+          },
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 4,
+            "succY": 6
+          },
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 5,
+            "succY": 6
+          }
+        ],
         "colore": "BIANCO",
         "percorsoImmagine": "/pedonebianco.png",
         "posX": 6,
@@ -558,7 +3244,68 @@
       "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
       "DATA": {
         "primaMossa": true,
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 1,
+            "prevY": 7,
+            "succX": 3,
+            "succY": 7
+          },
+          {
+            "prevX": 1,
+            "prevY": 7,
+            "succX": 2,
+            "succY": 7
+          },
+          {
+            "prevX": 1,
+            "prevY": 7,
+            "succX": 3,
+            "succY": 7
+          },
+          {
+            "prevX": 1,
+            "prevY": 7,
+            "succX": 2,
+            "succY": 7
+          },
+          {
+            "prevX": 1,
+            "prevY": 7,
+            "succX": 3,
+            "succY": 7
+          },
+          {
+            "prevX": 1,
+            "prevY": 7,
+            "succX": 2,
+            "succY": 7
+          },
+          {
+            "prevX": 1,
+            "prevY": 7,
+            "succX": 3,
+            "succY": 7
+          },
+          {
+            "prevX": 1,
+            "prevY": 7,
+            "succX": 2,
+            "succY": 7
+          },
+          {
+            "prevX": 1,
+            "prevY": 7,
+            "succX": 3,
+            "succY": 7
+          },
+          {
+            "prevX": 1,
+            "prevY": 7,
+            "succX": 2,
+            "succY": 7
+          }
+        ],
         "colore": "NERO",
         "percorsoImmagine": "/pedonenero.png",
         "posX": 1,
@@ -568,18 +3315,86 @@
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
       "DATA": {
-        "primaMossa": true,
-        "mossePossibili": [],
+        "primaMossa": false,
+        "mossePossibili": [
+          {
+            "prevX": 6,
+            "prevY": 7,
+            "succX": 4,
+            "succY": 7
+          },
+          {
+            "prevX": 6,
+            "prevY": 7,
+            "succX": 5,
+            "succY": 7
+          },
+          {
+            "prevX": 4,
+            "prevY": 7,
+            "succX": 3,
+            "succY": 7
+          },
+          {
+            "prevX": 4,
+            "prevY": 7,
+            "succX": 3,
+            "succY": 7
+          },
+          {
+            "prevX": 4,
+            "prevY": 7,
+            "succX": 3,
+            "succY": 7
+          }
+        ],
         "colore": "BIANCO",
         "percorsoImmagine": "/pedonebianco.png",
-        "posX": 6,
+        "posX": 4,
         "posY": 7
       }
     },
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Torre",
       "DATA": {
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 7,
+            "prevY": 0,
+            "succX": 7,
+            "succY": 1
+          },
+          {
+            "prevX": 7,
+            "prevY": 0,
+            "succX": 7,
+            "succY": 1
+          },
+          {
+            "prevX": 7,
+            "prevY": 0,
+            "succX": 7,
+            "succY": 1
+          },
+          {
+            "prevX": 7,
+            "prevY": 0,
+            "succX": 7,
+            "succY": 1
+          },
+          {
+            "prevX": 7,
+            "prevY": 0,
+            "succX": 7,
+            "succY": 1
+          },
+          {
+            "prevX": 7,
+            "prevY": 0,
+            "succX": 7,
+            "succY": 1
+          }
+        ],
         "colore": "BIANCO",
         "percorsoImmagine": "/torrebianca.png",
         "posX": 7,
@@ -589,17 +3404,289 @@
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Cavallo",
       "DATA": {
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 5,
+            "prevY": 2,
+            "succX": 4,
+            "succY": 0
+          },
+          {
+            "prevX": 5,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 1
+          },
+          {
+            "prevX": 5,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 5,
+            "prevY": 2,
+            "succX": 4,
+            "succY": 4
+          },
+          {
+            "prevX": 5,
+            "prevY": 2,
+            "succX": 7,
+            "succY": 1
+          }
+        ],
         "colore": "BIANCO",
         "percorsoImmagine": "/cavallobianco.png",
-        "posX": 7,
-        "posY": 1
+        "posX": 5,
+        "posY": 2
       }
     },
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Alfiere",
       "DATA": {
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 7
+          }
+        ],
         "colore": "BIANCO",
         "percorsoImmagine": "/alfierebianco.png",
         "posX": 7,
@@ -619,7 +3706,92 @@
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Regina",
       "DATA": {
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 5,
+            "succY": 2
+          },
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 4,
+            "succY": 1
+          },
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 3,
+            "succY": 0
+          },
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 5,
+            "succY": 2
+          },
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 4,
+            "succY": 1
+          },
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 3,
+            "succY": 0
+          },
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 6,
+            "succY": 3
+          }
+        ],
         "colore": "BIANCO",
         "percorsoImmagine": "/reginabianca.png",
         "posX": 7,
@@ -639,17 +3811,109 @@
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Cavallo",
       "DATA": {
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 5,
+            "prevY": 5,
+            "succX": 7,
+            "succY": 6
+          },
+          {
+            "prevX": 5,
+            "prevY": 5,
+            "succX": 6,
+            "succY": 7
+          },
+          {
+            "prevX": 5,
+            "prevY": 5,
+            "succX": 3,
+            "succY": 4
+          },
+          {
+            "prevX": 5,
+            "prevY": 5,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 5,
+            "prevY": 5,
+            "succX": 6,
+            "succY": 3
+          }
+        ],
         "colore": "BIANCO",
         "percorsoImmagine": "/cavallobianco.png",
-        "posX": 7,
-        "posY": 6
+        "posX": 5,
+        "posY": 5
       }
     },
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Torre",
       "DATA": {
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 7,
+            "prevY": 7,
+            "succX": 6,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 7,
+            "succX": 5,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 7,
+            "succX": 6,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 7,
+            "succX": 5,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 7,
+            "succX": 6,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 7,
+            "succX": 5,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 7,
+            "succX": 7,
+            "succY": 6
+          },
+          {
+            "prevX": 7,
+            "prevY": 7,
+            "succX": 6,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 7,
+            "succX": 5,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 7,
+            "succX": 7,
+            "succY": 6
+          }
+        ],
         "colore": "BIANCO",
         "percorsoImmagine": "/torrebianca.png",
         "posX": 7,
@@ -659,7 +3923,44 @@
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Torre",
       "DATA": {
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 7,
+            "prevY": 0,
+            "succX": 7,
+            "succY": 1
+          },
+          {
+            "prevX": 7,
+            "prevY": 0,
+            "succX": 7,
+            "succY": 1
+          },
+          {
+            "prevX": 7,
+            "prevY": 0,
+            "succX": 7,
+            "succY": 1
+          },
+          {
+            "prevX": 7,
+            "prevY": 0,
+            "succX": 7,
+            "succY": 1
+          },
+          {
+            "prevX": 7,
+            "prevY": 0,
+            "succX": 7,
+            "succY": 1
+          },
+          {
+            "prevX": 7,
+            "prevY": 0,
+            "succX": 7,
+            "succY": 1
+          }
+        ],
         "colore": "BIANCO",
         "percorsoImmagine": "/torrebianca.png",
         "posX": 7,
@@ -669,17 +3970,289 @@
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Cavallo",
       "DATA": {
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 5,
+            "prevY": 2,
+            "succX": 4,
+            "succY": 0
+          },
+          {
+            "prevX": 5,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 1
+          },
+          {
+            "prevX": 5,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 5,
+            "prevY": 2,
+            "succX": 4,
+            "succY": 4
+          },
+          {
+            "prevX": 5,
+            "prevY": 2,
+            "succX": 7,
+            "succY": 1
+          }
+        ],
         "colore": "BIANCO",
         "percorsoImmagine": "/cavallobianco.png",
-        "posX": 7,
-        "posY": 1
+        "posX": 5,
+        "posY": 2
       }
     },
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Alfiere",
       "DATA": {
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 7,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 7
+          }
+        ],
         "colore": "BIANCO",
         "percorsoImmagine": "/alfierebianco.png",
         "posX": 7,
@@ -699,7 +4272,92 @@
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Regina",
       "DATA": {
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 5,
+            "succY": 2
+          },
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 4,
+            "succY": 1
+          },
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 3,
+            "succY": 0
+          },
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 5,
+            "succY": 2
+          },
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 4,
+            "succY": 1
+          },
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 3,
+            "succY": 0
+          },
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 6,
+            "succY": 3
+          },
+          {
+            "prevX": 7,
+            "prevY": 4,
+            "succX": 6,
+            "succY": 3
+          }
+        ],
         "colore": "BIANCO",
         "percorsoImmagine": "/reginabianca.png",
         "posX": 7,
@@ -719,17 +4377,109 @@
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Cavallo",
       "DATA": {
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 5,
+            "prevY": 5,
+            "succX": 7,
+            "succY": 6
+          },
+          {
+            "prevX": 5,
+            "prevY": 5,
+            "succX": 6,
+            "succY": 7
+          },
+          {
+            "prevX": 5,
+            "prevY": 5,
+            "succX": 3,
+            "succY": 4
+          },
+          {
+            "prevX": 5,
+            "prevY": 5,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 5,
+            "prevY": 5,
+            "succX": 6,
+            "succY": 3
+          }
+        ],
         "colore": "BIANCO",
         "percorsoImmagine": "/cavallobianco.png",
-        "posX": 7,
-        "posY": 6
+        "posX": 5,
+        "posY": 5
       }
     },
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Torre",
       "DATA": {
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 7,
+            "prevY": 7,
+            "succX": 6,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 7,
+            "succX": 5,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 7,
+            "succX": 6,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 7,
+            "succX": 5,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 7,
+            "succX": 6,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 7,
+            "succX": 5,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 7,
+            "succX": 7,
+            "succY": 6
+          },
+          {
+            "prevX": 7,
+            "prevY": 7,
+            "succX": 6,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 7,
+            "succX": 5,
+            "succY": 7
+          },
+          {
+            "prevX": 7,
+            "prevY": 7,
+            "succX": 7,
+            "succY": 6
+          }
+        ],
         "colore": "BIANCO",
         "percorsoImmagine": "/torrebianca.png",
         "posX": 7,
@@ -742,98 +4492,1274 @@
       "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
       "DATA": {
         "primaMossa": true,
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 3,
+            "succY": 0
+          },
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 2,
+            "succY": 0
+          },
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 3,
+            "succY": 0
+          },
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 2,
+            "succY": 0
+          },
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 3,
+            "succY": 0
+          },
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 2,
+            "succY": 0
+          },
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 3,
+            "succY": 0
+          },
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 2,
+            "succY": 0
+          },
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 3,
+            "succY": 0
+          },
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 2,
+            "succY": 0
+          },
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 3,
+            "succY": 0
+          },
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 2,
+            "succY": 0
+          },
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 3,
+            "succY": 0
+          },
+          {
+            "prevX": 1,
+            "prevY": 0,
+            "succX": 2,
+            "succY": 0
+          }
+        ],
         "colore": "NERO",
         "percorsoImmagine": "/pedonenero.png",
         "posX": 1,
         "posY": 0
       }
     },
-    null,
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
       "DATA": {
         "primaMossa": true,
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 4,
+            "succY": 0
+          },
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 5,
+            "succY": 0
+          },
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 4,
+            "succY": 0
+          },
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 5,
+            "succY": 0
+          },
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 4,
+            "succY": 0
+          },
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 5,
+            "succY": 0
+          },
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 4,
+            "succY": 0
+          },
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 5,
+            "succY": 0
+          },
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 4,
+            "succY": 0
+          },
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 5,
+            "succY": 0
+          },
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 4,
+            "succY": 0
+          },
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 5,
+            "succY": 0
+          },
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 4,
+            "succY": 0
+          },
+          {
+            "prevX": 6,
+            "prevY": 0,
+            "succX": 5,
+            "succY": 0
+          }
+        ],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/pedonebianco.png",
+        "posX": 6,
+        "posY": 0
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": false,
+        "mossePossibili": [
+          {
+            "prevX": 1,
+            "prevY": 1,
+            "succX": 3,
+            "succY": 1
+          },
+          {
+            "prevX": 1,
+            "prevY": 1,
+            "succX": 2,
+            "succY": 1
+          },
+          {
+            "prevX": 3,
+            "prevY": 1,
+            "succX": 4,
+            "succY": 1
+          },
+          {
+            "prevX": 3,
+            "prevY": 1,
+            "succX": 4,
+            "succY": 1
+          },
+          {
+            "prevX": 3,
+            "prevY": 1,
+            "succX": 4,
+            "succY": 1
+          },
+          {
+            "prevX": 3,
+            "prevY": 1,
+            "succX": 4,
+            "succY": 1
+          }
+        ],
         "colore": "NERO",
         "percorsoImmagine": "/pedonenero.png",
-        "posX": 1,
+        "posX": 3,
         "posY": 1
       }
     },
-    null,
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
       "DATA": {
         "primaMossa": true,
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 4,
+            "succY": 1
+          },
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 5,
+            "succY": 1
+          },
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 4,
+            "succY": 1
+          },
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 5,
+            "succY": 1
+          },
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 4,
+            "succY": 1
+          },
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 5,
+            "succY": 1
+          },
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 4,
+            "succY": 1
+          },
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 5,
+            "succY": 1
+          },
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 4,
+            "succY": 1
+          },
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 5,
+            "succY": 1
+          },
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 4,
+            "succY": 1
+          },
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 5,
+            "succY": 1
+          },
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 4,
+            "succY": 1
+          },
+          {
+            "prevX": 6,
+            "prevY": 1,
+            "succX": 5,
+            "succY": 1
+          }
+        ],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/pedonebianco.png",
+        "posX": 6,
+        "posY": 1
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 2
+          },
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 2
+          },
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 2
+          },
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 2
+          },
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 2
+          },
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 2
+          },
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 2
+          },
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 2
+          },
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 2
+          },
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 2
+          },
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 2
+          },
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 2
+          },
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 3,
+            "succY": 2
+          },
+          {
+            "prevX": 1,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 2
+          }
+        ],
         "colore": "NERO",
         "percorsoImmagine": "/pedonenero.png",
         "posX": 1,
         "posY": 2
       }
     },
-    null,
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
       "DATA": {
         "primaMossa": true,
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 6,
+            "prevY": 2,
+            "succX": 4,
+            "succY": 2
+          },
+          {
+            "prevX": 6,
+            "prevY": 2,
+            "succX": 5,
+            "succY": 2
+          },
+          {
+            "prevX": 6,
+            "prevY": 2,
+            "succX": 4,
+            "succY": 2
+          },
+          {
+            "prevX": 6,
+            "prevY": 2,
+            "succX": 5,
+            "succY": 2
+          }
+        ],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/pedonebianco.png",
+        "posX": 6,
+        "posY": 2
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 2,
+            "succY": 3
+          },
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 2,
+            "succY": 3
+          },
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 2,
+            "succY": 3
+          },
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 2,
+            "succY": 3
+          },
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 2,
+            "succY": 3
+          },
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 2,
+            "succY": 3
+          },
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 1,
+            "prevY": 3,
+            "succX": 2,
+            "succY": 3
+          }
+        ],
         "colore": "NERO",
         "percorsoImmagine": "/pedonenero.png",
         "posX": 1,
         "posY": 3
       }
     },
-    null,
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": false,
+        "mossePossibili": [
+          {
+            "prevX": 6,
+            "prevY": 3,
+            "succX": 4,
+            "succY": 3
+          },
+          {
+            "prevX": 6,
+            "prevY": 3,
+            "succX": 5,
+            "succY": 3
+          },
+          {
+            "prevX": 4,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 4,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 4,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 4,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 4,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 4,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          },
+          {
+            "prevX": 4,
+            "prevY": 3,
+            "succX": 3,
+            "succY": 3
+          }
+        ],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/pedonebianco.png",
+        "posX": 4,
+        "posY": 3
+      }
+    },
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
       "DATA": {
         "primaMossa": true,
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 3,
+            "succY": 4
+          },
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 2,
+            "succY": 4
+          },
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 3,
+            "succY": 4
+          },
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 2,
+            "succY": 4
+          },
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 3,
+            "succY": 4
+          },
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 2,
+            "succY": 4
+          },
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 3,
+            "succY": 4
+          },
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 2,
+            "succY": 4
+          },
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 3,
+            "succY": 4
+          },
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 2,
+            "succY": 4
+          },
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 3,
+            "succY": 4
+          },
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 2,
+            "succY": 4
+          },
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 3,
+            "succY": 4
+          },
+          {
+            "prevX": 1,
+            "prevY": 4,
+            "succX": 2,
+            "succY": 4
+          }
+        ],
         "colore": "NERO",
         "percorsoImmagine": "/pedonenero.png",
         "posX": 1,
         "posY": 4
       }
     },
-    null,
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
       "DATA": {
         "primaMossa": true,
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 4,
+            "succY": 4
+          },
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 4,
+            "succY": 4
+          },
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 4,
+            "succY": 4
+          },
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 4,
+            "succY": 4
+          },
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 4,
+            "succY": 4
+          },
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 4,
+            "succY": 4
+          },
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 5,
+            "succY": 4
+          },
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 4,
+            "succY": 4
+          },
+          {
+            "prevX": 6,
+            "prevY": 4,
+            "succX": 5,
+            "succY": 4
+          }
+        ],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/pedonebianco.png",
+        "posX": 6,
+        "posY": 4
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": false,
+        "mossePossibili": [
+          {
+            "prevX": 1,
+            "prevY": 5,
+            "succX": 3,
+            "succY": 5
+          },
+          {
+            "prevX": 1,
+            "prevY": 5,
+            "succX": 2,
+            "succY": 5
+          },
+          {
+            "prevX": 2,
+            "prevY": 5,
+            "succX": 3,
+            "succY": 5
+          },
+          {
+            "prevX": 2,
+            "prevY": 5,
+            "succX": 3,
+            "succY": 5
+          },
+          {
+            "prevX": 2,
+            "prevY": 5,
+            "succX": 3,
+            "succY": 5
+          },
+          {
+            "prevX": 2,
+            "prevY": 5,
+            "succX": 3,
+            "succY": 5
+          },
+          {
+            "prevX": 2,
+            "prevY": 5,
+            "succX": 3,
+            "succY": 5
+          },
+          {
+            "prevX": 2,
+            "prevY": 5,
+            "succX": 3,
+            "succY": 5
+          }
+        ],
         "colore": "NERO",
         "percorsoImmagine": "/pedonenero.png",
-        "posX": 1,
+        "posX": 2,
         "posY": 5
       }
     },
-    null,
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
       "DATA": {
         "primaMossa": true,
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 6,
+            "prevY": 5,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 6,
+            "prevY": 5,
+            "succX": 5,
+            "succY": 5
+          },
+          {
+            "prevX": 6,
+            "prevY": 5,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 6,
+            "prevY": 5,
+            "succX": 5,
+            "succY": 5
+          },
+          {
+            "prevX": 6,
+            "prevY": 5,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 6,
+            "prevY": 5,
+            "succX": 5,
+            "succY": 5
+          },
+          {
+            "prevX": 6,
+            "prevY": 5,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 6,
+            "prevY": 5,
+            "succX": 5,
+            "succY": 5
+          },
+          {
+            "prevX": 6,
+            "prevY": 5,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 6,
+            "prevY": 5,
+            "succX": 5,
+            "succY": 5
+          },
+          {
+            "prevX": 6,
+            "prevY": 5,
+            "succX": 4,
+            "succY": 5
+          },
+          {
+            "prevX": 6,
+            "prevY": 5,
+            "succX": 5,
+            "succY": 5
+          }
+        ],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/pedonebianco.png",
+        "posX": 6,
+        "posY": 5
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 2,
+            "succY": 6
+          },
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 2,
+            "succY": 6
+          },
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 2,
+            "succY": 6
+          },
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 2,
+            "succY": 6
+          },
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 2,
+            "succY": 6
+          },
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 2,
+            "succY": 6
+          },
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 3,
+            "succY": 6
+          },
+          {
+            "prevX": 1,
+            "prevY": 6,
+            "succX": 2,
+            "succY": 6
+          }
+        ],
         "colore": "NERO",
         "percorsoImmagine": "/pedonenero.png",
         "posX": 1,
         "posY": 6
       }
     },
-    null,
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
       "DATA": {
         "primaMossa": true,
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 4,
+            "succY": 6
+          },
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 5,
+            "succY": 6
+          },
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 4,
+            "succY": 6
+          },
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 5,
+            "succY": 6
+          },
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 4,
+            "succY": 6
+          },
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 5,
+            "succY": 6
+          },
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 4,
+            "succY": 6
+          },
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 5,
+            "succY": 6
+          },
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 4,
+            "succY": 6
+          },
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 5,
+            "succY": 6
+          },
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 4,
+            "succY": 6
+          },
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 5,
+            "succY": 6
+          },
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 4,
+            "succY": 6
+          },
+          {
+            "prevX": 6,
+            "prevY": 6,
+            "succX": 5,
+            "succY": 6
+          }
+        ],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/pedonebianco.png",
+        "posX": 6,
+        "posY": 6
+      }
+    },
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": true,
+        "mossePossibili": [
+          {
+            "prevX": 1,
+            "prevY": 7,
+            "succX": 3,
+            "succY": 7
+          },
+          {
+            "prevX": 1,
+            "prevY": 7,
+            "succX": 2,
+            "succY": 7
+          },
+          {
+            "prevX": 1,
+            "prevY": 7,
+            "succX": 3,
+            "succY": 7
+          },
+          {
+            "prevX": 1,
+            "prevY": 7,
+            "succX": 2,
+            "succY": 7
+          },
+          {
+            "prevX": 1,
+            "prevY": 7,
+            "succX": 3,
+            "succY": 7
+          },
+          {
+            "prevX": 1,
+            "prevY": 7,
+            "succX": 2,
+            "succY": 7
+          },
+          {
+            "prevX": 1,
+            "prevY": 7,
+            "succX": 3,
+            "succY": 7
+          },
+          {
+            "prevX": 1,
+            "prevY": 7,
+            "succX": 2,
+            "succY": 7
+          },
+          {
+            "prevX": 1,
+            "prevY": 7,
+            "succX": 3,
+            "succY": 7
+          },
+          {
+            "prevX": 1,
+            "prevY": 7,
+            "succX": 2,
+            "succY": 7
+          }
+        ],
         "colore": "NERO",
         "percorsoImmagine": "/pedonenero.png",
         "posX": 1,
         "posY": 7
       }
     },
-    null,
+    {
+      "CLASSNAME": "it.unibas.scacchi.modello.Pedone",
+      "DATA": {
+        "primaMossa": false,
+        "mossePossibili": [
+          {
+            "prevX": 6,
+            "prevY": 7,
+            "succX": 4,
+            "succY": 7
+          },
+          {
+            "prevX": 6,
+            "prevY": 7,
+            "succX": 5,
+            "succY": 7
+          },
+          {
+            "prevX": 4,
+            "prevY": 7,
+            "succX": 3,
+            "succY": 7
+          },
+          {
+            "prevX": 4,
+            "prevY": 7,
+            "succX": 3,
+            "succY": 7
+          },
+          {
+            "prevX": 4,
+            "prevY": 7,
+            "succX": 3,
+            "succY": 7
+          }
+        ],
+        "colore": "BIANCO",
+        "percorsoImmagine": "/pedonebianco.png",
+        "posX": 4,
+        "posY": 7
+      }
+    },
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Torre",
       "DATA": {
@@ -847,7 +5773,20 @@
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Cavallo",
       "DATA": {
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 0,
+            "prevY": 1,
+            "succX": 2,
+            "succY": 2
+          },
+          {
+            "prevX": 0,
+            "prevY": 1,
+            "succX": 2,
+            "succY": 0
+          }
+        ],
         "colore": "NERO",
         "percorsoImmagine": "/cavallonero.png",
         "posX": 0,
@@ -857,7 +5796,56 @@
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Alfiere",
       "DATA": {
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 0,
+            "prevY": 2,
+            "succX": 1,
+            "succY": 1
+          },
+          {
+            "prevX": 0,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 0
+          },
+          {
+            "prevX": 0,
+            "prevY": 2,
+            "succX": 1,
+            "succY": 1
+          },
+          {
+            "prevX": 0,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 0
+          },
+          {
+            "prevX": 0,
+            "prevY": 2,
+            "succX": 1,
+            "succY": 1
+          },
+          {
+            "prevX": 0,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 0
+          },
+          {
+            "prevX": 0,
+            "prevY": 2,
+            "succX": 1,
+            "succY": 1
+          },
+          {
+            "prevX": 0,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 0
+          }
+        ],
         "colore": "NERO",
         "percorsoImmagine": "/alfierenero.png",
         "posX": 0,
@@ -897,17 +5885,55 @@
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Cavallo",
       "DATA": {
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 2,
+            "prevY": 7,
+            "succX": 1,
+            "succY": 5
+          },
+          {
+            "prevX": 2,
+            "prevY": 7,
+            "succX": 0,
+            "succY": 6
+          },
+          {
+            "prevX": 2,
+            "prevY": 7,
+            "succX": 3,
+            "succY": 5
+          },
+          {
+            "prevX": 2,
+            "prevY": 7,
+            "succX": 4,
+            "succY": 6
+          }
+        ],
         "colore": "NERO",
         "percorsoImmagine": "/cavallonero.png",
-        "posX": 0,
-        "posY": 6
+        "posX": 2,
+        "posY": 7
       }
     },
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Torre",
       "DATA": {
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 0,
+            "prevY": 7,
+            "succX": 0,
+            "succY": 6
+          },
+          {
+            "prevX": 0,
+            "prevY": 7,
+            "succX": 0,
+            "succY": 6
+          }
+        ],
         "colore": "NERO",
         "percorsoImmagine": "/torrenera.png",
         "posX": 0,
@@ -927,7 +5953,20 @@
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Cavallo",
       "DATA": {
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 0,
+            "prevY": 1,
+            "succX": 2,
+            "succY": 2
+          },
+          {
+            "prevX": 0,
+            "prevY": 1,
+            "succX": 2,
+            "succY": 0
+          }
+        ],
         "colore": "NERO",
         "percorsoImmagine": "/cavallonero.png",
         "posX": 0,
@@ -937,7 +5976,56 @@
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Alfiere",
       "DATA": {
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 0,
+            "prevY": 2,
+            "succX": 1,
+            "succY": 1
+          },
+          {
+            "prevX": 0,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 0
+          },
+          {
+            "prevX": 0,
+            "prevY": 2,
+            "succX": 1,
+            "succY": 1
+          },
+          {
+            "prevX": 0,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 0
+          },
+          {
+            "prevX": 0,
+            "prevY": 2,
+            "succX": 1,
+            "succY": 1
+          },
+          {
+            "prevX": 0,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 0
+          },
+          {
+            "prevX": 0,
+            "prevY": 2,
+            "succX": 1,
+            "succY": 1
+          },
+          {
+            "prevX": 0,
+            "prevY": 2,
+            "succX": 2,
+            "succY": 0
+          }
+        ],
         "colore": "NERO",
         "percorsoImmagine": "/alfierenero.png",
         "posX": 0,
@@ -977,17 +6065,55 @@
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Cavallo",
       "DATA": {
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 2,
+            "prevY": 7,
+            "succX": 1,
+            "succY": 5
+          },
+          {
+            "prevX": 2,
+            "prevY": 7,
+            "succX": 0,
+            "succY": 6
+          },
+          {
+            "prevX": 2,
+            "prevY": 7,
+            "succX": 3,
+            "succY": 5
+          },
+          {
+            "prevX": 2,
+            "prevY": 7,
+            "succX": 4,
+            "succY": 6
+          }
+        ],
         "colore": "NERO",
         "percorsoImmagine": "/cavallonero.png",
-        "posX": 0,
-        "posY": 6
+        "posX": 2,
+        "posY": 7
       }
     },
     {
       "CLASSNAME": "it.unibas.scacchi.modello.Torre",
       "DATA": {
-        "mossePossibili": [],
+        "mossePossibili": [
+          {
+            "prevX": 0,
+            "prevY": 7,
+            "succX": 0,
+            "succY": 6
+          },
+          {
+            "prevX": 0,
+            "prevY": 7,
+            "succX": 0,
+            "succY": 6
+          }
+        ],
         "colore": "NERO",
         "percorsoImmagine": "/torrenera.png",
         "posX": 0,
@@ -996,5 +6122,6 @@
     }
   ],
   "pezziMangiatiBianchi": [],
-  "pezziMangiatiNeri": []
+  "pezziMangiatiNeri": [],
+  "turnoBianco": false
 }

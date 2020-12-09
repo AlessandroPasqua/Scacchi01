@@ -3,6 +3,8 @@ package it.unibas.scacchi.modello;
 import it.unibas.scacchi.Costanti;
 import java.util.ArrayList;
 import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Scacchiera {
    
@@ -13,15 +15,14 @@ public class Scacchiera {
    private List<Pezzo> pezziAttiviNeri = new ArrayList<Pezzo>();
    private List<Pezzo> pezziMangiatiBianchi = new ArrayList<Pezzo>();
    private List<Pezzo> pezziMangiatiNeri = new ArrayList<Pezzo>();
+   private static final Logger log = LoggerFactory.getLogger(Scacchiera.class);
+   private boolean turnoBianco = true;
 
    //Costruttori
 
-    public Scacchiera() {}
-    
-    
+    public Scacchiera() {
+    }
 
-   
-    
     //Metodi Classe
     
         //Metodo che inizializza la scacchiera con i suoi pezzi in posizione iniziale e li inserisce in due liste "PezziAttivi" per 
@@ -31,7 +32,7 @@ public class Scacchiera {
             this.posizionaPezzo(new Pedone(Costanti.NERO,true), 1, j);
             pezziAttiviBianchi.add(matriceScacchiera[1][j]);
             this.posizionaPezzo(new Pedone(Costanti.BIANCO,true), Costanti.N-2, j);
-            pezziAttiviNeri.add(matriceScacchiera[Costanti.N-1][j]);
+            pezziAttiviNeri.add(matriceScacchiera[Costanti.N-2][j]);
         }        
         
         //posizionamento pezzi bianchi
@@ -132,11 +133,14 @@ public class Scacchiera {
         List<Mossa> mosse = new ArrayList<Mossa>();
         if ( colore.equals(Costanti.BIANCO) ){
            pezzi = this.pezziAttiviNeri; 
+           log.debug("Ho scelto la lista pezzi attivi neri");
         } else {
             pezzi = this.pezziAttiviBianchi;
+            log.debug("Ho scelto la lista pezzi attivi neri");
         }
         for ( Pezzo p : pezzi ){
             if ( !(p instanceof Re)){
+                log.debug("" + p + " " + p.toString());
                 p.calcolaMosse(this);
                 mosse.addAll(p.getMossePossibili());
             }
@@ -179,11 +183,18 @@ public class Scacchiera {
         return false;
     }
     
+    public void cambiaTurno(){
+        this.turnoBianco = !this.turnoBianco;
+    }
+    
             ////////////////////////
             ////Metodi Get e Set////
             ////////////////////////
     
     public Pezzo getPezzo( int x , int y ){
+        if ( x > Costanti.N || y > Costanti.N || x < 0 || y < 0 ){
+            return null;
+        }
         return matriceScacchiera[x][y];
     }
     
@@ -206,5 +217,11 @@ public class Scacchiera {
     public List<Pezzo> getPezziMangiatiNeri() {
         return pezziMangiatiNeri;
     }
+
+    public boolean isTurnoBianco() {
+        return turnoBianco;
+    }
+    
+    
    
 }

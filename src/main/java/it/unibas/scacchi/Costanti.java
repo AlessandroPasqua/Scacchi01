@@ -6,6 +6,7 @@ public class Costanti {
     public static final String NERO = "NERO" ;
     public static final int N = 8 ;
     public static final String SCACCHIERA = "SCACCHIERA";
+    public static final String PEZZOATTIVO = "PezzoAttivo";
     
     public static final String RENERO = "/renero.png";
     public static final String REGINANERO = "/reginanera.png";

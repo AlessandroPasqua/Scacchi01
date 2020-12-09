@@ -41,16 +41,22 @@ public class WorkerCaricaScacchiera extends SwingWorker {
                 Applicazione.getInstance().getFrame().nascondiCursoreCaricamento();
                 return;
             }
-
             Applicazione.getInstance().getModello().insertBean(Costanti.SCACCHIERA, scacchiera);
-            Applicazione.getInstance().getFrame().nascondiCursoreCaricamento();
             Applicazione.getInstance().getVistaPrincipale().aggiornaScacchiera();
-            
+            if ( scacchiera.isTurnoBianco() ){
+                Applicazione.getInstance().getVistaPrincipale().getColoreTurno().setText("Bianco");
+            } else {
+                Applicazione.getInstance().getVistaPrincipale().getColoreTurno().setText("Nero");
+            }
             Applicazione.getInstance().getFrame().mostraMessaggio("Caricata la partita precedente");
+            
+            
         } catch (Exception ex) {
             logger.debug(ex.getMessage());
             Applicazione.getInstance().getFrame().mostraMessaggioErrore("Impossibile caricare la partita");
-        } 
+        } finally {
+            Applicazione.getInstance().getFrame().nascondiCursoreCaricamento();
+        }
     }
 
 }
